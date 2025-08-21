@@ -6,7 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yahoo Fantasy NFL Tracker</title>
     <style>
-        /* Previous styles plus new ones */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 1.1em;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .section h2 {
+            margin: 0 0 20px 0;
+            color: #2c3e50;
+            font-size: 1.4em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
         .auth-section {
             background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
             color: #333;
@@ -22,21 +95,111 @@
         .status-success {
             background: #d4edda;
             color: #155724;
+            border: 1px solid #c3e6cb;
         }
 
         .status-error {
             background: #f8d7da;
             color: #721c24;
+            border: 1px solid #f5c6cb;
         }
 
         .status-warning {
             background: #fff3cd;
             color: #856404;
+            border: 1px solid #ffeaa7;
         }
 
         .loading {
             opacity: 0.6;
             pointer-events: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .stats-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .stats-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .winner-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .winner-card h3 {
+            margin: 0 0 15px 0;
+            color: #8b4513;
+            font-size: 1.2em;
+        }
+
+        .winner-info {
+            color: #5d4e37;
+        }
+
+        .winner-info strong {
+            color: #8b4513;
+            font-size: 1.1em;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -56,10 +219,8 @@
                     Not authenticated. Click below to connect to Yahoo Fantasy.
                 </div>
                 <button id="authBtn" class="btn" onclick="startAuth()">Connect to Yahoo</button>
-                <button id="testBtn" class="btn" onclick="testConnection()" style="display: none;">Test
-                    Connection</button>
-                <button id="fetchBtn" class="btn" onclick="fetchLeagueData()" style="display: none;">Fetch League
-                    Data</button>
+                <button id="testBtn" class="btn" onclick="testConnection()" style="display: none;">Test Connection</button>
+                <button id="fetchBtn" class="btn" onclick="fetchLeagueData()" style="display: none;">Fetch League Data</button>
             </div>
 
             <!-- League Information -->
@@ -70,26 +231,130 @@
                 </div>
             </div>
 
-            <!-- Rest of the previous HTML sections... -->
-            <!-- (Prize Settings, Add Winner, Stats, etc.) -->
+            <!-- Prize Settings Section -->
+            <div class="section">
+                <h2>💰 Prize Settings</h2>
+                <div class="form-group">
+                    <label for="weeklyPrize">Weekly High Score Prize ($)</label>
+                    <input type="number" id="weeklyPrize" placeholder="Enter weekly prize amount" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="seasonPrize">Season Champion Prize ($)</label>
+                    <input type="number" id="seasonPrize" placeholder="Enter season prize amount" min="0" step="0.01">
+                </div>
+                <button class="btn" onclick="savePrizeSettings()">Save Prize Settings</button>
+                <div id="prizeDisplay" style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
+                    <strong>Current Settings:</strong><br>
+                    Weekly Prize: <span id="currentWeekly">Not set</span><br>
+                    Season Prize: <span id="currentSeason">Not set</span>
+                </div>
+            </div>
+
+            <!-- Add Winner Section -->
+            <div class="section">
+                <h2>🏆 Add Weekly Winner</h2>
+                <div class="form-group">
+                    <label for="week">Week</label>
+                    <select id="week">
+                        <option value="">Select Week</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" placeholder="Enter team name">
+                </div>
+                <div class="form-group">
+                    <label for="managerName">Manager Name</label>
+                    <input type="text" id="managerName" placeholder="Enter manager name">
+                </div>
+                <div class="form-group">
+                    <label for="score">Score</label>
+                    <input type="number" id="score" placeholder="Enter score" step="0.01">
+                </div>
+                <button class="btn" onclick="addWinner()">Add Winner</button>
+            </div>
+
+            <!-- Winners List Section -->
+            <div class="section">
+                <h2>📋 Weekly Winners</h2>
+                <div id="winnersList">
+                    <p>No winners recorded yet.</p>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="section">
+                <h2>📈 Statistics</h2>
+                <div id="statsDisplay">
+                    <div class="stats-grid">
+                        <div class="stats-card">
+                            <div class="stats-number" id="totalWeeks">0</div>
+                            <div class="stats-label">Weeks Completed</div>
+                        </div>
+                        <div class="stats-card">
+                            <div class="stats-number" id="totalPayout">$0</div>
+                            <div class="stats-label">Total Paid Out</div>
+                        </div>
+                        <div class="stats-card">
+                            <div class="stats-number" id="highestScore">0</div>
+                            <div class="stats-label">Highest Score</div>
+                        </div>
+                        <div class="stats-card">
+                            <div class="stats-number" id="averageScore">0</div>
+                            <div class="stats-label">Average Score</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Section -->
+            <div class="section">
+                <h2>🥇 Leaderboard</h2>
+                <div id="leaderboard">
+                    <p>No data available yet.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
         let authTokens = null;
+        let winners = [];
+        let prizeSettings = {
+            weekly: 0,
+            season: 0
+        };
 
-        // Load saved auth tokens
+        // Initialize the application
         document.addEventListener('DOMContentLoaded', function () {
+            // Check for saved auth tokens
             const saved = localStorage.getItem('yahooAuthTokens');
             if (saved) {
-                authTokens = JSON.parse(saved);
-                updateAuthStatus('Authenticated! Ready to fetch league data.', 'success');
-                document.getElementById('authBtn').style.display = 'none';
-                document.getElementById('testBtn').style.display = 'inline-block';
-                document.getElementById('fetchBtn').style.display = 'inline-block';
+                try {
+                    authTokens = JSON.parse(saved);
+                    updateAuthStatus('Authenticated! Ready to fetch league data.', 'success');
+                    document.getElementById('authBtn').style.display = 'none';
+                    document.getElementById('testBtn').style.display = 'inline-block';
+                    document.getElementById('fetchBtn').style.display = 'inline-block';
+                } catch (error) {
+                    console.error('Error parsing saved tokens:', error);
+                    localStorage.removeItem('yahooAuthTokens');
+                }
             }
 
-            // Load previous functionality
+            // Check for auth callback
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const error = urlParams.get('error');
+            
+            if (error) {
+                updateAuthStatus(`Authentication error: ${error}`, 'error');
+            } else if (code) {
+                exchangeCodeForToken(code);
+            }
+
+            // Initialize form elements
+            populateWeekDropdown();
             loadData();
             loadPrizeSettings();
             displayWinners();
@@ -97,121 +362,63 @@
             updateStats();
         });
 
+        // Authentication functions
         async function startAuth() {
-  try {
-    updateAuthStatus('Starting authentication...', 'warning');
-    
-    // Step 1: Get auth URL
-    const response = await fetch('/api/auth?step=init');
-    const data = await response.json();
-    
-    if (data.error) {
-      throw new Error(data.error);
-    }
-
-    // Redirect to Yahoo (same window)
-    window.location.href = data.authUrl;
-    
-  } catch (error) {
-    console.error('Auth error:', error);
-    updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
-  }
-}
-
-// Add this to handle the callback
-document.addEventListener('DOMContentLoaded', function() {
-  // Check for auth callback
-  const urlParams = new URLSearchParams(window.location.search);
-  const code = urlParams.get('code');
-  const error = urlParams.get('error');
-  
-  if (error) {
-    updateAuthStatus(`Authentication error: ${error}`, 'error');
-  } else if (code) {
-    // Exchange code for token
-    exchangeCodeForToken(code);
-  }
-  
-  // Rest of your existing code...
-});
-
-async function exchangeCodeForToken(code) {
-  try {
-    updateAuthStatus('Completing authentication...', 'warning');
-    
-    const response = await fetch(`/api/auth?step=verify&code=${code}`);
-    const data = await response.json();
-    
-    if (data.error) {
-      throw new Error(data.error);
-    }
-
-    // Save tokens
-    authTokens = {
-      accessToken: data.accessToken,
-      refreshToken: data.refreshToken,
-      expiresIn: data.expiresIn,
-      timestamp: new Date().toISOString()
-    };
-    
-    localStorage.setItem('yahooAuthTokens', JSON.stringify(authTokens));
-    
-    updateAuthStatus('Authentication successful!', 'success');
-    document.getElementById('authBtn').style.display = 'none';
-    document.getElementById('testBtn').style.display = 'inline-block';
-    document.getElementById('fetchBtn').style.display = 'inline-block';
-    
-    // Clean up URL
-    window.history.replaceState({}, document.title, window.location.pathname);
-    
-  } catch (error) {
-    console.error('Token exchange error:', error);
-    updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
-  }
-}
-        async function handleAuthCallback(event) {
             try {
-                // Extract oauth verifier from callback
-                const urlParams = new URLSearchParams(event.data);
-                const oauthVerifier = urlParams.get('oauth_verifier');
-                const oauthToken = urlParams.get('oauth_token');
+                updateAuthStatus('Starting authentication...', 'warning');
                 
-                if (!oauthVerifier) return;
-
-                updateAuthStatus('Completing authentication...', 'warning');
-
-                const oauthTokenSecret = sessionStorage.getItem('oauthTokenSecret');
+                const response = await fetch('/api/auth?step=init');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
                 
-                // Step 2: Exchange for access token
-                const response = await fetch(
-  `/api/auth?step=verify` +
-  `&oauth_token=${encodeURIComponent(oauthToken)}` +
-  `&oauth_verifier=${encodeURIComponent(oauthVerifier)}` +
-  `&oauth_token_secret=${encodeURIComponent(oauthTokenSecret)}`
-);
-
                 const data = await response.json();
                 
                 if (data.error) {
                     throw new Error(data.error);
                 }
 
-                // Save access tokens
+                window.location.href = data.authUrl;
+                
+            } catch (error) {
+                console.error('Auth error:', error);
+                updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
+            }
+        }
+
+        async function exchangeCodeForToken(code) {
+            try {
+                updateAuthStatus('Completing authentication...', 'warning');
+                
+                const response = await fetch(`/api/auth?step=verify&code=${encodeURIComponent(code)}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
                 authTokens = {
                     accessToken: data.accessToken,
-                    accessTokenSecret: data.accessTokenSecret,
+                    refreshToken: data.refreshToken,
+                    expiresIn: data.expiresIn,
                     timestamp: new Date().toISOString()
                 };
                 
                 localStorage.setItem('yahooAuthTokens', JSON.stringify(authTokens));
                 
-                updateAuthStatus('Authentication successful! Ready to fetch league data.', 'success');
+                updateAuthStatus('Authentication successful!', 'success');
                 document.getElementById('authBtn').style.display = 'none';
                 document.getElementById('testBtn').style.display = 'inline-block';
                 document.getElementById('fetchBtn').style.display = 'inline-block';
                 
+                window.history.replaceState({}, document.title, window.location.pathname);
+                
             } catch (error) {
-                console.error('Auth callback error:', error);
+                console.error('Token exchange error:', error);
                 updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
             }
         }
@@ -225,7 +432,20 @@ async function exchangeCodeForToken(code) {
             try {
                 updateAuthStatus('Testing connection...', 'warning');
                 
-                const response = await fetch(`/api/league-data?accessToken=${authTokens.accessToken}&accessTokenSecret=${authTokens.accessTokenSecret}&week=1`);
+                const params = new URLSearchParams({
+                    accessToken: authTokens.accessToken,
+                    week: '1'
+                });
+                
+                if (authTokens.accessTokenSecret) {
+                    params.append('accessTokenSecret', authTokens.accessTokenSecret);
+                }
+                
+                const response = await fetch(`/api/league-data?${params}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
                 const data = await response.json();
                 
                 if (data.error) {
@@ -251,14 +471,25 @@ async function exchangeCodeForToken(code) {
                 document.getElementById('fetchBtn').classList.add('loading');
                 updateAuthStatus('Fetching league data...', 'warning');
                 
-                const response = await fetch(`/api/league-data?accessToken=${authTokens.accessToken}&accessTokenSecret=${authTokens.accessTokenSecret}`);
+                const params = new URLSearchParams({
+                    accessToken: authTokens.accessToken
+                });
+                
+                if (authTokens.accessTokenSecret) {
+                    params.append('accessTokenSecret', authTokens.accessTokenSecret);
+                }
+                
+                const response = await fetch(`/api/league-data?${params}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
                 const data = await response.json();
                 
                 if (data.error) {
                     throw new Error(data.error);
                 }
 
-                // Display league information
                 displayLeagueInfo(data);
                 updateAuthStatus('League data fetched successfully!', 'success');
                 
@@ -271,66 +502,246 @@ async function exchangeCodeForToken(code) {
         }
 
         function displayLeagueInfo(data) {
-  const container = document.getElementById('leagueInfo');
-  if (!container) {
-    console.warn('leagueInfo container not found');
-    return;
-  }
+            const container = document.getElementById('leagueInfo');
+            if (!container) {
+                console.warn('leagueInfo container not found');
+                return;
+            }
 
-  const leagueName = data.leagueName || '2025 NFL League';
-  const currentWeek = data.currentWeek || 'N/A';
-  const lastUpdated = data.lastUpdated
-    ? new Date(data.lastUpdated).toLocaleDateString()
-    : 'N/A';
+            const leagueName = data.leagueName || '2025 NFL League';
+            const currentWeek = data.currentWeek || 'N/A';
+            const lastUpdated = data.lastUpdated
+                ? new Date(data.lastUpdated).toLocaleDateString()
+                : 'N/A';
 
-  const winnerMarkup = data.weeklyWinner
-    ? `
-      <div class="winner-card" style="margin-top: 20px;">
-        <h3>This Week's High Scorer</h3>
-        <div class="winner-info">
-          <div>
-            <strong>${data.weeklyWinner.team}</strong><br>
-            Manager: ${data.weeklyWinner.manager}<br>
-            Score: ${data.weeklyWinner.score}
-          </div>
-        </div>
-      </div>
-    `
-    : '';
+            const winnerMarkup = data.weeklyWinner
+                ? `
+                <div class="winner-card">
+                    <h3>This Week's High Scorer</h3>
+                    <div class="winner-info">
+                        <div>
+                            <strong>${data.weeklyWinner.team}</strong><br>
+                            Manager: ${data.weeklyWinner.manager}<br>
+                            Score: ${data.weeklyWinner.score}
+                        </div>
+                    </div>
+                </div>
+                `
+                : '';
 
-  container.innerHTML = `
-    <div class="stats-grid">
-      <div class="stats-card">
-        <div class="stats-number">${leagueName}</div>
-        <div class="stats-label">League Name</div>
-      </div>
-      <div class="stats-card">
-        <div class="stats-number">${currentWeek}</div>
-        <div class="stats-label">Current Week</div>
-      </div>
-      <div class="stats-card">
-        <div class="stats-number">${lastUpdated}</div>
-        <div class="stats-label">Last Updated</div>
-      </div>
-    </div>
-    ${winnerMarkup}
-  `;
-}
-
+            container.innerHTML = `
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <div class="stats-number">${leagueName}</div>
+                        <div class="stats-label">League Name</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-number">${currentWeek}</div>
+                        <div class="stats-label">Current Week</div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-number">${lastUpdated}</div>
+                        <div class="stats-label">Last Updated</div>
+                    </div>
+                </div>
+                ${winnerMarkup}
+            `;
+        }
 
         function updateAuthStatus(message, type) {
             const statusEl = document.getElementById('authStatus');
             if (!statusEl) {
                 console.warn('authStatus element not found');
-            return;
+                return;
             }
             statusEl.textContent = message;
             statusEl.className = `api-status status-${type}`;
         }
 
+        // Prize settings functions
+        function savePrizeSettings() {
+            const weekly = parseFloat(document.getElementById('weeklyPrize').value) || 0;
+            const season = parseFloat(document.getElementById('seasonPrize').value) || 0;
+            
+            prizeSettings = { weekly, season };
+            localStorage.setItem('prizeSettings', JSON.stringify(prizeSettings));
+            
+            updatePrizeDisplay();
+            alert('Prize settings saved!');
+        }
 
-        // Include all previous JavaScript functions here...
-        // (loadData, saveData, addWinner, etc.)
+        function loadPrizeSettings() {
+            const saved = localStorage.getItem('prizeSettings');
+            if (saved) {
+                try {
+                    prizeSettings = JSON.parse(saved);
+                    document.getElementById('weeklyPrize').value = prizeSettings.weekly || '';
+                    document.getElementById('seasonPrize').value = prizeSettings.season || '';
+                    updatePrizeDisplay();
+                } catch (error) {
+                    console.error('Error loading prize settings:', error);
+                }
+            }
+        }
+
+        function updatePrizeDisplay() {
+            document.getElementById('currentWeekly').textContent = 
+                prizeSettings.weekly ? `$${prizeSettings.weekly.toFixed(2)}` : 'Not set';
+            document.getElementById('currentSeason').textContent = 
+                prizeSettings.season ? `$${prizeSettings.season.toFixed(2)}` : 'Not set';
+        }
+
+        // Winner management functions
+        function populateWeekDropdown() {
+            const select = document.getElementById('week');
+            select.innerHTML = '<option value="">Select Week</option>';
+            
+            for (let i = 1; i <= 18; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = `Week ${i}`;
+                select.appendChild(option);
+            }
+        }
+
+        function addWinner() {
+            const week = parseInt(document.getElementById('week').value);
+            const teamName = document.getElementById('teamName').value.trim();
+            const managerName = document.getElementById('managerName').value.trim();
+            const score = parseFloat(document.getElementById('score').value);
+
+            if (!week || !teamName || !managerName || isNaN(score)) {
+                alert('Please fill in all fields with valid data.');
+                return;
+            }
+
+            // Check if winner already exists for this week
+            const existingIndex = winners.findIndex(w => w.week === week);
+            if (existingIndex !== -1) {
+                if (!confirm(`A winner already exists for Week ${week}. Do you want to replace it?`)) {
+                    return;
+                }
+                winners[existingIndex] = { week, teamName, managerName, score, date: new Date().toISOString() };
+            } else {
+                winners.push({ week, teamName, managerName, score, date: new Date().toISOString() });
+            }
+
+            saveData();
+            displayWinners();
+            updateStats();
+            updateLeaderboard();
+
+            // Clear form
+            document.getElementById('week').value = '';
+            document.getElementById('teamName').value = '';
+            document.getElementById('managerName').value = '';
+            document.getElementById('score').value = '';
+
+            alert('Winner added successfully!');
+        }
+
+        function displayWinners() {
+            const container = document.getElementById('winnersList');
+            
+            if (winners.length === 0) {
+                container.innerHTML = '<p>No winners recorded yet.</p>';
+                return;
+            }
+
+            const sortedWinners = [...winners].sort((a, b) => b.week - a.week);
+            
+            const html = sortedWinners.map(winner => `
+                <div class="winner-card" style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: between; align-items: center;">
+                        <div>
+                            <h3 style="margin: 0;">Week ${winner.week}</h3>
+                            <strong>${winner.teamName}</strong><br>
+                            Manager: ${winner.managerName}<br>
+                            Score: ${winner.score.toFixed(2)}<br>
+                            <small>Added: ${new Date(winner.date).toLocaleDateString()}</small>
+                        </div>
+                        <button class="btn" onclick="removeWinner(${winner.week})" 
+                                style="background: #e74c3c; margin-left: auto;">Remove</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.innerHTML = html;
+        }
+
+        function removeWinner(week) {
+            if (!confirm(`Are you sure you want to remove the winner for Week ${week}?`)) {
+                return;
+            }
+            
+            winners = winners.filter(w => w.week !== week);
+            saveData();
+            displayWinners();
+            updateStats();
+            updateLeaderboard();
+        }
+
+        // Statistics and leaderboard functions
+        function updateStats() {
+            const totalWeeks = winners.length;
+            const totalPayout = totalWeeks * (prizeSettings.weekly || 0);
+            const scores = winners.map(w => w.score);
+            const highestScore = scores.length > 0 ? Math.max(...scores) : 0;
+            const averageScore = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
+
+            document.getElementById('totalWeeks').textContent = totalWeeks;
+            document.getElementById('totalPayout').textContent = `$${totalPayout.toFixed(2)}`;
+            document.getElementById('highestScore').textContent = highestScore.toFixed(2);
+            document.getElementById('averageScore').textContent = averageScore.toFixed(2);
+        }
+
+        function updateLeaderboard() {
+            const container = document.getElementById('leaderboard');
+            
+            if (winners.length === 0) {
+                container.innerHTML = '<p>No data available yet.</p>';
+                return;
+            }
+
+            // Count wins per manager
+            const managerWins = {};
+            winners.forEach(winner => {
+                const key = `${winner.managerName} (${winner.teamName})`;
+                managerWins[key] = (managerWins[key] || 0) + 1;
+            });
+
+            // Sort by win count
+            const sortedManagers = Object.entries(managerWins)
+                .sort(([,a], [,b]) => b - a)
+                .slice(0, 10); // Top 10
+
+            const html = sortedManagers.map(([manager, wins], index) => `
+                <div style="display: flex; justify-content: between; align-items: center; 
+                           padding: 10px; margin: 5px 0; background: #f8f9fa; border-radius: 5px;">
+                    <span><strong>#${index + 1}</strong> ${manager}</span>
+                    <span style="font-weight: bold; color: #3498db;">${wins} win${wins !== 1 ? 's' : ''}</span>
+                </div>
+            `).join('');
+            
+            container.innerHTML = html;
+        }
+
+        // Data persistence functions
+        function saveData() {
+            localStorage.setItem('fantasyWinners', JSON.stringify(winners));
+        }
+
+        function loadData() {
+            const saved = localStorage.getItem('fantasyWinners');
+            if (saved) {
+                try {
+                    winners = JSON.parse(saved);
+                } catch (error) {
+                    console.error('Error loading winners data:', error);
+                    winners = [];
+                }
+            }
+        }
     </script>
 </body>
 

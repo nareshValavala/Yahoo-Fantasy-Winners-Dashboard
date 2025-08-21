@@ -10,7 +10,8 @@ module.exports = async function handler(req, res) {
   
   if (code) {
     console.log('Authorization code received, redirecting...');
-    return res.redirect(`/?code=${code}`);
+    // Make sure code is passed in URL
+    return res.redirect(`/?code=${encodeURIComponent(code)}`);
   }
   
   console.error('No code or error received');
