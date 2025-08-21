@@ -9,7 +9,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
-    "axios": "^1.6.0",
+    "axios": "^1.6.7",
     "node-fetch": "^3.3.2",
     "oauth": "^0.10.0",
     "querystring": "^0.2.1",
@@ -19,6 +19,6 @@
     "vercel": "^32.0.0"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   }
 }

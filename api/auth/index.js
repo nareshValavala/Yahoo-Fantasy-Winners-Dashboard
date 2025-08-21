@@ -1,7 +1,7 @@
-import axios from 'axios';
-import qs from 'querystring';
+const axios = require('axios');
+const qs = require('querystring');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   const { method, query } = req;
 
   // CORS headers
@@ -57,4 +57,4 @@ export default async function handler(req, res) {
     console.error('Auth error:', err.response?.data || err.message);
     res.status(500).json({ error: 'Authentication failed', details: err.response?.data || err.message });
   }
-}
+};
