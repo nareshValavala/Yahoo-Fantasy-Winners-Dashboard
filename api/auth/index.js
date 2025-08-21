@@ -20,7 +20,7 @@ module.exports = async function handler(req, res) {
     if (query.step === 'init') {
       const authUrl = `https://api.login.yahoo.com/oauth2/request_auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(
         redirectUri
-      )}&response_type=code&scope=fantasy-sports-read%20fantasy-sports-write`;
+      )}&response_type=code&scope=fspt-r`;
 
       return res.json({ authUrl, message: 'Visit the authUrl to authorize the app' });
     }

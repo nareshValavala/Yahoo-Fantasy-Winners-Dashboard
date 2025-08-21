@@ -98,35 +98,77 @@
         });
 
         async function startAuth() {
-            try {
-                updateAuthStatus('Starting authentication...', 'warning');
+  try {
+    updateAuthStatus('Starting authentication...', 'warning');
+    
+    // Step 1: Get auth URL
+    const response = await fetch('/api/auth?step=init');
+    const data = await response.json();
+    
+    if (data.error) {
+      throw new Error(data.error);
+    }
 
-                // Step 1: Get request token
-                const response = await fetch('/api/auth?step=init');
-                const data = await response.json();
+    // Redirect to Yahoo (same window)
+    window.location.href = data.authUrl;
+    
+  } catch (error) {
+    console.error('Auth error:', error);
+    updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
+  }
+}
 
-                if (data.error) {
-                    throw new Error(data.error);
-                }
+// Add this to handle the callback
+document.addEventListener('DOMContentLoaded', function() {
+  // Check for auth callback
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get('code');
+  const error = urlParams.get('error');
+  
+  if (error) {
+    updateAuthStatus(`Authentication error: ${error}`, 'error');
+  } else if (code) {
+    // Exchange code for token
+    exchangeCodeForToken(code);
+  }
+  
+  // Rest of your existing code...
+});
 
-                // Store temporary tokens
-                sessionStorage.setItem('oauthTokenSecret', data.oauthTokenSecret);
+async function exchangeCodeForToken(code) {
+  try {
+    updateAuthStatus('Completing authentication...', 'warning');
+    
+    const response = await fetch(`/api/auth?step=verify&code=${code}`);
+    const data = await response.json();
+    
+    if (data.error) {
+      throw new Error(data.error);
+    }
 
-                // Open Yahoo auth in new window
-                const authWindow = window.open(data.authUrl, 'yahoo-auth', 'width=600,height=600');
-
-                updateAuthStatus('Authorization window opened. Please authorize the app and return here.', 'warning');
-
-                // Listen for auth completion
-                window.addEventListener('message', handleAuthCallback);
-
-            } catch (error) {
-                console.error('Auth error:', error);
-                updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
-
-            }
-        }
-
+    // Save tokens
+    authTokens = {
+      accessToken: data.accessToken,
+      refreshToken: data.refreshToken,
+      expiresIn: data.expiresIn,
+      timestamp: new Date().toISOString()
+    };
+    
+    localStorage.setItem('yahooAuthTokens', JSON.stringify(authTokens));
+    
+    updateAuthStatus('Authentication successful!', 'success');
+    document.getElementById('authBtn').style.display = 'none';
+    document.getElementById('testBtn').style.display = 'inline-block';
+    document.getElementById('fetchBtn').style.display = 'inline-block';
+    
+    // Clean up URL
+    window.history.replaceState({}, document.title, window.location.pathname);
+    
+  } catch (error) {
+    console.error('Token exchange error:', error);
+    updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
+  }
+}
         async function handleAuthCallback(event) {
             try {
                 // Extract oauth verifier from callback
