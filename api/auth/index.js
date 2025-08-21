@@ -13,14 +13,20 @@ module.exports = async function handler(req, res) {
 
   const clientId = process.env.YAHOO_CLIENT_ID;
   const clientSecret = process.env.YAHOO_CLIENT_SECRET;
-  const redirectUri = `${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'}/api/auth/callback`;
+  
+  // Use environment variable or construct from request headers
+  const redirectUri = process.env.YAHOO_REDIRECT_URI || 
+    `${req.headers['x-forwarded-proto'] || 'https'}://${req.headers.host}/api/auth/callback`;
 
   try {
     // Step 1: Redirect user to Yahoo login
     if (query.step === 'init') {
-      const authUrl = `https://api.login.yahoo.com/oauth2/request_auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(
-        redirectUri
-      )}&response_type=code&scope=fspt-r`;
+      const authUrl = `https://api.login.yahoo.com/oauth2/request_auth?` +
+        `client_id=${clientId}&` +
+        `redirect_uri=${encodeURIComponent(redirectUri)}&` +
+        `response_type=code&` +
+        `scope=fspt-w&` + // Changed from fspt-r to fspt-w for read/write access
+        `language=en-us`;
 
       return res.json({ authUrl, message: 'Visit the authUrl to authorize the app' });
     }
@@ -39,7 +45,12 @@ module.exports = async function handler(req, res) {
           code,
           grant_type: 'authorization_code'
         }),
-        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+        { 
+          headers: { 
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json'
+          } 
+        }
       );
 
       const { access_token, refresh_token, expires_in } = tokenResponse.data;
@@ -55,6 +66,9 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'Invalid step parameter' });
   } catch (err) {
     console.error('Auth error:', err.response?.data || err.message);
-    res.status(500).json({ error: 'Authentication failed', details: err.response?.data || err.message });
+    res.status(500).json({ 
+      error: 'Authentication failed', 
+      details: err.response?.data || err.message 
+    });
   }
 };

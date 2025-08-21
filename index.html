@@ -367,13 +367,13 @@
             try {
                 updateAuthStatus('Starting authentication...', 'warning');
                 
-                const response = await fetch('/api/auth?step=init');
+                // Get client ID and auth URL from server
+                const response = await fetch('/api/auth/init');
                 if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    throw new Error(`Failed to get auth URL: ${response.status}`);
                 }
                 
                 const data = await response.json();
-                
                 if (data.error) {
                     throw new Error(data.error);
                 }
@@ -390,7 +390,22 @@
             try {
                 updateAuthStatus('Completing authentication...', 'warning');
                 
-                const response = await fetch(`/api/auth?step=verify&code=${encodeURIComponent(code)}`);
+                const clientId = 'dj0yJmk9TzdZU21uZ1Vqa01pJmQ9WVdrOWNEQldOVUZuVEhjbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWY2';
+                const redirectUri = window.location.origin + '/api/auth/callback';
+                
+                // Since we can't make direct calls to Yahoo's token endpoint from the browser due to CORS,
+                // we need to handle this through your Vercel API route
+                const response = await fetch('/api/auth/token', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        code: code,
+                        redirectUri: redirectUri
+                    })
+                });
+                
                 if (!response.ok) {
                     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
@@ -402,9 +417,9 @@
                 }
 
                 authTokens = {
-                    accessToken: data.accessToken,
-                    refreshToken: data.refreshToken,
-                    expiresIn: data.expiresIn,
+                    accessToken: data.access_token,
+                    refreshToken: data.refresh_token,
+                    expiresIn: data.expires_in,
                     timestamp: new Date().toISOString()
                 };
                 

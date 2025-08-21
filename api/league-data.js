@@ -18,7 +18,7 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    const leagueId = process.env.LEAGUE_ID;
+    const leagueId = process.env.LEAGUE_ID || '1236511'; // Your league ID as fallback
     const currentWeek = week || getCurrentNFLWeek();
 
     // Yahoo Fantasy API endpoints
@@ -89,7 +89,7 @@ function formatYahooData(league, standings, matchups, week) {
 
 function getCurrentNFLWeek() {
   const now = new Date();
-  const seasonStart = new Date('2024-09-05'); // Adjust per season
+  const seasonStart = new Date('2025-09-04'); // Updated for 2025 season
   const weeksSinceStart = Math.floor((now - seasonStart) / (7 * 24 * 60 * 60 * 1000));
   return Math.max(1, Math.min(18, weeksSinceStart + 1));
 }
