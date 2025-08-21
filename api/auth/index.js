@@ -1,18 +1,7 @@
+import axios from 'axios';
+import qs from 'querystring';
 
-
-const { OAuth } = require('oauth');
-const oauth = new OAuth(
-   'https://api.login.yahoo.com/oauth2/request_auth',
-  'https://api.login.yahoo.com/oauth2/get_token',
-  process.env.YAHOO_CLIENT_ID,
-  process.env.YAHOO_CLIENT_SECRET,
-  '1.0A',
-  `${process.env.VERCEL_URL || 'http://localhost:3000'}/api/auth/callback`,
-  'HMAC-SHA1'
-);
-
-module.exports = async function handler(req, res) {
-
+export default async function handler(req, res) {
   const { method, query } = req;
 
   // CORS headers
@@ -20,64 +9,52 @@ module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  if (method === 'OPTIONS') {
-    return res.status(200).end();
-  }
+  if (method === 'OPTIONS') return res.status(200).end();
+
+  const clientId = process.env.YAHOO_CLIENT_ID;
+  const clientSecret = process.env.YAHOO_CLIENT_SECRET;
+  const redirectUri = `${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'}/api/auth/callback`;
 
   try {
+    // Step 1: Redirect user to Yahoo login
     if (query.step === 'init') {
-      // Step 1: Get request token
-      return new Promise((resolve) => {
-        oauth.getOAuthRequestToken((error, oauthToken, oauthTokenSecret) => {
-          if (error) {
-            console.error('OAuth request token error:', error);
-            return res.status(500).json({ error: 'Failed to get request token' });
-          }
+      const authUrl = `https://api.login.yahoo.com/oauth2/request_auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(
+        redirectUri
+      )}&response_type=code&scope=fantasy-sports-read%20fantasy-sports-write`;
 
-          // Store token secret (in production, use a database)
-          // For now, we'll return it to be stored client-side temporarily
-          const authUrl = `https://api.login.yahoo.com/oauth/v2/request_auth?oauth_token=${oauthToken}`;
-          
-          res.json({
-            authUrl,
-            oauthToken,
-            oauthTokenSecret,
-            message: 'Visit the authUrl to authorize, then return with the verifier'
-          });
-          resolve();
-        });
-      });
+      return res.json({ authUrl, message: 'Visit the authUrl to authorize the app' });
     }
 
+    // Step 2: Exchange code for access token
     if (query.step === 'verify') {
-      // Step 2: Exchange verifier for access token
-      const { oauth_token, oauth_verifier, oauth_token_secret } = query;
-      
-      return new Promise((resolve) => {
-        oauth.getOAuthAccessToken(
-          oauth_token,
-          oauth_token_secret,
-          oauth_verifier,
-          (error, oauthAccessToken, oauthAccessTokenSecret) => {
-            if (error) {
-              console.error('OAuth access token error:', error);
-              return res.status(500).json({ error: 'Failed to get access token' });
-            }
+      const { code } = query;
+      if (!code) return res.status(400).json({ error: 'Missing code parameter' });
 
-            res.json({
-              accessToken: oauthAccessToken,
-              accessTokenSecret: oauthAccessTokenSecret,
-              message: 'Authentication successful! Store these tokens securely.'
-            });
-            resolve();
-          }
-        );
+      const tokenResponse = await axios.post(
+        'https://api.login.yahoo.com/oauth2/get_token',
+        qs.stringify({
+          client_id: clientId,
+          client_secret: clientSecret,
+          redirect_uri: redirectUri,
+          code,
+          grant_type: 'authorization_code'
+        }),
+        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+      );
+
+      const { access_token, refresh_token, expires_in } = tokenResponse.data;
+
+      return res.json({
+        accessToken: access_token,
+        refreshToken: refresh_token,
+        expiresIn: expires_in,
+        message: 'Authentication successful! Store these tokens securely.'
       });
     }
 
-    res.status(400).json({ error: 'Invalid step parameter' });
-  } catch (error) {
-    console.error('Auth error:', error);
-    res.status(500).json({ error: 'Authentication failed' });
+    return res.status(400).json({ error: 'Invalid step parameter' });
+  } catch (err) {
+    console.error('Auth error:', err.response?.data || err.message);
+    res.status(500).json({ error: 'Authentication failed', details: err.response?.data || err.message });
   }
 }
