@@ -1,6 +1,6 @@
 // This runs automatically every Tuesday at 12 PM via Vercel Cron
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Verify this is a legitimate cron request
   if (req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) {
     return res.status(401).json({ error: 'Unauthorized' });

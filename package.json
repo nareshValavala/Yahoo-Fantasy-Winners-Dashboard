@@ -4,10 +4,11 @@
   "description": "Yahoo Fantasy NFL League Tracker",
   "main": "index.html",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Static site - no build needed'",
-    "deploy": "vercel --prod"
-  },
+  "start": "vercel dev",
+  "build": "echo 'Static site - no build needed'",
+  "deploy": "vercel --prod"
+}
+,
   "dependencies": {
     "node-fetch": "^3.3.2",
     "oauth": "^0.10.0",
