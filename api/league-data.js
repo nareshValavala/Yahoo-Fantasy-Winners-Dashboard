@@ -4,8 +4,8 @@ const { OAuth } = require('oauth');
 const fetch = require('node-fetch');
 
 const oauth = new OAuth(
-  'https://api.login.yahoo.com/oauth/v2/get_request_token',
-  'https://api.login.yahoo.com/oauth/v2/get_token',
+  'https://api.login.yahoo.com/oauth2/request_auth',
+  'https://api.login.yahoo.com/oauth2/get_token',
   process.env.YAHOO_CLIENT_ID,
   process.env.YAHOO_CLIENT_SECRET,
   '1.0A',
