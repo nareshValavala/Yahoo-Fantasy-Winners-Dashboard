@@ -1,0 +1,19 @@
+{
+  "name": "yahoo-fantasy-tracker",
+  "version": "1.0.0",
+  "description": "Yahoo Fantasy NFL League Tracker",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "oauth": "^0.10.0",
+    "querystring": "^0.2.1"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

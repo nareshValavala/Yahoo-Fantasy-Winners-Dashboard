@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahoo Fantasy NFL Tracker</title>
+    <style>
+        /* Previous styles plus new ones */
+        .auth-section {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            color: #333;
+        }
+
+        .api-status {
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏈 Yahoo Fantasy NFL Tracker</h1>
+            <p>Automated tracking for your 2025 NFL League (ID# 1236511)</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Yahoo Authentication Section -->
+            <div class="section auth-section">
+                <h2>🔐 Yahoo Authentication</h2>
+                <div id="authStatus" class="api-status status-warning">
+                    Not authenticated. Click below to connect to Yahoo Fantasy.
+                </div>
+                <button id="authBtn" class="btn" onclick="startAuth()">Connect to Yahoo</button>
+                <button id="testBtn" class="btn" onclick="testConnection()" style="display: none;">Test
+                    Connection</button>
+                <button id="fetchBtn" class="btn" onclick="fetchLeagueData()" style="display: none;">Fetch League
+                    Data</button>
+            </div>
+
+            <!-- League Information -->
+            <div class="section">
+                <h2>📊 League Information</h2>
+                <div id="leagueInfo">
+                    <p>Connect to Yahoo to see your league information.</p>
+                </div>
+            </div>
+
+            <!-- Rest of the previous HTML sections... -->
+            <!-- (Prize Settings, Add Winner, Stats, etc.) -->
+        </div>
+    </div>
+
+    <script>
+        let authTokens = null;
+
+        // Load saved auth tokens
+        document.addEventListener('DOMContentLoaded', function () {
+            const saved = localStorage.getItem('yahooAuthTokens');
+            if (saved) {
+                authTokens = JSON.parse(saved);
+                updateAuthStatus('Authenticated! Ready to fetch league data.', 'success');
+                document.getElementById('authBtn').style.display = 'none';
+                document.getElementById('testBtn').style.display = 'inline-block';
+                document.getElementById('fetchBtn').style.display = 'inline-block';
+            }
+
+            // Load previous functionality
+            loadData();
+            loadPrizeSettings();
+            displayWinners();
+            updateLeaderboard();
+            updateStats();
+        });
+
+        async function startAuth() {
+            try {
+                updateAuthStatus('Starting authentication...', 'warning');
+
+                // Step 1: Get request token
+                const response = await fetch('/api/auth?step=init');
+                const data = await response.json();
+
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                // Store temporary tokens
+                sessionStorage.setItem('oauthTokenSecret', data.oauthTokenSecret);
+
+                // Open Yahoo auth in new window
+                const authWindow = window.open(data.authUrl, 'yahoo-auth', 'width=600,height=600');
+
+                updateAuthStatus('Authorization window opened. Please authorize the app and return here.', 'warning');
+
+                // Listen for auth completion
+                window.addEventListener('message', handleAuthCallback);
+
+            } catch (error) {
+                console.error('Auth error:', error);
+                updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
+
+            }
+        }
+
+        async function handleAuthCallback(event) {
+            try {
+                // Extract oauth verifier from callback
+                const urlParams = new URLSearchParams(event.data);
+                const oauthVerifier = urlParams.get('oauth_verifier');
+                const oauthToken = urlParams.get('oauth_token');
+                
+                if (!oauthVerifier) return;
+
+                updateAuthStatus('Completing authentication...', 'warning');
+
+                const oauthTokenSecret = sessionStorage.getItem('oauthTokenSecret');
+                
+                // Step 2: Exchange for access token
+                const response = await fetch(
+  `/api/auth?step=verify` +
+  `&oauth_token=${encodeURIComponent(oauthToken)}` +
+  `&oauth_verifier=${encodeURIComponent(oauthVerifier)}` +
+  `&oauth_token_secret=${encodeURIComponent(oauthTokenSecret)}`
+);
+
+                const data = await response.json();
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                // Save access tokens
+                authTokens = {
+                    accessToken: data.accessToken,
+                    accessTokenSecret: data.accessTokenSecret,
+                    timestamp: new Date().toISOString()
+                };
+                
+                localStorage.setItem('yahooAuthTokens', JSON.stringify(authTokens));
+                
+                updateAuthStatus('Authentication successful! Ready to fetch league data.', 'success');
+                document.getElementById('authBtn').style.display = 'none';
+                document.getElementById('testBtn').style.display = 'inline-block';
+                document.getElementById('fetchBtn').style.display = 'inline-block';
+                
+            } catch (error) {
+                console.error('Auth callback error:', error);
+                updateAuthStatus(`Authentication failed: ${error.message}`, 'error');
+            }
+        }
+
+        async function testConnection() {
+            if (!authTokens) {
+                updateAuthStatus('No authentication tokens found.', 'error');
+                return;
+            }
+
+            try {
+                updateAuthStatus('Testing connection...', 'warning');
+                
+                const response = await fetch(`/api/league-data?accessToken=${authTokens.accessToken}&accessTokenSecret=${authTokens.accessTokenSecret}&week=1`);
+                const data = await response.json();
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                updateAuthStatus('Connection successful! League data accessible.', 'success');
+                console.log('Test data:', data);
+                
+            } catch (error) {
+                console.error('Connection test error:', error);
+                updateAuthStatus(`Connection failed: ${error.message}`, 'error');
+            }
+        }
+
+        async function fetchLeagueData() {
+            if (!authTokens) {
+                alert('Please authenticate first.');
+                return;
+            }
+
+            try {
+                document.getElementById('fetchBtn').classList.add('loading');
+                updateAuthStatus('Fetching league data...', 'warning');
+                
+                const response = await fetch(`/api/league-data?accessToken=${authTokens.accessToken}&accessTokenSecret=${authTokens.accessTokenSecret}`);
+                const data = await response.json();
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                // Display league information
+                displayLeagueInfo(data);
+                updateAuthStatus('League data fetched successfully!', 'success');
+                
+            } catch (error) {
+                console.error('Fetch error:', error);
+                updateAuthStatus(`Failed to fetch data: ${error.message}`, 'error');
+            } finally {
+                document.getElementById('fetchBtn').classList.remove('loading');
+            }
+        }
+
+        function displayLeagueInfo(data) {
+  const container = document.getElementById('leagueInfo');
+  if (!container) {
+    console.warn('leagueInfo container not found');
+    return;
+  }
+
+  const leagueName = data.leagueName || '2025 NFL League';
+  const currentWeek = data.currentWeek || 'N/A';
+  const lastUpdated = data.lastUpdated
+    ? new Date(data.lastUpdated).toLocaleDateString()
+    : 'N/A';
+
+  const winnerMarkup = data.weeklyWinner
+    ? `
+      <div class="winner-card" style="margin-top: 20px;">
+        <h3>This Week's High Scorer</h3>
+        <div class="winner-info">
+          <div>
+            <strong>${data.weeklyWinner.team}</strong><br>
+            Manager: ${data.weeklyWinner.manager}<br>
+            Score: ${data.weeklyWinner.score}
+          </div>
+        </div>
+      </div>
+    `
+    : '';
+
+  container.innerHTML = `
+    <div class="stats-grid">
+      <div class="stats-card">
+        <div class="stats-number">${leagueName}</div>
+        <div class="stats-label">League Name</div>
+      </div>
+      <div class="stats-card">
+        <div class="stats-number">${currentWeek}</div>
+        <div class="stats-label">Current Week</div>
+      </div>
+      <div class="stats-card">
+        <div class="stats-number">${lastUpdated}</div>
+        <div class="stats-label">Last Updated</div>
+      </div>
+    </div>
+    ${winnerMarkup}
+  `;
+}
+
+
+        function updateAuthStatus(message, type) {
+            const statusEl = document.getElementById('authStatus');
+            if (!statusEl) {
+                console.warn('authStatus element not found');
+            return;
+            }
+            statusEl.textContent = message;
+            statusEl.className = `api-status status-${type}`;
+        }
+
+
+        // Include all previous JavaScript functions here...
+        // (loadData, saveData, addWinner, etc.)
+    </script>
+</body>
+
+</html>
