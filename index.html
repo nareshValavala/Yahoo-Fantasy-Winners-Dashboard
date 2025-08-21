@@ -212,8 +212,21 @@
         </div>
 
         <div class="main-content">
-            <!-- Yahoo Authentication Section -->
-            <div class="section auth-section">
+            <!-- Admin Login Section -->
+            <div class="section" id="adminLoginSection">
+                <h2>🔐 Admin Access</h2>
+                <div class="form-group">
+                    <label for="adminPassword">Admin Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter admin password">
+                </div>
+                <button class="btn" onclick="checkAdminAccess()">Login as Admin</button>
+                <p style="margin-top: 10px; color: #666; font-size: 0.9em;">
+                    Regular users can view all information below. Admin access required for editing.
+                </p>
+            </div>
+
+            <!-- Yahoo Authentication Section (Admin Only) -->
+            <div class="section auth-section admin-only" style="display: none;">
                 <h2>🔐 Yahoo Authentication</h2>
                 <div id="authStatus" class="api-status status-warning">
                     Not authenticated. Click below to connect to Yahoo Fantasy.
@@ -234,24 +247,40 @@
             <!-- Prize Settings Section -->
             <div class="section">
                 <h2>💰 Prize Settings</h2>
-                <div class="form-group">
-                    <label for="weeklyPrize">Weekly High Score Prize ($)</label>
-                    <input type="number" id="weeklyPrize" placeholder="Enter weekly prize amount" min="0" step="0.01">
+                <div class="admin-only" style="display: none;">
+                    <div class="form-group">
+                        <label for="weeklyPrize">Weekly High Score Prize ($)</label>
+                        <input type="number" id="weeklyPrize" placeholder="Weekly prize amount" min="0" step="0.01">
+                        <small style="color: #666;">Paid out for weeks 1-14</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstPlacePrize">1st Place Prize ($)</label>
+                        <input type="number" id="firstPlacePrize" placeholder="Championship prize" min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="secondPlacePrize">2nd Place Prize ($)</label>
+                        <input type="number" id="secondPlacePrize" placeholder="Runner-up prize" min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="thirdPlacePrize">3rd Place Prize ($)</label>
+                        <input type="number" id="thirdPlacePrize" placeholder="Third place prize" min="0" step="0.01">
+                    </div>
+                    <button class="btn" onclick="savePrizeSettings()">Save Prize Settings</button>
                 </div>
-                <div class="form-group">
-                    <label for="seasonPrize">Season Champion Prize ($)</label>
-                    <input type="number" id="seasonPrize" placeholder="Enter season prize amount" min="0" step="0.01">
-                </div>
-                <button class="btn" onclick="savePrizeSettings()">Save Prize Settings</button>
                 <div id="prizeDisplay" style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px;">
-                    <strong>Current Settings:</strong><br>
-                    Weekly Prize: <span id="currentWeekly">Not set</span><br>
-                    Season Prize: <span id="currentSeason">Not set</span>
+                    <strong>Prize Structure:</strong><br>
+                    Weekly Prize (Weeks 1-14): <span id="currentWeekly">Not set</span><br>
+                    1st Place: <span id="currentFirst">Not set</span><br>
+                    2nd Place: <span id="currentSecond">Not set</span><br>
+                    3rd Place: <span id="currentThird">Not set</span><br>
+                    <div style="margin-top: 10px; font-weight: bold; color: #2c3e50;">
+                        Total Prize Pool: <span id="totalPool">$0.00</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Add Winner Section -->
-            <div class="section">
+            <!-- Add Winner Section (Admin Only) -->
+            <div class="section admin-only" style="display: none;">
                 <h2>🏆 Add Weekly Winner</h2>
                 <div class="form-group">
                     <label for="week">Week</label>
@@ -293,7 +322,7 @@
                         </div>
                         <div class="stats-card">
                             <div class="stats-number" id="totalPayout">$0</div>
-                            <div class="stats-label">Total Paid Out</div>
+                            <div class="stats-label">Weekly Prizes Paid</div>
                         </div>
                         <div class="stats-card">
                             <div class="stats-number" id="highestScore">0</div>
@@ -314,6 +343,12 @@
                     <p>No data available yet.</p>
                 </div>
             </div>
+
+            <!-- Admin Status -->
+            <div id="adminStatus" style="position: fixed; top: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 8px 12px; border-radius: 5px; font-size: 0.8em; display: none;">
+                <span>Admin Mode</span>
+                <button onclick="logoutAdmin()" style="margin-left: 10px; background: #e74c3c; border: none; color: white; padding: 2px 6px; border-radius: 3px; cursor: pointer;">Logout</button>
+            </div>
         </div>
     </div>
 
@@ -322,11 +357,22 @@
         let winners = [];
         let prizeSettings = {
             weekly: 0,
-            season: 0
+            firstPlace: 0,
+            secondPlace: 0,
+            thirdPlace: 0
         };
+        let isAdmin = false;
+        const adminPassword = 'fantasy2025'; // Change this to your preferred password
 
         // Initialize the application
         document.addEventListener('DOMContentLoaded', function () {
+            // Check for saved admin status
+            const savedAdmin = localStorage.getItem('isAdmin');
+            if (savedAdmin === 'true') {
+                isAdmin = true;
+                showAdminSections();
+            }
+
             // Check for saved auth tokens
             const saved = localStorage.getItem('yahooAuthTokens');
             if (saved) {
@@ -361,6 +407,55 @@
             updateLeaderboard();
             updateStats();
         });
+
+        // Admin access functions
+        function checkAdminAccess() {
+            const enteredPassword = document.getElementById('adminPassword').value;
+            
+            if (enteredPassword === adminPassword) {
+                isAdmin = true;
+                localStorage.setItem('isAdmin', 'true');
+                showAdminSections();
+                document.getElementById('adminPassword').value = '';
+                alert('Admin access granted!');
+            } else {
+                alert('Incorrect password. Admin access denied.');
+                document.getElementById('adminPassword').value = '';
+            }
+        }
+
+        function showAdminSections() {
+            // Hide admin login section
+            document.getElementById('adminLoginSection').style.display = 'none';
+            
+            // Show all admin-only sections
+            const adminSections = document.querySelectorAll('.admin-only');
+            adminSections.forEach(section => {
+                section.style.display = 'block';
+            });
+            
+            // Show admin status indicator
+            document.getElementById('adminStatus').style.display = 'block';
+        }
+
+        function logoutAdmin() {
+            isAdmin = false;
+            localStorage.removeItem('isAdmin');
+            
+            // Show admin login section
+            document.getElementById('adminLoginSection').style.display = 'block';
+            
+            // Hide all admin-only sections
+            const adminSections = document.querySelectorAll('.admin-only');
+            adminSections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Hide admin status indicator
+            document.getElementById('adminStatus').style.display = 'none';
+            
+            alert('Logged out of admin mode');
+        }
 
         // Authentication functions
         async function startAuth() {
@@ -573,12 +668,18 @@
             statusEl.className = `api-status status-${type}`;
         }
 
-        // Prize settings functions
         function savePrizeSettings() {
+            if (!isAdmin) {
+                alert('Admin access required to modify prize settings.');
+                return;
+            }
+
             const weekly = parseFloat(document.getElementById('weeklyPrize').value) || 0;
-            const season = parseFloat(document.getElementById('seasonPrize').value) || 0;
+            const firstPlace = parseFloat(document.getElementById('firstPlacePrize').value) || 0;
+            const secondPlace = parseFloat(document.getElementById('secondPlacePrize').value) || 0;
+            const thirdPlace = parseFloat(document.getElementById('thirdPlacePrize').value) || 0;
             
-            prizeSettings = { weekly, season };
+            prizeSettings = { weekly, firstPlace, secondPlace, thirdPlace };
             localStorage.setItem('prizeSettings', JSON.stringify(prizeSettings));
             
             updatePrizeDisplay();
@@ -591,7 +692,9 @@
                 try {
                     prizeSettings = JSON.parse(saved);
                     document.getElementById('weeklyPrize').value = prizeSettings.weekly || '';
-                    document.getElementById('seasonPrize').value = prizeSettings.season || '';
+                    document.getElementById('firstPlacePrize').value = prizeSettings.firstPlace || '';
+                    document.getElementById('secondPlacePrize').value = prizeSettings.secondPlace || '';
+                    document.getElementById('thirdPlacePrize').value = prizeSettings.thirdPlace || '';
                     updatePrizeDisplay();
                 } catch (error) {
                     console.error('Error loading prize settings:', error);
@@ -601,9 +704,20 @@
 
         function updatePrizeDisplay() {
             document.getElementById('currentWeekly').textContent = 
-                prizeSettings.weekly ? `$${prizeSettings.weekly.toFixed(2)}` : 'Not set';
-            document.getElementById('currentSeason').textContent = 
-                prizeSettings.season ? `$${prizeSettings.season.toFixed(2)}` : 'Not set';
+                prizeSettings.weekly ? `${prizeSettings.weekly.toFixed(2)}` : 'Not set';
+            document.getElementById('currentFirst').textContent = 
+                prizeSettings.firstPlace ? `${prizeSettings.firstPlace.toFixed(2)}` : 'Not set';
+            document.getElementById('currentSecond').textContent = 
+                prizeSettings.secondPlace ? `${prizeSettings.secondPlace.toFixed(2)}` : 'Not set';
+            document.getElementById('currentThird').textContent = 
+                prizeSettings.thirdPlace ? `${prizeSettings.thirdPlace.toFixed(2)}` : 'Not set';
+            
+            // Calculate total prize pool
+            const weeklyTotal = (prizeSettings.weekly || 0) * 14; // 14 weeks of weekly prizes
+            const seasonTotal = (prizeSettings.firstPlace || 0) + (prizeSettings.secondPlace || 0) + (prizeSettings.thirdPlace || 0);
+            const totalPool = weeklyTotal + seasonTotal;
+            
+            document.getElementById('totalPool').textContent = `${totalPool.toFixed(2)}`;
         }
 
         // Winner management functions
@@ -614,12 +728,24 @@
             for (let i = 1; i <= 18; i++) {
                 const option = document.createElement('option');
                 option.value = i;
-                option.textContent = `Week ${i}`;
+                
+                if (i <= 14) {
+                    option.textContent = `Week ${i} (Weekly Prize)`;
+                } else {
+                    option.textContent = `Week ${i} (No Weekly Prize)`;
+                    option.style.color = '#666';
+                }
+                
                 select.appendChild(option);
             }
         }
 
         function addWinner() {
+            if (!isAdmin) {
+                alert('Admin access required to add winners.');
+                return;
+            }
+
             const week = parseInt(document.getElementById('week').value);
             const teamName = document.getElementById('teamName').value.trim();
             const managerName = document.getElementById('managerName').value.trim();
@@ -669,7 +795,12 @@
                 <div class="winner-card" style="margin-bottom: 15px;">
                     <div style="display: flex; justify-content: between; align-items: center;">
                         <div>
-                            <h3 style="margin: 0;">Week ${winner.week}</h3>
+                            <h3 style="margin: 0;">Week ${winner.week}
+                                ${winner.week <= 14 ? 
+                                    `<span style="background: #27ae60; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-left: 8px;">${(prizeSettings.weekly || 0).toFixed(0)}</span>` : 
+                                    '<span style="background: #95a5a6; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; margin-left: 8px;">No Prize</span>'
+                                }
+                            </h3>
                             <strong>${winner.teamName}</strong><br>
                             Manager: ${winner.managerName}<br>
                             Score: ${winner.score.toFixed(2)}<br>
@@ -685,6 +816,11 @@
         }
 
         function removeWinner(week) {
+            if (!isAdmin) {
+                alert('Admin access required to remove winners.');
+                return;
+            }
+            
             if (!confirm(`Are you sure you want to remove the winner for Week ${week}?`)) {
                 return;
             }
@@ -699,13 +835,14 @@
         // Statistics and leaderboard functions
         function updateStats() {
             const totalWeeks = winners.length;
-            const totalPayout = totalWeeks * (prizeSettings.weekly || 0);
+            const weeklyWinners = winners.filter(w => w.week <= 14); // Only weeks 1-14 get weekly prizes
+            const weeklyPayout = weeklyWinners.length * (prizeSettings.weekly || 0);
             const scores = winners.map(w => w.score);
             const highestScore = scores.length > 0 ? Math.max(...scores) : 0;
             const averageScore = scores.length > 0 ? scores.reduce((a, b) => a + b, 0) / scores.length : 0;
 
             document.getElementById('totalWeeks').textContent = totalWeeks;
-            document.getElementById('totalPayout').textContent = `$${totalPayout.toFixed(2)}`;
+            document.getElementById('totalPayout').textContent = `${weeklyPayout.toFixed(2)}`;
             document.getElementById('highestScore').textContent = highestScore.toFixed(2);
             document.getElementById('averageScore').textContent = averageScore.toFixed(2);
         }
