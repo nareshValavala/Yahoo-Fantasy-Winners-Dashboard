@@ -17,12 +17,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Vercel build & output
-.vercel/
-.vercel/output/
-.vercel/project.json
-.vercel/tmp/
-
 # Build artifacts
 dist/
 build/

@@ -1,0 +1,9 @@
+{
+  "weeklyPrize": 20,
+  "weeklyPrizeWeeks": 14,
+  "placementPrizes": {
+    "1": 400,
+    "2": 200,
+    "3": 120
+  }
+}

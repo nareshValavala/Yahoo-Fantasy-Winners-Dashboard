@@ -1,0 +1,24 @@
+{
+  "leagueName": null,
+  "leagueKey": null,
+  "season": null,
+  "currentWeek": null,
+  "isFinished": false,
+  "lastUpdated": null,
+  "payouts": {
+    "weeklyPrize": 20,
+    "weeklyPrizeWeeks": 14,
+    "placementPrizes": {
+      "1": 400,
+      "2": 200,
+      "3": 120
+    }
+  },
+  "dues": {
+    "buyInPerTeam": 100,
+    "totalExpected": 1000,
+    "totalCollected": 800
+  },
+  "teams": [],
+  "weeklyWinners": []
+}

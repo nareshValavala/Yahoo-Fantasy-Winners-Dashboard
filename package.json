@@ -1,24 +1,16 @@
 {
   "name": "yahoo-fantasy-tracker",
-  "version": "1.0.0",
-  "description": "Yahoo Fantasy NFL League Tracker",
+  "version": "2.0.0",
+  "description": "Automated Yahoo Fantasy NFL weekly winners + cash tracker, published as a static GitHub Pages site",
   "main": "index.html",
   "scripts": {
-    "start": "vercel dev",
-    "build": "echo 'Static site - no build needed'",
-    "deploy": "vercel --prod"
+    "update-data": "node scripts/update-league-data.mjs",
+    "bootstrap-auth": "node scripts/bootstrap-auth.mjs"
   },
   "dependencies": {
-    "axios": "^1.6.7",
-    "node-fetch": "^3.3.2",
-    "oauth": "^0.10.0",
-    "querystring": "^0.2.1",
-    "xml2js": "^0.6.2"
-  },
-  "devDependencies": {
-    "vercel": "^32.0.0"
+    "yahoo-fantasy": "^5.3.0"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=20"
   }
 }
