@@ -37,5 +37,9 @@ module.exports = async function handler(req, res) {
     return res.status(502).json({ error: `GitHub dispatch failed (HTTP ${response.status})`, details });
   }
 
-  res.status(200).json({ ok: true, message: 'Update triggered — data refreshes within a minute or two.' });
+  res.status(200).json({
+    ok: true,
+    message: 'Update triggered. Check the "✓ Live from Yahoo" badge in a minute or two — ' +
+      'it only succeeds once Yahoo API access is approved; until then this run is expected to fail.',
+  });
 };
