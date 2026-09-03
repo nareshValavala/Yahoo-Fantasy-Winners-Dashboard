@@ -347,6 +347,40 @@
             cursor: pointer;
         }
 
+        .tabs {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #7f8c8d;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
+        }
+
+        .tab-btn.active {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .tab-panel {
+            margin-top: 0;
+            border-top-left-radius: 0;
+        }
+
         .remove-link {
             background: none;
             border: none;
@@ -376,19 +410,65 @@
 
         <div id="statusBanner"></div>
 
-        <div class="section">
-            <h2>💰 Payout Structure</h2>
-            <div class="payout-grid" id="payoutGrid"></div>
+        <div class="tabs" id="tabBar">
+            <button class="tab-btn" data-tab="standings" onclick="switchTab('standings')">🥇 Standings</button>
+            <button class="tab-btn" data-tab="teams" onclick="switchTab('teams')">👥 Teams</button>
+            <button class="tab-btn" data-tab="winners" onclick="switchTab('winners')">📋 Weekly Winners</button>
+            <button class="tab-btn" data-tab="dues" onclick="switchTab('dues')">🧾 Dues &amp; Payouts</button>
+            <button class="tab-btn" data-tab="manual" id="manualTabBtn" onclick="switchTab('manual')" hidden>✍️ Record Winner</button>
         </div>
 
-        <div class="section">
-            <h2>🧾 League Dues</h2>
+        <div class="section tab-panel" data-tab="standings">
+            <div class="table-scroll">
+                <table id="standingsTable">
+                    <thead id="standingsHead"></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section tab-panel" data-tab="teams">
+            <div class="table-scroll">
+                <table id="teamsTable">
+                    <thead>
+                        <tr>
+                            <th>Draft #</th>
+                            <th>Team</th>
+                            <th>Manager</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section tab-panel" data-tab="winners">
+            <div class="table-scroll">
+                <table id="winnersTable">
+                    <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>Team</th>
+                            <th>Manager</th>
+                            <th>Score</th>
+                            <th>Prize</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section tab-panel" data-tab="dues">
+            <h3 style="margin-top: 0;">Payout Structure</h3>
+            <div class="payout-grid" id="payoutGrid"></div>
+
+            <h3>Who's Paid</h3>
             <p id="duesSummary" style="margin-top: 0; color: #7f8c8d;"></p>
             <div class="table-scroll">
                 <table id="duesTable">
                     <thead>
                         <tr>
-                            <th>Draft #</th>
                             <th>Team</th>
                             <th>Manager</th>
                             <th>Paid?</th>
@@ -399,18 +479,8 @@
             </div>
         </div>
 
-        <div class="section">
-            <h2>🥇 Standings &amp; Cash Won</h2>
-            <div class="table-scroll">
-                <table id="standingsTable">
-                    <thead id="standingsHead"></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="section" id="manualEntrySection" hidden>
-            <h2>✍️ Record Weekly Winner (manual, until Yahoo is connected)</h2>
+        <div class="section tab-panel" data-tab="manual" id="manualEntrySection">
+            <p style="margin-top: 0; color: #7f8c8d;">Record each week's high score by hand until Yahoo automation is connected.</p>
             <div class="manual-form">
                 <div class="field">
                     <label for="manualWeek">Week</label>
@@ -425,24 +495,6 @@
                     <input type="number" id="manualScore" step="0.01" style="width: 100px;">
                 </div>
                 <button onclick="saveManualWinner()">Save Winner</button>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>📋 Weekly High-Score Winners</h2>
-            <div class="table-scroll">
-                <table id="winnersTable">
-                    <thead>
-                        <tr>
-                            <th>Week</th>
-                            <th>Team</th>
-                            <th>Manager</th>
-                            <th>Score</th>
-                            <th>Prize</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
             </div>
         </div>
 
@@ -702,14 +754,14 @@
 
         function renderAdminBar() {
             const bar = document.getElementById('adminBar');
-            const manualSection = document.getElementById('manualEntrySection');
+            const manualTabBtn = document.getElementById('manualTabBtn');
             if (isAdmin) {
                 bar.innerHTML = `
                     <span class="admin-badge">🔓 Admin Mode</span>
-                    <span class="label">Dues are now editable below.</span>
+                    <span class="label">Dues are now editable, and a "Record Winner" tab has appeared.</span>
                     <button class="secondary" onclick="logoutAdmin()" style="margin-left: auto;">Exit Admin</button>
                 `;
-                manualSection.hidden = false;
+                manualTabBtn.hidden = false;
                 populateManualTeamSelect();
             } else {
                 bar.innerHTML = `
@@ -717,7 +769,8 @@
                     <input type="password" id="adminTokenInput" placeholder="Paste a GitHub personal access token">
                     <button onclick="unlockAdmin()">Unlock Admin</button>
                 `;
-                manualSection.hidden = true;
+                manualTabBtn.hidden = true;
+                if (manualTabBtn.classList.contains('active')) switchTab(DEFAULT_TAB);
             }
         }
 
@@ -756,6 +809,28 @@
             } finally {
                 checkboxEl.disabled = false;
             }
+        }
+
+        // ---- Tabs ----
+
+        const TAB_NAMES = ['standings', 'teams', 'winners', 'dues', 'manual'];
+        const DEFAULT_TAB = 'standings';
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.tab === tabName);
+            });
+            document.querySelectorAll('.tab-panel').forEach(panel => {
+                panel.hidden = panel.dataset.tab !== tabName;
+            });
+            try { localStorage.setItem('activeTab', tabName); } catch {}
+        }
+
+        function getInitialTab() {
+            let saved = null;
+            try { saved = localStorage.getItem('activeTab'); } catch {}
+            if (saved && TAB_NAMES.includes(saved) && (saved !== 'manual' || isAdmin)) return saved;
+            return DEFAULT_TAB;
         }
 
         function toast(message, type = 'info') {
@@ -841,6 +916,7 @@
 
             renderPayouts(data.payouts);
             renderDues(data.dues, data.teams || []);
+            renderTeams(data.teams || []);
             renderStandings(data.teams || [], data.dataSource);
             renderWinners(data.weeklyWinners || []);
 
@@ -873,7 +949,7 @@
         function renderDues(dues, teams) {
             const tbody = document.querySelector('#duesTable tbody');
             if (!teams.length) {
-                tbody.innerHTML = '<tr><td colspan="4">No roster data yet.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="3">No roster data yet.</td></tr>';
                 document.getElementById('duesSummary').textContent = '';
                 return;
             }
@@ -882,8 +958,7 @@
 
             tbody.innerHTML = sorted.map(team => `
                 <tr>
-                    <td>${team.draftPosition ?? '—'}</td>
-                    <td><button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
+                    <td><strong>${team.name}</strong></td>
                     <td>${team.manager}</td>
                     <td>${isAdmin
                         ? `<input type="checkbox" class="dues-checkbox" ${team.duesPaid ? 'checked' : ''}
@@ -898,6 +973,24 @@
                 document.getElementById('duesSummary').textContent =
                     `Collected ${fmtMoney(dues.totalCollected)} of ${fmtMoney(dues.totalExpected)} (${fmtMoney(dues.buyInPerTeam)}/team)`;
             }
+        }
+
+        function renderTeams(teams) {
+            const tbody = document.querySelector('#teamsTable tbody');
+            if (!teams.length) {
+                tbody.innerHTML = '<tr><td colspan="3">No team data yet.</td></tr>';
+                return;
+            }
+
+            const sorted = [...teams].sort((a, b) => (a.draftPosition ?? 999) - (b.draftPosition ?? 999));
+
+            tbody.innerHTML = sorted.map(team => `
+                <tr>
+                    <td>${team.draftPosition ?? '—'}</td>
+                    <td><button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
+                    <td>${team.manager}</td>
+                </tr>
+            `).join('');
         }
 
         function renderStandings(teams, dataSource) {
@@ -958,6 +1051,7 @@
             isAdmin = !!getAdminToken();
             await loadTeamsConfig();
             renderAdminBar();
+            switchTab(getInitialTab());
             await loadLeagueData();
         })();
     </script>
