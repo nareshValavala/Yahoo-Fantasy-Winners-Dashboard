@@ -6,23 +6,24 @@ A fully automated, free dashboard for league **529714**: weekly high-score winne
 
 ## One-time setup
 
-### 1. Create a Yahoo app
+### 1. Create a Yahoo app and apply for Fantasy Sports API access
 
 - Go to https://developer.yahoo.com/apps/ and create an app.
-- Enable **Fantasy Sports** with **Read** access.
-- Set the redirect URI to `oob` (out-of-band — Yahoo displays the code on screen instead of redirecting to a server).
-- Note the **Client ID** and **Client Secret**.
+  - **Redirect URI**: `http://localhost:8080/callback` (not `oob` — Yahoo's current UI rejects that; localhost URIs don't need domain verification).
+  - **OAuth Client Type**: **Confidential Client**.
+  - Note the **Client ID** and **Client Secret**.
+- **Also apply for API access at https://sports.yahoo.com/developer/access/.** As of 2026, Yahoo requires a separate approval for Fantasy Sports API access — even for personal, single-league use — on top of the app itself. It's free and read-only by default. Paste your Client ID from above into the form, pick "Small (< 1,000 users)", and describe it as a personal single-league dashboard. Without this approval, every API call fails with `"This application is not authorized to perform this action."` regardless of how the app is configured.
 
 ### 2. Get a refresh token (run locally, once)
 
-This step needs to happen on your machine so your client secret never leaves it:
+This step needs to happen on your machine so your client secret never leaves it. Put `YAHOO_CLIENT_ID` and `YAHOO_CLIENT_SECRET` in a local `.env` file (see `.env.example`), then:
 
 ```bash
 npm install
-YAHOO_CLIENT_ID=xxx YAHOO_CLIENT_SECRET=yyy node scripts/bootstrap-auth.mjs
+node scripts/bootstrap-auth.mjs
 ```
 
-Open the printed URL, log in to Yahoo, authorize the app, and paste the code it shows you back into the terminal. The script prints a `refresh_token` at the end.
+It opens a throwaway local server on port 8080, prints a Yahoo login URL for you to open, and automatically captures the authorization code once you approve — no manual copy-pasting. The script prints a `refresh_token` at the end.
 
 ### 3. Add GitHub Actions secrets
 
