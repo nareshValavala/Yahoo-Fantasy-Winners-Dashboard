@@ -10,6 +10,12 @@ import path from "path";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, "..");
 
+try {
+  process.loadEnvFile(path.join(rootDir, ".env")); // for local runs; CI sets these via secrets
+} catch {
+  // no .env file — fine in CI, where the workflow sets these directly
+}
+
 const {
   YAHOO_CLIENT_ID,
   YAHOO_CLIENT_SECRET,
