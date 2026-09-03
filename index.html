@@ -381,6 +381,22 @@
             border-top-left-radius: 0;
         }
 
+        .refresh-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85em;
+            margin-top: 8px;
+        }
+
+        .refresh-btn:disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+
         .remove-link {
             background: none;
             border: none;
@@ -404,6 +420,9 @@
             <h1>🏈 Yahoo Fantasy NFL Tracker</h1>
             <p id="leagueSubtitle">Loading league data…</p>
             <div id="dataSourceNote"></div>
+            <div>
+                <button class="refresh-btn" id="refreshNowBtn" onclick="refreshNow()">🔄 Refresh Now</button>
+            </div>
         </div>
 
         <div class="admin-bar" id="adminBar"></div>
@@ -533,6 +552,28 @@
         const WORKFLOW_FILE = 'update-league-data.yml';
 
         let currentData = null;
+
+        const VERCEL_API_BASE = 'https://yahoo-fantasy-winners-dashboard.vercel.app';
+
+        // Public — no admin token needed. The Vercel function holds its own
+        // server-side GitHub token, so anyone can trigger a refresh.
+        async function refreshNow() {
+            const btn = document.getElementById('refreshNowBtn');
+            btn.disabled = true;
+            const originalText = btn.textContent;
+            btn.textContent = '🔄 Triggering…';
+            try {
+                const res = await fetch(`${VERCEL_API_BASE}/api/trigger-update`, { method: 'POST' });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+                toast(data.message || 'Refresh triggered.');
+            } catch (error) {
+                toast(`Could not trigger refresh: ${error.message}`, 'error');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = originalText;
+            }
+        }
 
         let teamsByKey = {};
         let isAdmin = false;
@@ -899,8 +940,12 @@
         }
 
         function render(data) {
+            const leagueName = data.leagueName || teamsConfigCache?.leagueName || 'NFL Fantasy League';
+            const leagueId = (data.leagueKey ? data.leagueKey.split('.').pop() : null) || teamsConfigCache?.leagueId;
+
             document.getElementById('leagueSubtitle').textContent =
-                `${data.leagueName || 'NFL League'}${data.currentWeek ? ` — Week ${data.currentWeek}` : ''}${data.isFinished ? ' (Season Complete)' : ''}`;
+                `${leagueName}${leagueId ? ` (Yahoo League #${leagueId})` : ''}` +
+                `${data.currentWeek ? ` — Week ${data.currentWeek}` : ''}${data.isFinished ? ' (Season Complete)' : ''}`;
 
             const noteEl = document.getElementById('dataSourceNote');
             if (data.dataSource === 'manual') {

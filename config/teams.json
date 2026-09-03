@@ -1,4 +1,6 @@
 {
+  "leagueName": "Fantasy League 529714",
+  "leagueId": "529714",
   "buyInPerTeam": 100,
   "teams": [
     { "team": "Steelers", "manager": "chandrakanth", "draftPosition": 1, "paid": true },
