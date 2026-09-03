@@ -40,6 +40,11 @@ const duesConfig = JSON.parse(
 );
 const duesByTeamName = new Map(duesConfig.teams.map((t) => [t.team, t]));
 
+// Must match the redirect URI used in bootstrap-auth.mjs when the current
+// refresh token was issued (not actually used for refresh-token requests,
+// but kept consistent just in case).
+const REDIRECT_URI = process.env.YAHOO_REDIRECT_URI || "http://localhost:8080/callback";
+
 const yf = new YahooFantasy(
   YAHOO_CLIENT_ID,
   YAHOO_CLIENT_SECRET,
@@ -52,7 +57,7 @@ const yf = new YahooFantasy(
       );
     }
   },
-  "oob"
+  REDIRECT_URI
 );
 
 yf.setRefreshToken(YAHOO_REFRESH_TOKEN);
