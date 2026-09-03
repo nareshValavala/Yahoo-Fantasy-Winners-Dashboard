@@ -421,7 +421,7 @@
             <p id="leagueSubtitle">Loading league data…</p>
             <div id="dataSourceNote"></div>
             <div>
-                <button class="refresh-btn" id="refreshNowBtn" onclick="refreshNow()">🔄 Refresh Now</button>
+                <button class="refresh-btn" id="refreshNowBtn" onclick="refreshNow()" hidden>🔄 Refresh Now</button>
             </div>
         </div>
 
@@ -796,6 +796,7 @@
         function renderAdminBar() {
             const bar = document.getElementById('adminBar');
             const manualTabBtn = document.getElementById('manualTabBtn');
+            const refreshBtn = document.getElementById('refreshNowBtn');
             if (isAdmin) {
                 bar.innerHTML = `
                     <span class="admin-badge">🔓 Admin Mode</span>
@@ -803,6 +804,7 @@
                     <button class="secondary" onclick="logoutAdmin()" style="margin-left: auto;">Exit Admin</button>
                 `;
                 manualTabBtn.hidden = false;
+                refreshBtn.hidden = false;
                 populateManualTeamSelect();
             } else {
                 bar.innerHTML = `
@@ -811,6 +813,7 @@
                     <button onclick="unlockAdmin()">Unlock Admin</button>
                 `;
                 manualTabBtn.hidden = true;
+                refreshBtn.hidden = true;
                 if (manualTabBtn.classList.contains('active')) switchTab(DEFAULT_TAB);
             }
         }
