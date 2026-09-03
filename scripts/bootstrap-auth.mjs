@@ -2,11 +2,18 @@
 // Yahoo refresh_token, which you then save as the YAHOO_REFRESH_TOKEN
 // GitHub Actions secret. Your client secret never leaves your machine.
 //
-// Usage:
-//   YAHOO_CLIENT_ID=xxx YAHOO_CLIENT_SECRET=yyy node scripts/bootstrap-auth.mjs
+// Usage (reads YAHOO_CLIENT_ID / YAHOO_CLIENT_SECRET from a .env file in the
+// project root if present, otherwise from already-exported env vars):
+//   node scripts/bootstrap-auth.mjs
 
 import readline from "readline/promises";
 import { stdin, stdout } from "process";
+
+try {
+  process.loadEnvFile(); // Node 20.12+/22+ — loads ./.env if present
+} catch {
+  // no .env file — fall back to whatever's already in the environment
+}
 
 const { YAHOO_CLIENT_ID, YAHOO_CLIENT_SECRET } = process.env;
 
