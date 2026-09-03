@@ -164,6 +164,7 @@ weeklyWinners.sort((a, b) => b.week - a.week);
 const paidCount = duesConfig.teams.filter((t) => t.paid).length;
 
 const output = {
+  dataSource: "yahoo",
   leagueName: leagueStandings.name,
   leagueKey,
   season: leagueStandings.season,

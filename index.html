@@ -294,6 +294,68 @@
             background: #e74c3c;
         }
 
+        .data-source-note {
+            display: inline-block;
+            font-size: 0.8em;
+            padding: 3px 10px;
+            border-radius: 10px;
+            margin-top: 8px;
+        }
+
+        .data-source-note.manual {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .data-source-note.yahoo {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .manual-form {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .manual-form .field {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .manual-form label {
+            font-size: 0.8em;
+            color: #7f8c8d;
+        }
+
+        .manual-form input, .manual-form select {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+
+        .manual-form button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .remove-link {
+            background: none;
+            border: none;
+            color: #e74c3c;
+            cursor: pointer;
+            font-size: 0.85em;
+            margin-left: 8px;
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
@@ -307,6 +369,7 @@
         <div class="header">
             <h1>🏈 Yahoo Fantasy NFL Tracker</h1>
             <p id="leagueSubtitle">Loading league data…</p>
+            <div id="dataSourceNote"></div>
         </div>
 
         <div class="admin-bar" id="adminBar"></div>
@@ -340,19 +403,28 @@
             <h2>🥇 Standings &amp; Cash Won</h2>
             <div class="table-scroll">
                 <table id="standingsTable">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Team</th>
-                            <th>Manager</th>
-                            <th>W-L-T</th>
-                            <th>Points For</th>
-                            <th>Weekly Wins</th>
-                            <th>Cash Won</th>
-                        </tr>
-                    </thead>
+                    <thead id="standingsHead"></thead>
                     <tbody></tbody>
                 </table>
+            </div>
+        </div>
+
+        <div class="section" id="manualEntrySection" hidden>
+            <h2>✍️ Record Weekly Winner (manual, until Yahoo is connected)</h2>
+            <div class="manual-form">
+                <div class="field">
+                    <label for="manualWeek">Week</label>
+                    <input type="number" id="manualWeek" min="1" max="18" style="width: 70px;">
+                </div>
+                <div class="field">
+                    <label for="manualTeam">Team</label>
+                    <select id="manualTeam"></select>
+                </div>
+                <div class="field">
+                    <label for="manualScore">Score</label>
+                    <input type="number" id="manualScore" step="0.01" style="width: 100px;">
+                </div>
+                <button onclick="saveManualWinner()">Save Winner</button>
             </div>
         </div>
 
@@ -405,10 +477,189 @@
         const GITHUB_REPO = 'Yahoo-Fantasy-Winners-Dashboard';
         const GITHUB_BRANCH = 'main';
         const TEAMS_CONFIG_PATH = 'config/teams.json';
+        const DATA_FILE_PATH = 'data/league.json';
         const WORKFLOW_FILE = 'update-league-data.yml';
+
+        let currentData = null;
 
         let teamsByKey = {};
         let isAdmin = false;
+        let teamsConfigCache = null; // ./config/teams.json — roster + dues, public/static
+
+        // ---- Shared GitHub Contents API helpers (admin writes only) ----
+
+        async function githubGetFile(path) {
+            const token = getAdminToken();
+            const res = await fetch(
+                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}?ref=${GITHUB_BRANCH}`,
+                { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' } }
+            );
+            if (!res.ok) throw new Error(`Could not read ${path} (HTTP ${res.status})`);
+            const fileData = await res.json();
+            return { content: JSON.parse(decodeURIComponent(escape(atob(fileData.content)))), sha: fileData.sha };
+        }
+
+        async function githubPutFile(path, dataObj, message, sha) {
+            const token = getAdminToken();
+            const newContent = JSON.stringify(dataObj, null, 2) + '\n';
+            const res = await fetch(
+                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
+                {
+                    method: 'PUT',
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        Accept: 'application/vnd.github+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message,
+                        content: btoa(unescape(encodeURIComponent(newContent))),
+                        sha,
+                        branch: GITHUB_BRANCH
+                    })
+                }
+            );
+            if (!res.ok) throw new Error(`Save failed (HTTP ${res.status})`);
+        }
+
+        async function triggerWorkflowRefresh() {
+            const token = getAdminToken();
+            await fetch(
+                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
+                {
+                    method: 'POST',
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        Accept: 'application/vnd.github+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ ref: GITHUB_BRANCH })
+                }
+            );
+        }
+
+        // ---- Manual data mode (used until the Yahoo automation is connected) ----
+
+        function computeManualTeams(weeklyWinners) {
+            const winsByTeam = {};
+            const cashByTeam = {};
+            (weeklyWinners || []).forEach(w => {
+                winsByTeam[w.teamName] = (winsByTeam[w.teamName] || 0) + 1;
+                cashByTeam[w.teamName] = (cashByTeam[w.teamName] || 0) + Number(w.prize || 0);
+            });
+
+            return (teamsConfigCache?.teams || []).map((t, i) => {
+                const weeklyCash = cashByTeam[t.team] || 0;
+                return {
+                    teamKey: `manual.${i + 1}`,
+                    name: t.team,
+                    manager: t.manager,
+                    draftPosition: t.draftPosition,
+                    duesPaid: t.paid,
+                    rank: null,
+                    wins: 0,
+                    losses: 0,
+                    ties: 0,
+                    pointsFor: 0,
+                    weeklyWins: winsByTeam[t.team] || 0,
+                    weeklyCash,
+                    placementCash: 0,
+                    totalCash: weeklyCash,
+                    roster: []
+                };
+            });
+        }
+
+        function computeDuesSummary() {
+            const buyInPerTeam = teamsConfigCache?.buyInPerTeam || 0;
+            const teams = teamsConfigCache?.teams || [];
+            const paidCount = teams.filter(t => t.paid).length;
+            return {
+                buyInPerTeam,
+                totalExpected: buyInPerTeam * teams.length,
+                totalCollected: buyInPerTeam * paidCount
+            };
+        }
+
+        function buildManualLeagueData(existing, weeklyWinners) {
+            return {
+                dataSource: 'manual',
+                leagueName: existing.leagueName || null,
+                leagueKey: existing.leagueKey || null,
+                season: existing.season || null,
+                currentWeek: existing.currentWeek || null,
+                isFinished: existing.isFinished || false,
+                lastUpdated: new Date().toISOString(),
+                payouts: existing.payouts,
+                dues: computeDuesSummary(),
+                teams: computeManualTeams(weeklyWinners),
+                weeklyWinners: [...weeklyWinners].sort((a, b) => b.week - a.week)
+            };
+        }
+
+        // mutateWeeklyWinners: (existingWeeklyWinners) => newWeeklyWinners
+        async function saveManualDataFile(mutateWeeklyWinners) {
+            const { content: data, sha } = await githubGetFile(DATA_FILE_PATH);
+            const weeklyWinners = mutateWeeklyWinners(data.weeklyWinners || []);
+            const updated = buildManualLeagueData(data, weeklyWinners);
+            await githubPutFile(DATA_FILE_PATH, updated, 'Update league data (manual)', sha);
+            currentData = updated;
+            render(updated);
+        }
+
+        async function saveManualWinner() {
+            const week = parseInt(document.getElementById('manualWeek').value, 10);
+            const teamName = document.getElementById('manualTeam').value;
+            const score = parseFloat(document.getElementById('manualScore').value);
+
+            if (!week || !teamName || isNaN(score)) {
+                toast('Fill in week, team, and score.', 'error');
+                return;
+            }
+
+            const team = teamsConfigCache?.teams.find(t => t.team === teamName);
+            const prize = currentData?.payouts?.weeklyPrize ?? 20;
+
+            try {
+                await saveManualDataFile(existingWinners => {
+                    const withoutThisWeek = existingWinners.filter(w => w.week !== week);
+                    withoutThisWeek.push({
+                        week, teamName, manager: team?.manager || 'Unknown', score, prize, tied: false, source: 'manual'
+                    });
+                    return withoutThisWeek;
+                });
+                toast(`Saved Week ${week} winner: ${teamName}`);
+                document.getElementById('manualWeek').value = '';
+                document.getElementById('manualScore').value = '';
+            } catch (error) {
+                toast(`Could not save: ${error.message}`, 'error');
+            }
+        }
+
+        async function removeManualWinner(week) {
+            if (!confirm(`Remove the recorded winner for Week ${week}?`)) return;
+            try {
+                await saveManualDataFile(existingWinners => existingWinners.filter(w => w.week !== week));
+                toast(`Removed Week ${week}.`);
+            } catch (error) {
+                toast(`Could not remove: ${error.message}`, 'error');
+            }
+        }
+
+        async function loadTeamsConfig() {
+            try {
+                const res = await fetch('./config/teams.json', { cache: 'no-store' });
+                if (res.ok) teamsConfigCache = await res.json();
+            } catch (error) {
+                console.error('Failed to load teams config:', error);
+            }
+        }
+
+        function populateManualTeamSelect() {
+            const select = document.getElementById('manualTeam');
+            if (!select || !teamsConfigCache) return;
+            select.innerHTML = teamsConfigCache.teams.map(t => `<option value="${t.team}">${t.team}</option>`).join('');
+        }
 
         // ---- Admin mode (writes go straight to GitHub via a personal access token
         // you paste in and that stays only in your own browser's localStorage) ----
@@ -451,78 +702,54 @@
 
         function renderAdminBar() {
             const bar = document.getElementById('adminBar');
+            const manualSection = document.getElementById('manualEntrySection');
             if (isAdmin) {
                 bar.innerHTML = `
                     <span class="admin-badge">🔓 Admin Mode</span>
                     <span class="label">Dues are now editable below.</span>
                     <button class="secondary" onclick="logoutAdmin()" style="margin-left: auto;">Exit Admin</button>
                 `;
+                manualSection.hidden = false;
+                populateManualTeamSelect();
             } else {
                 bar.innerHTML = `
                     <span class="label">Admin:</span>
                     <input type="password" id="adminTokenInput" placeholder="Paste a GitHub personal access token">
                     <button onclick="unlockAdmin()">Unlock Admin</button>
                 `;
+                manualSection.hidden = true;
             }
         }
 
         async function saveDuesPaid(teamName, newPaidValue) {
-            const token = getAdminToken();
-
-            const getRes = await fetch(
-                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${TEAMS_CONFIG_PATH}?ref=${GITHUB_BRANCH}`,
-                { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' } }
-            );
-            if (!getRes.ok) throw new Error(`Could not read config (HTTP ${getRes.status})`);
-            const fileData = await getRes.json();
-
-            const config = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+            const { content: config, sha } = await githubGetFile(TEAMS_CONFIG_PATH);
             const team = config.teams.find(t => t.team === teamName);
             if (!team) throw new Error(`Team "${teamName}" not found in config/teams.json`);
             team.paid = newPaidValue;
 
-            const newContent = JSON.stringify(config, null, 2) + '\n';
-            const newContentB64 = btoa(unescape(encodeURIComponent(newContent)));
-
-            const putRes = await fetch(
-                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${TEAMS_CONFIG_PATH}`,
-                {
-                    method: 'PUT',
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                        Accept: 'application/vnd.github+json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        message: `Update dues: ${teamName} -> ${newPaidValue ? 'paid' : 'unpaid'}`,
-                        content: newContentB64,
-                        sha: fileData.sha,
-                        branch: GITHUB_BRANCH
-                    })
-                }
+            await githubPutFile(
+                TEAMS_CONFIG_PATH,
+                config,
+                `Update dues: ${teamName} -> ${newPaidValue ? 'paid' : 'unpaid'}`,
+                sha
             );
-            if (!putRes.ok) throw new Error(`Save failed (HTTP ${putRes.status})`);
+            teamsConfigCache = config;
 
-            // Trigger an on-demand refresh so the public data catches up within a minute or two.
-            await fetch(
-                `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
-                {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                        Accept: 'application/vnd.github+json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ ref: GITHUB_BRANCH })
-                }
-            );
+            // If Yahoo automation is live, trigger an on-demand refresh so data/league.json
+            // picks up the change too. In manual mode there's nothing to run.
+            if (currentData && currentData.dataSource === 'yahoo') {
+                await triggerWorkflowRefresh();
+            } else {
+                await saveManualDataFile(d => d); // just re-syncs dues totals into data/league.json
+            }
         }
 
         async function handleDuesToggle(teamName, checked, checkboxEl) {
             checkboxEl.disabled = true;
+            const wasYahoo = currentData?.dataSource === 'yahoo';
             try {
                 await saveDuesPaid(teamName, checked);
-                toast('Saved — the site will refresh with the new data in a minute or two.');
+                toast(wasYahoo ? 'Saved — the site will refresh with the new data in a minute or two.' : 'Saved.');
             } catch (error) {
                 checkboxEl.checked = !checked;
                 toast(`Could not save: ${error.message}`, 'error');
@@ -571,10 +798,17 @@
                 const response = await fetch('./data/league.json', { cache: 'no-store' });
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 const data = await response.json();
+                currentData = data;
 
                 if (!data.lastUpdated) {
-                    showBanner('No data yet — the automated update hasn\'t run for the first time. Check back after the next scheduled run, or trigger it manually from the Actions tab.', 'warning');
-                    return;
+                    showBanner(
+                        isAdmin
+                            ? 'No data yet. Use the "Record Weekly Winner" panel below to enter results by hand until Yahoo automation is connected.'
+                            : 'No data yet — check back soon.',
+                        'warning'
+                    );
+                } else {
+                    document.getElementById('statusBanner').innerHTML = '';
                 }
 
                 render(data);
@@ -591,18 +825,27 @@
 
         function render(data) {
             document.getElementById('leagueSubtitle').textContent =
-                `${data.leagueName || 'NFL League'} — Week ${data.currentWeek ?? '—'}${data.isFinished ? ' (Season Complete)' : ''}`;
+                `${data.leagueName || 'NFL League'}${data.currentWeek ? ` — Week ${data.currentWeek}` : ''}${data.isFinished ? ' (Season Complete)' : ''}`;
+
+            const noteEl = document.getElementById('dataSourceNote');
+            if (data.dataSource === 'manual') {
+                noteEl.innerHTML = '<span class="data-source-note manual">📝 Manual entry — Yahoo automation not connected yet</span>';
+            } else if (data.dataSource === 'yahoo') {
+                noteEl.innerHTML = '<span class="data-source-note yahoo">✓ Live from Yahoo</span>';
+            } else {
+                noteEl.innerHTML = '';
+            }
 
             teamsByKey = {};
             (data.teams || []).forEach(t => { teamsByKey[t.teamKey] = t; });
 
             renderPayouts(data.payouts);
             renderDues(data.dues, data.teams || []);
-            renderStandings(data.teams || []);
+            renderStandings(data.teams || [], data.dataSource);
             renderWinners(data.weeklyWinners || []);
 
             document.getElementById('lastUpdated').textContent =
-                `Last updated: ${new Date(data.lastUpdated).toLocaleString()}`;
+                data.lastUpdated ? `Last updated: ${new Date(data.lastUpdated).toLocaleString()}` : '';
         }
 
         function renderPayouts(payouts) {
@@ -657,20 +900,34 @@
             }
         }
 
-        function renderStandings(teams) {
+        function renderStandings(teams, dataSource) {
+            const thead = document.getElementById('standingsHead');
             const tbody = document.querySelector('#standingsTable tbody');
+            const isYahoo = dataSource === 'yahoo';
+
+            thead.innerHTML = isYahoo
+                ? '<tr><th>Rank</th><th>Team</th><th>Manager</th><th>W-L-T</th><th>Points For</th><th>Weekly Wins</th><th>Cash Won</th></tr>'
+                : '<tr><th>Team</th><th>Manager</th><th>Weekly Wins</th><th>Cash Won</th></tr>';
+
             if (!teams.length) {
-                tbody.innerHTML = '<tr><td colspan="7">No standings data yet.</td></tr>';
+                tbody.innerHTML = `<tr><td colspan="${isYahoo ? 7 : 4}">No standings data yet.</td></tr>`;
                 return;
             }
 
-            tbody.innerHTML = teams.map(team => `
+            tbody.innerHTML = teams.map(team => isYahoo ? `
                 <tr class="${team.rank === 1 ? 'rank-1' : ''}">
                     <td>${team.rank ?? '—'}</td>
                     <td><button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
                     <td>${team.manager}</td>
                     <td>${team.wins}-${team.losses}-${team.ties}</td>
                     <td>${Number(team.pointsFor).toFixed(2)}</td>
+                    <td>${team.weeklyWins || 0}</td>
+                    <td class="cash">${fmtMoney(team.totalCash)}</td>
+                </tr>
+            ` : `
+                <tr>
+                    <td><strong>${team.name}</strong></td>
+                    <td>${team.manager}</td>
                     <td>${team.weeklyWins || 0}</td>
                     <td class="cash">${fmtMoney(team.totalCash)}</td>
                 </tr>
@@ -690,14 +947,19 @@
                     <td><strong>${w.teamName}</strong></td>
                     <td>${w.manager}</td>
                     <td>${Number(w.score).toFixed(2)}</td>
-                    <td class="cash">${fmtMoney(w.prize)}</td>
+                    <td class="cash">${fmtMoney(w.prize)}${isAdmin && w.source === 'manual'
+                        ? `<button class="remove-link" onclick="removeManualWinner(${w.week})">Remove</button>`
+                        : ''}</td>
                 </tr>
             `).join('');
         }
 
-        isAdmin = !!getAdminToken();
-        renderAdminBar();
-        loadLeagueData();
+        (async () => {
+            isAdmin = !!getAdminToken();
+            await loadTeamsConfig();
+            renderAdminBar();
+            await loadLeagueData();
+        })();
     </script>
 </body>
 
