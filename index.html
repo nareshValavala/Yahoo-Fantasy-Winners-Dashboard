@@ -911,13 +911,20 @@
                 noteEl.innerHTML = '';
             }
 
+            // The roster/dues config is known even before Yahoo or a manual entry has
+            // populated data/league.json's teams array — fall back to it so the Teams
+            // and Dues tabs aren't empty on a totally fresh site.
+            const usingFallbackTeams = !data.teams || !data.teams.length;
+            const teams = usingFallbackTeams ? computeManualTeams(data.weeklyWinners || []) : data.teams;
+            const dues = usingFallbackTeams ? computeDuesSummary() : data.dues;
+
             teamsByKey = {};
-            (data.teams || []).forEach(t => { teamsByKey[t.teamKey] = t; });
+            teams.forEach(t => { teamsByKey[t.teamKey] = t; });
 
             renderPayouts(data.payouts);
-            renderDues(data.dues, data.teams || []);
-            renderTeams(data.teams || []);
-            renderStandings(data.teams || [], data.dataSource);
+            renderDues(dues, teams);
+            renderTeams(teams);
+            renderStandings(teams, data.dataSource);
             renderWinners(data.weeklyWinners || []);
 
             document.getElementById('lastUpdated').textContent =
