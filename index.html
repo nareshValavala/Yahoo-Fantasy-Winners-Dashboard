@@ -612,7 +612,28 @@
                     })
                 }
             );
-            if (!res.ok) throw new Error(`Save failed (HTTP ${res.status})`);
+            if (!res.ok) {
+                const err = new Error(`Save failed (HTTP ${res.status})`);
+                err.status = res.status;
+                throw err;
+            }
+        }
+
+        // Read-modify-write with one automatic retry on a 409 (stale sha —
+        // someone else wrote the file between our read and our write).
+        // mutateFn: (currentContent) => newContent
+        async function githubReadModifyWrite(path, mutateFn, message) {
+            for (let attempt = 0; attempt < 2; attempt++) {
+                const { content, sha } = await githubGetFile(path);
+                const updated = mutateFn(content);
+                try {
+                    await githubPutFile(path, updated, message, sha);
+                    return updated;
+                } catch (error) {
+                    if (attempt === 0 && error.status === 409) continue;
+                    throw error;
+                }
+            }
         }
 
         async function triggerWorkflowRefresh() {
@@ -692,10 +713,11 @@
 
         // mutateWeeklyWinners: (existingWeeklyWinners) => newWeeklyWinners
         async function saveManualDataFile(mutateWeeklyWinners) {
-            const { content: data, sha } = await githubGetFile(DATA_FILE_PATH);
-            const weeklyWinners = mutateWeeklyWinners(data.weeklyWinners || []);
-            const updated = buildManualLeagueData(data, weeklyWinners);
-            await githubPutFile(DATA_FILE_PATH, updated, 'Update league data (manual)', sha);
+            const updated = await githubReadModifyWrite(
+                DATA_FILE_PATH,
+                (current) => buildManualLeagueData(current, mutateWeeklyWinners(current.weeklyWinners || [])),
+                'Update league data (manual)'
+            );
             currentData = updated;
             render(updated);
         }
@@ -819,16 +841,15 @@
         }
 
         async function saveDuesPaid(teamName, newPaidValue) {
-            const { content: config, sha } = await githubGetFile(TEAMS_CONFIG_PATH);
-            const team = config.teams.find(t => t.team === teamName);
-            if (!team) throw new Error(`Team "${teamName}" not found in config/teams.json`);
-            team.paid = newPaidValue;
-
-            await githubPutFile(
+            const config = await githubReadModifyWrite(
                 TEAMS_CONFIG_PATH,
-                config,
-                `Update dues: ${teamName} -> ${newPaidValue ? 'paid' : 'unpaid'}`,
-                sha
+                (current) => {
+                    const team = current.teams.find(t => t.team === teamName);
+                    if (!team) throw new Error(`Team "${teamName}" not found in config/teams.json`);
+                    team.paid = newPaidValue;
+                    return current;
+                },
+                `Update dues: ${teamName} -> ${newPaidValue ? 'paid' : 'unpaid'}`
             );
             teamsConfigCache = config;
 
