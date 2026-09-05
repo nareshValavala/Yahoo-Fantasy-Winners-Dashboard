@@ -3,15 +3,65 @@
   "leagueId": "529714",
   "buyInPerTeam": 100,
   "teams": [
-    { "team": "Steelers", "manager": "chandrakanth", "draftPosition": 1, "paid": true },
-    { "team": "Insane in the End Zone", "manager": "Kiran K", "draftPosition": 2, "paid": false },
-    { "team": "Launch Play VJ", "manager": "VJ", "draftPosition": 3, "paid": true },
-    { "team": "Fly High Eagles", "manager": "Dhru", "draftPosition": 4, "paid": true },
-    { "team": "4th Down Sagar", "manager": "Sagar", "draftPosition": 5, "paid": true },
-    { "team": "PUKA BOO", "manager": "Sai", "draftPosition": 6, "paid": true },
-    { "team": "Touchdown fever", "manager": "Bhargav", "draftPosition": 7, "paid": false },
-    { "team": "Still A Patriot", "manager": "Jr Nani", "draftPosition": 8, "paid": true },
-    { "team": "49ers", "manager": "ashok", "draftPosition": 9, "paid": true },
-    { "team": "Bear Claw", "manager": "bharath", "draftPosition": 10, "paid": true }
+    {
+      "team": "Steelers",
+      "manager": "chandrakanth",
+      "draftPosition": 1,
+      "paid": true
+    },
+    {
+      "team": "Insane in the End Zone",
+      "manager": "Kiran K",
+      "draftPosition": 2,
+      "paid": true
+    },
+    {
+      "team": "Launch Play VJ",
+      "manager": "VJ",
+      "draftPosition": 3,
+      "paid": true
+    },
+    {
+      "team": "Fly High Eagles",
+      "manager": "Dhru",
+      "draftPosition": 4,
+      "paid": true
+    },
+    {
+      "team": "4th Down Sagar",
+      "manager": "Sagar",
+      "draftPosition": 5,
+      "paid": true
+    },
+    {
+      "team": "PUKA BOO",
+      "manager": "Sai",
+      "draftPosition": 6,
+      "paid": true
+    },
+    {
+      "team": "Touchdown fever",
+      "manager": "Bhargav",
+      "draftPosition": 7,
+      "paid": false
+    },
+    {
+      "team": "Still A Patriot",
+      "manager": "Jr Nani",
+      "draftPosition": 8,
+      "paid": true
+    },
+    {
+      "team": "49ers",
+      "manager": "ashok",
+      "draftPosition": 9,
+      "paid": true
+    },
+    {
+      "team": "Bear Claw",
+      "manager": "bharath",
+      "draftPosition": 10,
+      "paid": true
+    }
   ]
 }
