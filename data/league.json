@@ -5,7 +5,7 @@
   "season": null,
   "currentWeek": null,
   "isFinished": false,
-  "lastUpdated": "2026-09-05T18:42:22.209Z",
+  "lastUpdated": "2026-09-05T18:45:07.720Z",
   "payouts": {
     "weeklyPrize": 20,
     "weeklyPrizeWeeks": 14,
@@ -18,7 +18,7 @@
   "dues": {
     "buyInPerTeam": 100,
     "totalExpected": 1000,
-    "totalCollected": 900
+    "totalCollected": 1000
   },
   "teams": [
     {
@@ -128,7 +128,7 @@
       "name": "Touchdown fever",
       "manager": "Bhargav",
       "draftPosition": 7,
-      "duesPaid": false,
+      "duesPaid": true,
       "rank": null,
       "wins": 0,
       "losses": 0,
