@@ -207,6 +207,17 @@
             border-bottom: none;
         }
 
+        .rank-pill {
+            display: inline-block;
+            min-width: 22px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            color: white;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-align: center;
+        }
+
         .roster-slot {
             display: inline-block;
             min-width: 32px;
@@ -563,6 +574,7 @@
         <div class="tabs" id="tabBar">
             <button class="tab-btn" data-tab="standings" onclick="switchTab('standings')">🥇 Standings</button>
             <button class="tab-btn" data-tab="teams" onclick="switchTab('teams')">👥 Teams</button>
+            <button class="tab-btn" data-tab="power" onclick="switchTab('power')">⚡ Power Rankings</button>
             <button class="tab-btn" data-tab="matchups" onclick="switchTab('matchups')">🏈 Matchups</button>
             <button class="tab-btn" data-tab="winners" onclick="switchTab('winners')">📋 Weekly Winners</button>
             <button class="tab-btn" data-tab="dues" onclick="switchTab('dues')">🧾 Dues &amp; Payouts</button>
@@ -587,6 +599,32 @@
                             <th>Team</th>
                             <th>Manager</th>
                             <th>Waiver Order</th>
+                            <th>Power Rank</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section tab-panel" data-tab="power">
+            <p style="margin-top: 0; color: #7f8c8d;">
+                Roster strength by position, computed from each team's starting lineup value
+                (<a href="https://dynasty-daddy.com/help/api-documentation" target="_blank" rel="noopener">Dynasty Daddy player values</a>).
+                Not a prediction of who wins — just who's holding the most value.
+            </p>
+            <div class="table-scroll">
+                <table id="powerTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Total Value</th>
+                            <th>QB</th>
+                            <th>RB</th>
+                            <th>WR</th>
+                            <th>TE</th>
+                            <th>FLEX</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -1107,7 +1145,7 @@
 
         // ---- Tabs ----
 
-        const TAB_NAMES = ['standings', 'teams', 'matchups', 'winners', 'dues', 'manual'];
+        const TAB_NAMES = ['standings', 'teams', 'power', 'matchups', 'winners', 'dues', 'manual'];
         const DEFAULT_TAB = 'teams';
 
         function switchTab(tabName) {
@@ -1138,6 +1176,68 @@
         // ---- Team roster modal (read-only, visible to everyone) ----
 
         const STARTING_SLOT_ORDER = ['QB', 'RB', 'WR', 'TE', 'W/R/T', 'FLEX', 'K', 'DEF'];
+
+        // ---- Power rankings: computed entirely from our own roster + trade-value
+        // data (no dependency on any third party's private per-league view) ----
+
+        const POWER_GROUPS = { QB: ['QB'], RB: ['RB'], WR: ['WR'], TE: ['TE'], FLEX: ['W/R/T', 'FLEX'] };
+
+        function computePowerRankings(teams) {
+            const rows = teams.map(team => {
+                const starters = (team.roster || []).filter(p => p.position !== 'BN' && p.position !== 'IR');
+                const byGroup = { QB: 0, RB: 0, WR: 0, TE: 0, FLEX: 0 };
+                let total = 0;
+                starters.forEach(p => {
+                    const value = tradeValuesCache?.[p.yahooPlayerId]?.tradeValue || 0;
+                    total += value;
+                    const group = Object.keys(POWER_GROUPS).find(g => POWER_GROUPS[g].includes(p.position));
+                    if (group) byGroup[group] += value;
+                });
+                return {
+                    teamKey: team.teamKey, name: team.name, manager: team.manager,
+                    logoUrl: team.logoUrl, total, byGroup, groupRank: {}
+                };
+            });
+
+            rows.sort((a, b) => b.total - a.total);
+            rows.forEach((r, i) => { r.rank = i + 1; });
+
+            Object.keys(POWER_GROUPS).forEach(group => {
+                [...rows].sort((a, b) => b.byGroup[group] - a.byGroup[group])
+                    .forEach((r, i) => { r.groupRank[group] = i + 1; });
+            });
+
+            rows.sort((a, b) => a.rank - b.rank);
+            return rows;
+        }
+
+        function rankPill(rank, total) {
+            if (rank == null || !total) return '—';
+            const t = total <= 1 ? 0 : (rank - 1) / (total - 1);
+            const hue = 120 - t * 120; // 120 green -> 0 red
+            return `<span class="rank-pill" style="background:hsl(${hue}, 65%, 45%)">${rank}</span>`;
+        }
+
+        function renderPowerRankings(rows) {
+            const tbody = document.querySelector('#powerTable tbody');
+            if (!rows.length) {
+                tbody.innerHTML = '<tr><td colspan="8">No roster/value data yet.</td></tr>';
+                return;
+            }
+            const n = rows.length;
+            tbody.innerHTML = rows.map(r => `
+                <tr>
+                    <td>${rankPill(r.rank, n)}</td>
+                    <td>${logoImg(r.logoUrl, r.name)}<strong>${r.name}</strong><br><small style="color:#7f8c8d;">${r.manager}</small></td>
+                    <td>${r.total.toLocaleString()}</td>
+                    <td>${rankPill(r.groupRank.QB, n)}</td>
+                    <td>${rankPill(r.groupRank.RB, n)}</td>
+                    <td>${rankPill(r.groupRank.WR, n)}</td>
+                    <td>${rankPill(r.groupRank.TE, n)}</td>
+                    <td>${rankPill(r.groupRank.FLEX, n)}</td>
+                </tr>
+            `).join('');
+        }
 
         function playerRow(p) {
             const value = tradeValuesCache?.[p.yahooPlayerId];
@@ -1259,9 +1359,14 @@
             teamsByKey = {};
             teams.forEach(t => { teamsByKey[t.teamKey] = t; });
 
+            const powerRankings = computePowerRankings(teams);
+            const powerRankByTeamKey = {};
+            powerRankings.forEach(r => { powerRankByTeamKey[r.teamKey] = r.rank; });
+
             renderPayouts(data.payouts);
             renderDues(dues, teams);
-            renderTeams(teams);
+            renderTeams(teams, powerRankByTeamKey);
+            renderPowerRankings(powerRankings);
             renderStandings(teams, data.dataSource);
             renderWinners(data.weeklyWinners || []);
 
@@ -1320,14 +1425,15 @@
             }
         }
 
-        function renderTeams(teams) {
+        function renderTeams(teams, powerRankByTeamKey) {
             const tbody = document.querySelector('#teamsTable tbody');
             if (!teams.length) {
-                tbody.innerHTML = '<tr><td colspan="4">No team data yet.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="5">No team data yet.</td></tr>';
                 return;
             }
 
             const sorted = [...teams].sort((a, b) => (a.draftPosition ?? 999) - (b.draftPosition ?? 999));
+            const n = teams.length;
 
             tbody.innerHTML = sorted.map(team => `
                 <tr>
@@ -1335,6 +1441,7 @@
                     <td>${logoImg(team.logoUrl, team.name)}<button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
                     <td>${team.manager}</td>
                     <td>${team.waiverPriority ?? '—'}</td>
+                    <td>${rankPill(powerRankByTeamKey?.[team.teamKey], n)}</td>
                 </tr>
             `).join('');
         }
