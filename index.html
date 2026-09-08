@@ -547,6 +547,7 @@
                             <th>Draft #</th>
                             <th>Team</th>
                             <th>Manager</th>
+                            <th>Waiver Order</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -635,6 +636,7 @@
                             <th>Pos</th>
                             <th>Player</th>
                             <th>NFL Team</th>
+                            <th>Trade Value</th>
                         </tr>
                     </thead>
                     <tbody id="rosterModalBody"></tbody>
@@ -685,6 +687,7 @@
         let isAdmin = false;
         let teamsConfigCache = null; // ./config/teams.json — roster + dues, public/static
         let rostersCache = null; // ./data/rosters.json — player rosters, from Fantasy Helper until Yahoo is live
+        let tradeValuesCache = null; // ./data/trade-values.json — Dynasty Daddy player trade values, keyed by Yahoo player id
 
         // ---- Shared GitHub Contents API helpers (admin writes only) ----
 
@@ -787,6 +790,7 @@
                     placementCash: 0,
                     totalCash: weeklyCash,
                     logoUrl: rostersCache?.[t.team]?.logoUrl || null,
+                    waiverPriority: null,
                     roster: rostersCache?.[t.team]?.players || []
                 };
             });
@@ -884,6 +888,15 @@
                 if (res.ok) rostersCache = await res.json();
             } catch (error) {
                 console.error('Failed to load rosters:', error);
+            }
+        }
+
+        async function loadTradeValues() {
+            try {
+                const res = await fetch('./data/trade-values.json', { cache: 'no-store' });
+                if (res.ok) tradeValuesCache = await res.json();
+            } catch (error) {
+                console.error('Failed to load trade values:', error);
             }
         }
 
@@ -1068,7 +1081,7 @@
         // ---- Tabs ----
 
         const TAB_NAMES = ['standings', 'teams', 'matchups', 'winners', 'dues', 'manual'];
-        const DEFAULT_TAB = 'standings';
+        const DEFAULT_TAB = 'teams';
 
         function switchTab(tabName) {
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -1107,14 +1120,18 @@
             const roster = team.roster || [];
 
             tbody.innerHTML = roster.length
-                ? roster.map(p => `
+                ? roster.map(p => {
+                    const value = tradeValuesCache?.[p.yahooPlayerId];
+                    return `
                     <tr>
                         <td>${p.position}</td>
                         <td>${p.photoUrl ? `<img class="player-photo" src="${p.photoUrl}" alt="${p.name}" loading="lazy">` : ''}${p.name}${p.status ? ` <span class="badge status">${p.status}</span>` : ''}</td>
                         <td>${p.nflTeam || '—'}</td>
+                        <td>${value ? `${value.tradeValue} <small style="color:#7f8c8d;">(${value.positionRank}${p.position})</small>` : '—'}</td>
                     </tr>
-                `).join('')
-                : '<tr><td colspan="3">No roster data available yet.</td></tr>';
+                `;
+                }).join('')
+                : '<tr><td colspan="4">No roster data available yet.</td></tr>';
 
             document.getElementById('rosterModal').hidden = false;
         }
@@ -1246,7 +1263,7 @@
         function renderTeams(teams) {
             const tbody = document.querySelector('#teamsTable tbody');
             if (!teams.length) {
-                tbody.innerHTML = '<tr><td colspan="3">No team data yet.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="4">No team data yet.</td></tr>';
                 return;
             }
 
@@ -1257,6 +1274,7 @@
                     <td>${team.draftPosition ?? '—'}</td>
                     <td>${logoImg(team.logoUrl, team.name)}<button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
                     <td>${team.manager}</td>
+                    <td>${team.waiverPriority ?? '—'}</td>
                 </tr>
             `).join('');
         }
@@ -1320,6 +1338,7 @@
             await loadTeamsConfig();
             await loadSchedule();
             await loadRosters();
+            await loadTradeValues();
             renderAdminBar();
             renderMatchups();
             switchTab(getInitialTab());

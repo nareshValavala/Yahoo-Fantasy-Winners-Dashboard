@@ -44,6 +44,9 @@ function parseRosterHtml(html) {
       );
       const statusMatch = chunk.match(/data-bs-content="([^"]+)"/);
       const photoMatch = chunk.match(/class="group-item-logo[^"]*"\s+src="([^"]+)"/);
+      const photoUrl = photoMatch ? photoMatch[1] : null;
+      // Yahoo's own player id sits in the photo URL, e.g. .../players_l/08132026/40059.1.png
+      const yahooIdMatch = photoUrl ? photoUrl.match(/players_l\/\d+\/(\d+)\.\d+\.\w+$/) : null;
 
       if (!nameMatch) return null;
 
@@ -52,7 +55,8 @@ function parseRosterHtml(html) {
         position: posMatch ? posMatch[1].trim() : (teamPosMatch ? teamPosMatch[2].split(",")[0].trim() : "—"),
         nflTeam: teamPosMatch ? teamPosMatch[1].trim().toUpperCase() : "",
         status: statusMatch ? decodeHtmlEntities(statusMatch[1].trim()) : null,
-        photoUrl: photoMatch ? photoMatch[1] : null,
+        photoUrl,
+        yahooPlayerId: yahooIdMatch ? yahooIdMatch[1] : null,
       };
     })
     .filter(Boolean);
