@@ -1115,12 +1115,14 @@
                 noteEl.innerHTML = '';
             }
 
-            // The roster/dues config is known even before Yahoo or a manual entry has
-            // populated data/league.json's teams array — fall back to it so the Teams
-            // and Dues tabs aren't empty on a totally fresh site.
-            const usingFallbackTeams = !data.teams || !data.teams.length;
-            const teams = usingFallbackTeams ? computeManualTeams(data.weeklyWinners || []) : data.teams;
-            const dues = usingFallbackTeams ? computeDuesSummary() : data.dues;
+            // Only trust data.teams as authoritative once Yahoo automation is live --
+            // it has real rank/W-L/points/roster data that can't be recomputed locally.
+            // Otherwise (manual mode, or no data yet) always derive teams fresh from
+            // config/teams.json so a rename or dues change there takes effect
+            // immediately, instead of showing a stale snapshot from the last save.
+            const isYahooSourced = data.dataSource === 'yahoo';
+            const teams = isYahooSourced ? data.teams : computeManualTeams(data.weeklyWinners || []);
+            const dues = isYahooSourced ? data.dues : computeDuesSummary();
 
             teamsByKey = {};
             teams.forEach(t => { teamsByKey[t.teamKey] = t; });
