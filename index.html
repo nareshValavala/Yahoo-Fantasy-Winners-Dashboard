@@ -176,6 +176,45 @@
             margin-right: 8px;
         }
 
+        .roster-section {
+            margin-bottom: 20px;
+        }
+
+        .roster-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .roster-section h4 {
+            margin: 0 0 8px 0;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7f8c8d;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+        }
+
+        .roster-section table {
+            width: 100%;
+        }
+
+        .roster-section td {
+            padding: 6px 4px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .roster-section tr:last-child td {
+            border-bottom: none;
+        }
+
+        .roster-slot {
+            display: inline-block;
+            min-width: 32px;
+            font-weight: bold;
+            color: #3498db;
+            font-size: 0.85em;
+        }
+
         .player-photo {
             width: 28px;
             height: 28px;
@@ -629,19 +668,7 @@
                 <span id="rosterModalTitle">Team Roster</span>
                 <button class="modal-close" onclick="closeRoster()">&times;</button>
             </h3>
-            <div class="table-scroll">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Pos</th>
-                            <th>Player</th>
-                            <th>NFL Team</th>
-                            <th>Trade Value</th>
-                        </tr>
-                    </thead>
-                    <tbody id="rosterModalBody"></tbody>
-                </table>
-            </div>
+            <div id="rosterModalBody"></div>
         </div>
     </div>
 
@@ -1110,28 +1137,61 @@
 
         // ---- Team roster modal (read-only, visible to everyone) ----
 
+        const STARTING_SLOT_ORDER = ['QB', 'RB', 'WR', 'TE', 'W/R/T', 'FLEX', 'K', 'DEF'];
+
+        function playerRow(p) {
+            const value = tradeValuesCache?.[p.yahooPlayerId];
+            return `
+                <tr>
+                    <td><span class="roster-slot">${p.position}</span></td>
+                    <td>${p.photoUrl ? `<img class="player-photo" src="${p.photoUrl}" alt="${p.name}" loading="lazy">` : ''}${p.name}${p.status ? ` <span class="badge status">${p.status}</span>` : ''}</td>
+                    <td>${p.nflTeam || '—'}</td>
+                    <td>${value ? `${value.tradeValue} <small style="color:#7f8c8d;">(${value.positionRank}${p.position})</small>` : '—'}</td>
+                </tr>
+            `;
+        }
+
+        function rosterSection(title, players) {
+            if (!players.length) return '';
+            return `
+                <div class="roster-section">
+                    <h4>${title} (${players.length})</h4>
+                    <div class="table-scroll">
+                        <table><tbody>${players.map(playerRow).join('')}</tbody></table>
+                    </div>
+                </div>
+            `;
+        }
+
         function showRoster(teamKey) {
             const team = teamsByKey[teamKey];
             if (!team) return;
 
             document.getElementById('rosterModalTitle').innerHTML =
                 `${logoImg(team.logoUrl, team.name)}${team.name} — Roster`;
-            const tbody = document.getElementById('rosterModalBody');
+            const container = document.getElementById('rosterModalBody');
             const roster = team.roster || [];
 
-            tbody.innerHTML = roster.length
-                ? roster.map(p => {
-                    const value = tradeValuesCache?.[p.yahooPlayerId];
-                    return `
-                    <tr>
-                        <td>${p.position}</td>
-                        <td>${p.photoUrl ? `<img class="player-photo" src="${p.photoUrl}" alt="${p.name}" loading="lazy">` : ''}${p.name}${p.status ? ` <span class="badge status">${p.status}</span>` : ''}</td>
-                        <td>${p.nflTeam || '—'}</td>
-                        <td>${value ? `${value.tradeValue} <small style="color:#7f8c8d;">(${value.positionRank}${p.position})</small>` : '—'}</td>
-                    </tr>
-                `;
-                }).join('')
-                : '<tr><td colspan="4">No roster data available yet.</td></tr>';
+            if (!roster.length) {
+                container.innerHTML = '<p>No roster data available yet.</p>';
+                document.getElementById('rosterModal').hidden = false;
+                return;
+            }
+
+            const starters = roster
+                .filter(p => p.position !== 'BN' && p.position !== 'IR')
+                .sort((a, b) => {
+                    const ai = STARTING_SLOT_ORDER.indexOf(a.position);
+                    const bi = STARTING_SLOT_ORDER.indexOf(b.position);
+                    return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+                });
+            const bench = roster.filter(p => p.position === 'BN');
+            const ir = roster.filter(p => p.position === 'IR');
+
+            container.innerHTML =
+                rosterSection('Starting Lineup', starters) +
+                rosterSection('Bench', bench) +
+                rosterSection('Injured Reserve', ir);
 
             document.getElementById('rosterModal').hidden = false;
         }
