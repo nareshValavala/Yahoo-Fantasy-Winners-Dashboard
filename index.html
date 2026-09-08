@@ -481,7 +481,8 @@
             <p id="leagueSubtitle">Loading league data…</p>
             <div id="dataSourceNote"></div>
             <div>
-                <button class="refresh-btn" id="refreshNowBtn" onclick="refreshNow()" hidden>🔄 Refresh Now</button>
+                <button class="refresh-btn" id="refreshNowBtn" onclick="refreshNow('update-league-data', this)" hidden>🔄 Refresh Now</button>
+                <button class="refresh-btn" id="refreshRostersBtn" onclick="refreshNow('fetch-rosters', this)" hidden>👥 Refresh Rosters</button>
             </div>
         </div>
 
@@ -627,13 +628,16 @@
 
         // Public — no admin token needed. The Vercel function holds its own
         // server-side GitHub token, so anyone can trigger a refresh.
-        async function refreshNow() {
-            const btn = document.getElementById('refreshNowBtn');
+        async function refreshNow(workflow, btn) {
             btn.disabled = true;
             const originalText = btn.textContent;
             btn.textContent = '🔄 Triggering…';
             try {
-                const res = await fetch(`${VERCEL_API_BASE}/api/trigger-update`, { method: 'POST' });
+                const res = await fetch(`${VERCEL_API_BASE}/api/trigger-update`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ workflow })
+                });
                 const data = await res.json();
                 if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
                 toast(data.message || 'Refresh triggered.');
@@ -964,6 +968,7 @@
             const bar = document.getElementById('adminBar');
             const manualTabBtn = document.getElementById('manualTabBtn');
             const refreshBtn = document.getElementById('refreshNowBtn');
+            const refreshRostersBtn = document.getElementById('refreshRostersBtn');
             if (isAdmin) {
                 bar.innerHTML = `
                     <span class="admin-badge">🔓 Admin Mode</span>
@@ -972,6 +977,7 @@
                 `;
                 manualTabBtn.hidden = false;
                 refreshBtn.hidden = false;
+                refreshRostersBtn.hidden = false;
                 populateManualTeamSelect();
             } else {
                 bar.innerHTML = `
@@ -981,6 +987,7 @@
                 `;
                 manualTabBtn.hidden = true;
                 refreshBtn.hidden = true;
+                refreshRostersBtn.hidden = true;
                 if (manualTabBtn.classList.contains('active')) switchTab(DEFAULT_TAB);
             }
         }
