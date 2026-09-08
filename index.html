@@ -397,6 +397,66 @@
             cursor: default;
         }
 
+        .matchups-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .matchups-header button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .matchups-header button:disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
+
+        .matchups-header span {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .matchup-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .matchup-row:last-child {
+            border-bottom: none;
+        }
+
+        .matchup-team {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .matchup-team.right {
+            text-align: right;
+        }
+
+        .matchup-manager {
+            font-size: 0.8em;
+            color: #7f8c8d;
+        }
+
+        .matchup-vs {
+            padding: 0 20px;
+            color: #bbb;
+            font-weight: bold;
+        }
+
         .remove-link {
             background: none;
             border: none;
@@ -432,6 +492,7 @@
         <div class="tabs" id="tabBar">
             <button class="tab-btn" data-tab="standings" onclick="switchTab('standings')">🥇 Standings</button>
             <button class="tab-btn" data-tab="teams" onclick="switchTab('teams')">👥 Teams</button>
+            <button class="tab-btn" data-tab="matchups" onclick="switchTab('matchups')">🏈 Matchups</button>
             <button class="tab-btn" data-tab="winners" onclick="switchTab('winners')">📋 Weekly Winners</button>
             <button class="tab-btn" data-tab="dues" onclick="switchTab('dues')">🧾 Dues &amp; Payouts</button>
             <button class="tab-btn" data-tab="manual" id="manualTabBtn" onclick="switchTab('manual')" hidden>✍️ Record Winner</button>
@@ -459,6 +520,15 @@
                     <tbody></tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="section tab-panel" data-tab="matchups">
+            <div class="matchups-header">
+                <button id="prevWeekBtn" onclick="changeMatchupWeek(-1)">&lt;</button>
+                <span id="matchupsWeekLabel">Week —</span>
+                <button id="nextWeekBtn" onclick="changeMatchupWeek(1)">&gt;</button>
+            </div>
+            <div id="matchupsList"></div>
         </div>
 
         <div class="section tab-panel" data-tab="winners">
@@ -776,6 +846,71 @@
             select.innerHTML = teamsConfigCache.teams.map(t => `<option value="${t.team}">${t.team}</option>`).join('');
         }
 
+        // ---- Matchups (manually-sourced schedule, until Yahoo supplies it live) ----
+
+        let scheduleCache = null;
+        let currentMatchupWeek = null;
+
+        async function loadSchedule() {
+            try {
+                const res = await fetch('./config/schedule.json', { cache: 'no-store' });
+                if (res.ok) scheduleCache = await res.json();
+            } catch (error) {
+                console.error('Failed to load schedule:', error);
+            }
+        }
+
+        function getScheduleWeeks() {
+            if (!scheduleCache) return [];
+            return Object.keys(scheduleCache).map(Number).sort((a, b) => a - b);
+        }
+
+        function renderMatchups(week) {
+            const weeks = getScheduleWeeks();
+            const label = document.getElementById('matchupsWeekLabel');
+            const list = document.getElementById('matchupsList');
+
+            if (!weeks.length) {
+                label.textContent = 'Week —';
+                list.innerHTML = '<p>No schedule data yet.</p>';
+                document.getElementById('prevWeekBtn').disabled = true;
+                document.getElementById('nextWeekBtn').disabled = true;
+                return;
+            }
+
+            if (week == null || !weeks.includes(week)) week = weeks[0];
+            currentMatchupWeek = week;
+
+            label.textContent = `Week ${week}`;
+            document.getElementById('prevWeekBtn').disabled = week === weeks[0];
+            document.getElementById('nextWeekBtn').disabled = week === weeks[weeks.length - 1];
+
+            const managerOf = (teamName) =>
+                teamsConfigCache?.teams.find(t => t.team === teamName)?.manager || '';
+
+            const pairs = scheduleCache[String(week)] || [];
+            list.innerHTML = pairs.map(([a, b]) => `
+                <div class="matchup-row">
+                    <div class="matchup-team">
+                        <strong>${a}</strong>
+                        <span class="matchup-manager">${managerOf(a)}</span>
+                    </div>
+                    <div class="matchup-vs">vs</div>
+                    <div class="matchup-team right">
+                        <strong>${b}</strong>
+                        <span class="matchup-manager">${managerOf(b)}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function changeMatchupWeek(delta) {
+            const weeks = getScheduleWeeks();
+            const idx = weeks.indexOf(currentMatchupWeek);
+            const newIdx = idx + delta;
+            if (newIdx >= 0 && newIdx < weeks.length) renderMatchups(weeks[newIdx]);
+        }
+
         // ---- Admin mode (writes go straight to GitHub via a personal access token
         // you paste in and that stays only in your own browser's localStorage) ----
 
@@ -878,7 +1013,7 @@
 
         // ---- Tabs ----
 
-        const TAB_NAMES = ['standings', 'teams', 'winners', 'dues', 'manual'];
+        const TAB_NAMES = ['standings', 'teams', 'matchups', 'winners', 'dues', 'manual'];
         const DEFAULT_TAB = 'standings';
 
         function switchTab(tabName) {
@@ -1126,7 +1261,9 @@
         (async () => {
             isAdmin = !!getAdminToken();
             await loadTeamsConfig();
+            await loadSchedule();
             renderAdminBar();
+            renderMatchups();
             switchTab(getInitialTab());
             await loadLeagueData();
         })();
