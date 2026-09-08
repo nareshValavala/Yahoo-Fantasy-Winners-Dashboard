@@ -83,6 +83,7 @@ const teams = leagueStandings.standings.map((team) => {
     losses: Number(team.standings?.outcome_totals?.losses || 0),
     ties: Number(team.standings?.outcome_totals?.ties || 0),
     pointsFor: Number(team.standings?.points_for || 0),
+    logoUrl: team.team_logos?.[0]?.url || null,
   };
 });
 

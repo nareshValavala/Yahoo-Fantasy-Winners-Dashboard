@@ -1,10 +1,10 @@
-// Fetches team rosters from Fantasy Helper's public roster pages
-// (https://fantasyhelper.net/Yahoo/<gameId>.l.<leagueId>/<gameId>.l.<leagueId>.t.<n>/roster)
-// and writes data/rosters.json. Unlike scores/standings, these specific pages are
-// viewable without logging in -- confirmed by checking multiple teams directly --
-// so this is a legitimate stopgap for roster display until Yahoo API access is
-// approved. It does NOT touch scores, standings, or matchup results, which stay
-// on manual entry since every source for that data requires a real login.
+// Fetches team rosters (with player photos) and team logos from Fantasy
+// Helper's public pages and writes data/rosters.json. Unlike scores,
+// standings, or matchup results -- which every source gates behind a real
+// login -- these specific pages are viewable without logging in, confirmed
+// by checking multiple teams directly. This is a stopgap for roster/branding
+// display only, until Yahoo API access is approved; it does not touch
+// scores or standings, which stay on manual entry.
 //
 // Usage: node scripts/fetch-rosters.mjs
 
@@ -17,6 +17,7 @@ const rootDir = path.join(__dirname, "..");
 
 const GAME_ID = process.env.FANTASYHELPER_GAME_ID || "470";
 const LEAGUE_ID = process.env.LEAGUE_ID || "529714";
+const FETCH_HEADERS = { "User-Agent": "Mozilla/5.0 (compatible; league-tracker-bot/1.0)" };
 
 const teamsConfig = JSON.parse(
   await readFile(path.join(rootDir, "config", "teams.json"), "utf8")
@@ -42,6 +43,7 @@ function parseRosterHtml(html) {
         /<small class="text-nowrap ms-2 text-end">\s*<p class="mb-1">([^<]*)<\/p>\s*<p class="mb-0">([^<]*)<\/p>/
       );
       const statusMatch = chunk.match(/data-bs-content="([^"]+)"/);
+      const photoMatch = chunk.match(/class="group-item-logo[^"]*"\s+src="([^"]+)"/);
 
       if (!nameMatch) return null;
 
@@ -50,9 +52,17 @@ function parseRosterHtml(html) {
         position: posMatch ? posMatch[1].trim() : (teamPosMatch ? teamPosMatch[2].split(",")[0].trim() : "—"),
         nflTeam: teamPosMatch ? teamPosMatch[1].trim().toUpperCase() : "",
         status: statusMatch ? decodeHtmlEntities(statusMatch[1].trim()) : null,
+        photoUrl: photoMatch ? photoMatch[1] : null,
       };
     })
     .filter(Boolean);
+}
+
+function parseTeamLogo(html) {
+  const managerSection = html.split(">Manager<")[1];
+  if (!managerSection) return null;
+  const match = managerSection.match(/<img src="([^"]+)"/);
+  return match ? match[1] : null;
 }
 
 const rosters = {};
@@ -63,19 +73,29 @@ for (const team of teamsConfig.teams) {
     continue;
   }
 
-  const url = `https://fantasyhelper.net/Yahoo/${GAME_ID}.l.${LEAGUE_ID}/${GAME_ID}.l.${LEAGUE_ID}.t.${team.fantasyHelperTeamId}/roster`;
-  const res = await fetch(url, {
-    headers: { "User-Agent": "Mozilla/5.0 (compatible; league-tracker-bot/1.0)" },
-  });
+  const base = `https://fantasyhelper.net/Yahoo/${GAME_ID}.l.${LEAGUE_ID}/${GAME_ID}.l.${LEAGUE_ID}.t.${team.fantasyHelperTeamId}`;
 
-  if (!res.ok) {
-    console.warn(`Failed to fetch roster for ${team.team}: HTTP ${res.status}`);
-    continue;
+  const [teamRes, rosterRes] = await Promise.all([
+    fetch(base, { headers: FETCH_HEADERS }),
+    fetch(`${base}/roster`, { headers: FETCH_HEADERS }),
+  ]);
+
+  let logoUrl = null;
+  if (teamRes.ok) {
+    logoUrl = parseTeamLogo(await teamRes.text());
+  } else {
+    console.warn(`Failed to fetch team page for ${team.team}: HTTP ${teamRes.status}`);
   }
 
-  const html = await res.text();
-  rosters[team.team] = parseRosterHtml(html);
-  console.log(`${team.team}: ${rosters[team.team].length} players`);
+  let players = [];
+  if (rosterRes.ok) {
+    players = parseRosterHtml(await rosterRes.text());
+  } else {
+    console.warn(`Failed to fetch roster for ${team.team}: HTTP ${rosterRes.status}`);
+  }
+
+  rosters[team.team] = { logoUrl, players };
+  console.log(`${team.team}: ${players.length} players, logo ${logoUrl ? "found" : "missing"}`);
 }
 
 await writeFile(

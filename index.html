@@ -167,6 +167,25 @@
             margin-top: 10px;
         }
 
+        .team-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .player-photo {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+            margin-right: 8px;
+            background: #eee;
+        }
+
         .team-link {
             background: none;
             border: none;
@@ -439,11 +458,23 @@
         .matchup-team {
             flex: 1;
             display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .matchup-team > div {
+            display: flex;
             flex-direction: column;
         }
 
         .matchup-team.right {
+            flex-direction: row-reverse;
             text-align: right;
+        }
+
+        .matchup-team.right .team-logo {
+            margin-right: 0;
+            margin-left: 8px;
         }
 
         .matchup-manager {
@@ -482,7 +513,7 @@
             <div id="dataSourceNote"></div>
             <div>
                 <button class="refresh-btn" id="refreshNowBtn" onclick="refreshNow('update-league-data', this)" hidden>🔄 Refresh Now</button>
-                <button class="refresh-btn" id="refreshRostersBtn" onclick="refreshNow('fetch-rosters', this)" hidden>👥 Refresh Rosters</button>
+                <button class="refresh-btn" id="refreshRostersBtn" onclick="refreshNow('fetch-rosters', this)">👥 Refresh Rosters</button>
             </div>
         </div>
 
@@ -614,6 +645,7 @@
 
     <script>
         const fmtMoney = (n) => `$${Number(n || 0).toFixed(2)}`;
+        const logoImg = (url, alt) => url ? `<img class="team-logo" src="${url}" alt="${alt || ''}" loading="lazy">` : '';
 
         const GITHUB_OWNER = 'nareshValavala';
         const GITHUB_REPO = 'Yahoo-Fantasy-Winners-Dashboard';
@@ -754,7 +786,8 @@
                     weeklyCash,
                     placementCash: 0,
                     totalCash: weeklyCash,
-                    roster: rostersCache?.[t.team] || []
+                    logoUrl: rostersCache?.[t.team]?.logoUrl || null,
+                    roster: rostersCache?.[t.team]?.players || []
                 };
             });
         }
@@ -901,18 +934,25 @@
 
             const managerOf = (teamName) =>
                 teamsConfigCache?.teams.find(t => t.team === teamName)?.manager || '';
+            const logoOf = (teamName) => rostersCache?.[teamName]?.logoUrl || null;
 
             const pairs = scheduleCache[String(week)] || [];
             list.innerHTML = pairs.map(([a, b]) => `
                 <div class="matchup-row">
                     <div class="matchup-team">
-                        <strong>${a}</strong>
-                        <span class="matchup-manager">${managerOf(a)}</span>
+                        ${logoImg(logoOf(a), a)}
+                        <div>
+                            <strong>${a}</strong>
+                            <span class="matchup-manager">${managerOf(a)}</span>
+                        </div>
                     </div>
                     <div class="matchup-vs">vs</div>
                     <div class="matchup-team right">
-                        <strong>${b}</strong>
-                        <span class="matchup-manager">${managerOf(b)}</span>
+                        <div>
+                            <strong>${b}</strong>
+                            <span class="matchup-manager">${managerOf(b)}</span>
+                        </div>
+                        ${logoImg(logoOf(b), b)}
                     </div>
                 </div>
             `).join('');
@@ -968,7 +1008,6 @@
             const bar = document.getElementById('adminBar');
             const manualTabBtn = document.getElementById('manualTabBtn');
             const refreshBtn = document.getElementById('refreshNowBtn');
-            const refreshRostersBtn = document.getElementById('refreshRostersBtn');
             if (isAdmin) {
                 bar.innerHTML = `
                     <span class="admin-badge">🔓 Admin Mode</span>
@@ -977,7 +1016,6 @@
                 `;
                 manualTabBtn.hidden = false;
                 refreshBtn.hidden = false;
-                refreshRostersBtn.hidden = false;
                 populateManualTeamSelect();
             } else {
                 bar.innerHTML = `
@@ -987,7 +1025,6 @@
                 `;
                 manualTabBtn.hidden = true;
                 refreshBtn.hidden = true;
-                refreshRostersBtn.hidden = true;
                 if (manualTabBtn.classList.contains('active')) switchTab(DEFAULT_TAB);
             }
         }
@@ -1064,7 +1101,8 @@
             const team = teamsByKey[teamKey];
             if (!team) return;
 
-            document.getElementById('rosterModalTitle').textContent = `${team.name} — Roster`;
+            document.getElementById('rosterModalTitle').innerHTML =
+                `${logoImg(team.logoUrl, team.name)}${team.name} — Roster`;
             const tbody = document.getElementById('rosterModalBody');
             const roster = team.roster || [];
 
@@ -1072,7 +1110,7 @@
                 ? roster.map(p => `
                     <tr>
                         <td>${p.position}</td>
-                        <td>${p.name}${p.status ? ` <span class="badge status">${p.status}</span>` : ''}</td>
+                        <td>${p.photoUrl ? `<img class="player-photo" src="${p.photoUrl}" alt="${p.name}" loading="lazy">` : ''}${p.name}${p.status ? ` <span class="badge status">${p.status}</span>` : ''}</td>
                         <td>${p.nflTeam || '—'}</td>
                     </tr>
                 `).join('')
@@ -1188,7 +1226,7 @@
 
             tbody.innerHTML = sorted.map(team => `
                 <tr>
-                    <td><strong>${team.name}</strong></td>
+                    <td>${logoImg(team.logoUrl, team.name)}<strong>${team.name}</strong></td>
                     <td>${team.manager}</td>
                     <td>${isAdmin
                         ? `<input type="checkbox" class="dues-checkbox" ${team.duesPaid ? 'checked' : ''}
@@ -1217,7 +1255,7 @@
             tbody.innerHTML = sorted.map(team => `
                 <tr>
                     <td>${team.draftPosition ?? '—'}</td>
-                    <td><button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
+                    <td>${logoImg(team.logoUrl, team.name)}<button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
                     <td>${team.manager}</td>
                 </tr>
             `).join('');
@@ -1240,7 +1278,7 @@
             tbody.innerHTML = teams.map(team => isYahoo ? `
                 <tr class="${team.rank === 1 ? 'rank-1' : ''}">
                     <td>${team.rank ?? '—'}</td>
-                    <td><button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
+                    <td>${logoImg(team.logoUrl, team.name)}<button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
                     <td>${team.manager}</td>
                     <td>${team.wins}-${team.losses}-${team.ties}</td>
                     <td>${Number(team.pointsFor).toFixed(2)}</td>
@@ -1249,7 +1287,7 @@
                 </tr>
             ` : `
                 <tr>
-                    <td><strong>${team.name}</strong></td>
+                    <td>${logoImg(team.logoUrl, team.name)}<strong>${team.name}</strong></td>
                     <td>${team.manager}</td>
                     <td>${team.weeklyWins || 0}</td>
                     <td class="cash">${fmtMoney(team.totalCash)}</td>
