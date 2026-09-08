@@ -33,5 +33,68 @@
     ["ALLEN'S LAMB BIRYANI", "Fly High Eagles"],
     ["Touchdown fever", "49ers"],
     ["Bear Claw", "Launch Play VJ"]
+  ],
+  "6": [
+    ["The Uncles Team", "Touchdown fever"],
+    ["Insane in the End Zone", "Fly High Eagles"],
+    ["ALLEN'S LAMB BIRYANI", "Launch Play VJ"],
+    ["4th Down Sagar", "Steelers"],
+    ["Bear Claw", "49ers"]
+  ],
+  "7": [
+    ["The Uncles Team", "Bear Claw"],
+    ["Insane in the End Zone", "ALLEN'S LAMB BIRYANI"],
+    ["Touchdown fever", "4th Down Sagar"],
+    ["Fly High Eagles", "Steelers"],
+    ["Launch Play VJ", "49ers"]
+  ],
+  "8": [
+    ["The Uncles Team", "Launch Play VJ"],
+    ["ALLEN'S LAMB BIRYANI", "49ers"],
+    ["Touchdown fever", "Fly High Eagles"],
+    ["4th Down Sagar", "Bear Claw"],
+    ["Insane in the End Zone", "Steelers"]
+  ],
+  "9": [
+    ["The Uncles Team", "49ers"],
+    ["Insane in the End Zone", "Touchdown fever"],
+    ["ALLEN'S LAMB BIRYANI", "Steelers"],
+    ["Fly High Eagles", "Bear Claw"],
+    ["4th Down Sagar", "Launch Play VJ"]
+  ],
+  "10": [
+    ["The Uncles Team", "ALLEN'S LAMB BIRYANI"],
+    ["Insane in the End Zone", "Bear Claw"],
+    ["Touchdown fever", "Steelers"],
+    ["Fly High Eagles", "Launch Play VJ"],
+    ["4th Down Sagar", "49ers"]
+  ],
+  "11": [
+    ["The Uncles Team", "4th Down Sagar"],
+    ["Insane in the End Zone", "Launch Play VJ"],
+    ["ALLEN'S LAMB BIRYANI", "Touchdown fever"],
+    ["Fly High Eagles", "49ers"],
+    ["Bear Claw", "Steelers"]
+  ],
+  "12": [
+    ["The Uncles Team", "Fly High Eagles"],
+    ["Insane in the End Zone", "49ers"],
+    ["ALLEN'S LAMB BIRYANI", "4th Down Sagar"],
+    ["Touchdown fever", "Bear Claw"],
+    ["Steelers", "Launch Play VJ"]
+  ],
+  "13": [
+    ["The Uncles Team", "Insane in the End Zone"],
+    ["ALLEN'S LAMB BIRYANI", "Bear Claw"],
+    ["Touchdown fever", "Launch Play VJ"],
+    ["Fly High Eagles", "4th Down Sagar"],
+    ["Steelers", "49ers"]
+  ],
+  "14": [
+    ["The Uncles Team", "Steelers"],
+    ["Insane in the End Zone", "4th Down Sagar"],
+    ["ALLEN'S LAMB BIRYANI", "Fly High Eagles"],
+    ["Touchdown fever", "49ers"],
+    ["Bear Claw", "Launch Play VJ"]
   ]
 }
