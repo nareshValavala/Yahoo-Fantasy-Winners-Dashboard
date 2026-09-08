@@ -648,6 +648,7 @@
         let teamsByKey = {};
         let isAdmin = false;
         let teamsConfigCache = null; // ./config/teams.json — roster + dues, public/static
+        let rostersCache = null; // ./data/rosters.json — player rosters, from Fantasy Helper until Yahoo is live
 
         // ---- Shared GitHub Contents API helpers (admin writes only) ----
 
@@ -749,7 +750,7 @@
                     weeklyCash,
                     placementCash: 0,
                     totalCash: weeklyCash,
-                    roster: []
+                    roster: rostersCache?.[t.team] || []
                 };
             });
         }
@@ -837,6 +838,15 @@
                 if (res.ok) teamsConfigCache = await res.json();
             } catch (error) {
                 console.error('Failed to load teams config:', error);
+            }
+        }
+
+        async function loadRosters() {
+            try {
+                const res = await fetch('./data/rosters.json', { cache: 'no-store' });
+                if (res.ok) rostersCache = await res.json();
+            } catch (error) {
+                console.error('Failed to load rosters:', error);
             }
         }
 
@@ -1264,6 +1274,7 @@
             isAdmin = !!getAdminToken();
             await loadTeamsConfig();
             await loadSchedule();
+            await loadRosters();
             renderAdminBar();
             renderMatchups();
             switchTab(getInitialTab());

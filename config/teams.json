@@ -7,61 +7,71 @@
       "team": "Steelers",
       "manager": "chandrakanth",
       "draftPosition": 1,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 8
     },
     {
       "team": "Insane in the End Zone",
       "manager": "Kiran K",
       "draftPosition": 2,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 2
     },
     {
       "team": "Launch Play VJ",
       "manager": "VJ",
       "draftPosition": 3,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 9
     },
     {
       "team": "Fly High Eagles",
       "manager": "Dhru",
       "draftPosition": 4,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 5
     },
     {
       "team": "4th Down Sagar",
       "manager": "Sagar",
       "draftPosition": 5,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 6
     },
     {
       "team": "ALLEN'S LAMB BIRYANI",
       "manager": "Sai",
       "draftPosition": 6,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 3
     },
     {
       "team": "Touchdown fever",
       "manager": "Bhargav",
       "draftPosition": 7,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 4
     },
     {
       "team": "The Uncles Team",
       "manager": "Jr Nani",
       "draftPosition": 8,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 1
     },
     {
       "team": "49ers",
       "manager": "ashok",
       "draftPosition": 9,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 10
     },
     {
       "team": "Bear Claw",
       "manager": "bharath",
       "draftPosition": 10,
-      "paid": true
+      "paid": true,
+      "fantasyHelperTeamId": 7
     }
   ]
 }

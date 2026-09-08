@@ -1,0 +1,916 @@
+{
+  "Steelers": [
+    {
+      "name": "Jalen Hurts",
+      "position": "QB",
+      "nflTeam": "PHI",
+      "status": null
+    },
+    {
+      "name": "Jahmyr Gibbs",
+      "position": "RB",
+      "nflTeam": "DET",
+      "status": null
+    },
+    {
+      "name": "D'Andre Swift",
+      "position": "RB",
+      "nflTeam": "CHI",
+      "status": "Q - Abdomen"
+    },
+    {
+      "name": "Nico Collins",
+      "position": "WR",
+      "nflTeam": "HOU",
+      "status": null
+    },
+    {
+      "name": "Garrett Wilson",
+      "position": "WR",
+      "nflTeam": "NYJ",
+      "status": null
+    },
+    {
+      "name": "Brock Bowers",
+      "position": "TE",
+      "nflTeam": "LV",
+      "status": null
+    },
+    {
+      "name": "Jameson Williams",
+      "position": "W/R/T",
+      "nflTeam": "DET",
+      "status": null
+    },
+    {
+      "name": "Jayden Daniels",
+      "position": "BN",
+      "nflTeam": "WAS",
+      "status": null
+    },
+    {
+      "name": "Brian Thomas Jr.",
+      "position": "BN",
+      "nflTeam": "JAX",
+      "status": null
+    },
+    {
+      "name": "Quentin Johnston",
+      "position": "BN",
+      "nflTeam": "LAC",
+      "status": null
+    },
+    {
+      "name": "Blake Corum",
+      "position": "BN",
+      "nflTeam": "LAR",
+      "status": null
+    },
+    {
+      "name": "Travis Kelce",
+      "position": "BN",
+      "nflTeam": "KC",
+      "status": null
+    },
+    {
+      "name": "Jaxson Dart",
+      "position": "BN",
+      "nflTeam": "NYG",
+      "status": null
+    },
+    {
+      "name": "Cam Little",
+      "position": "K",
+      "nflTeam": "JAX",
+      "status": null
+    },
+    {
+      "name": "Ravens",
+      "position": "DEF",
+      "nflTeam": "BAL",
+      "status": null
+    }
+  ],
+  "Insane in the End Zone": [
+    {
+      "name": "Joe Burrow",
+      "position": "QB",
+      "nflTeam": "CIN",
+      "status": null
+    },
+    {
+      "name": "Bijan Robinson",
+      "position": "RB",
+      "nflTeam": "ATL",
+      "status": null
+    },
+    {
+      "name": "Javonte Williams",
+      "position": "RB",
+      "nflTeam": "DAL",
+      "status": null
+    },
+    {
+      "name": "Drake London",
+      "position": "WR",
+      "nflTeam": "ATL",
+      "status": null
+    },
+    {
+      "name": "Tetairoa McMillan",
+      "position": "WR",
+      "nflTeam": "CAR",
+      "status": null
+    },
+    {
+      "name": "Tucker Kraft",
+      "position": "TE",
+      "nflTeam": "GB",
+      "status": "Q - Knee - ACL"
+    },
+    {
+      "name": "Luther Burden III",
+      "position": "W/R/T",
+      "nflTeam": "CHI",
+      "status": "Q - Groin"
+    },
+    {
+      "name": "Jayden Reed",
+      "position": "BN",
+      "nflTeam": "GB",
+      "status": null
+    },
+    {
+      "name": "DK Metcalf",
+      "position": "BN",
+      "nflTeam": "PIT",
+      "status": "Q - Undisclosed"
+    },
+    {
+      "name": "Jordan Mason",
+      "position": "BN",
+      "nflTeam": "MIN",
+      "status": null
+    },
+    {
+      "name": "Courtland Sutton",
+      "position": "BN",
+      "nflTeam": "DEN",
+      "status": null
+    },
+    {
+      "name": "Xavier Worthy",
+      "position": "BN",
+      "nflTeam": "KC",
+      "status": null
+    },
+    {
+      "name": "Denzel Boston",
+      "position": "BN",
+      "nflTeam": "CLE",
+      "status": null
+    },
+    {
+      "name": "Tyler Loop",
+      "position": "K",
+      "nflTeam": "BAL",
+      "status": null
+    }
+  ],
+  "Launch Play VJ": [
+    {
+      "name": "Drake Maye",
+      "position": "QB",
+      "nflTeam": "NE",
+      "status": null
+    },
+    {
+      "name": "Derrick Henry",
+      "position": "RB",
+      "nflTeam": "BAL",
+      "status": null
+    },
+    {
+      "name": "Ashton Jeanty",
+      "position": "RB",
+      "nflTeam": "LV",
+      "status": "Q - Ankle"
+    },
+    {
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "nflTeam": "CIN",
+      "status": "Q - Knee"
+    },
+    {
+      "name": "Tee Higgins",
+      "position": "WR",
+      "nflTeam": "CIN",
+      "status": "Q - Heel"
+    },
+    {
+      "name": "Colston Loveland",
+      "position": "TE",
+      "nflTeam": "CHI",
+      "status": null
+    },
+    {
+      "name": "Rhamondre Stevenson",
+      "position": "W/R/T",
+      "nflTeam": "NE",
+      "status": null
+    },
+    {
+      "name": "TreVeyon Henderson",
+      "position": "BN",
+      "nflTeam": "NE",
+      "status": "Q - Ankle"
+    },
+    {
+      "name": "Carnell Tate",
+      "position": "BN",
+      "nflTeam": "TEN",
+      "status": "Q - Undisclosed"
+    },
+    {
+      "name": "Rico Dowdle",
+      "position": "BN",
+      "nflTeam": "PIT",
+      "status": null
+    },
+    {
+      "name": "Bo Nix",
+      "position": "BN",
+      "nflTeam": "DEN",
+      "status": null
+    },
+    {
+      "name": "Dallas Goedert",
+      "position": "BN",
+      "nflTeam": "PHI",
+      "status": null
+    },
+    {
+      "name": "Chris Rodriguez Jr.",
+      "position": "BN",
+      "nflTeam": "JAX",
+      "status": null
+    },
+    {
+      "name": "Cameron Dicker",
+      "position": "K",
+      "nflTeam": "LAC",
+      "status": "Q - Undisclosed"
+    },
+    {
+      "name": "Vikings",
+      "position": "DEF",
+      "nflTeam": "MIN",
+      "status": null
+    }
+  ],
+  "Fly High Eagles": [
+    {
+      "name": "Trevor Lawrence",
+      "position": "QB",
+      "nflTeam": "JAX",
+      "status": null
+    },
+    {
+      "name": "Jonathan Taylor",
+      "position": "RB",
+      "nflTeam": "IND",
+      "status": null
+    },
+    {
+      "name": "De'Von Achane",
+      "position": "RB",
+      "nflTeam": "MIA",
+      "status": null
+    },
+    {
+      "name": "Chris Olave",
+      "position": "WR",
+      "nflTeam": "NO",
+      "status": null
+    },
+    {
+      "name": "Ladd McConkey",
+      "position": "WR",
+      "nflTeam": "LAC",
+      "status": null
+    },
+    {
+      "name": "Sam LaPorta",
+      "position": "TE",
+      "nflTeam": "DET",
+      "status": "Q - Hip"
+    },
+    {
+      "name": "DJ Moore",
+      "position": "W/R/T",
+      "nflTeam": "BUF",
+      "status": null
+    },
+    {
+      "name": "Jadarian Price",
+      "position": "BN",
+      "nflTeam": "SEA",
+      "status": null
+    },
+    {
+      "name": "Jared Goff",
+      "position": "BN",
+      "nflTeam": "DET",
+      "status": null
+    },
+    {
+      "name": "Tony Pollard",
+      "position": "BN",
+      "nflTeam": "TEN",
+      "status": null
+    },
+    {
+      "name": "Jacory Croskey-Merritt",
+      "position": "BN",
+      "nflTeam": "WAS",
+      "status": "Q - Lower Body"
+    },
+    {
+      "name": "Makai Lemon",
+      "position": "BN",
+      "nflTeam": "PHI",
+      "status": null
+    },
+    {
+      "name": "Jalen Coker",
+      "position": "BN",
+      "nflTeam": "CAR",
+      "status": null
+    },
+    {
+      "name": "Ka'imi Fairbairn",
+      "position": "K",
+      "nflTeam": "HOU",
+      "status": null
+    },
+    {
+      "name": "Jaguars",
+      "position": "DEF",
+      "nflTeam": "JAX",
+      "status": null
+    }
+  ],
+  "4th Down Sagar": [
+    {
+      "name": "Kyler Murray",
+      "position": "QB",
+      "nflTeam": "MIN",
+      "status": null
+    },
+    {
+      "name": "Kyren Williams",
+      "position": "RB",
+      "nflTeam": "LAR",
+      "status": null
+    },
+    {
+      "name": "Cam Skattebo",
+      "position": "RB",
+      "nflTeam": "NYG",
+      "status": null
+    },
+    {
+      "name": "Puka Nacua",
+      "position": "WR",
+      "nflTeam": "LAR",
+      "status": "Q - Groin"
+    },
+    {
+      "name": "A.J. Brown",
+      "position": "WR",
+      "nflTeam": "NE",
+      "status": null
+    },
+    {
+      "name": "Trey McBride",
+      "position": "TE",
+      "nflTeam": "ARI",
+      "status": null
+    },
+    {
+      "name": "David Montgomery",
+      "position": "W/R/T",
+      "nflTeam": "HOU",
+      "status": null
+    },
+    {
+      "name": "Brock Purdy",
+      "position": "BN",
+      "nflTeam": "SF",
+      "status": null
+    },
+    {
+      "name": "Chris Godwin Jr.",
+      "position": "BN",
+      "nflTeam": "TB",
+      "status": null
+    },
+    {
+      "name": "J.K. Dobbins",
+      "position": "BN",
+      "nflTeam": "DEN",
+      "status": null
+    },
+    {
+      "name": "Michael Pittman Jr.",
+      "position": "BN",
+      "nflTeam": "PIT",
+      "status": "Q - Hamstring"
+    },
+    {
+      "name": "Juwan Johnson",
+      "position": "BN",
+      "nflTeam": "NO",
+      "status": null
+    },
+    {
+      "name": "Rachaad White",
+      "position": "BN",
+      "nflTeam": "WAS",
+      "status": "Q - Hamstring"
+    },
+    {
+      "name": "Jason Myers",
+      "position": "K",
+      "nflTeam": "SEA",
+      "status": null
+    },
+    {
+      "name": "Rams",
+      "position": "DEF",
+      "nflTeam": "LAR",
+      "status": null
+    }
+  ],
+  "ALLEN'S LAMB BIRYANI": [
+    {
+      "name": "Josh Allen",
+      "position": "QB",
+      "nflTeam": "BUF",
+      "status": null
+    },
+    {
+      "name": "Travis Etienne Jr.",
+      "position": "RB",
+      "nflTeam": "NO",
+      "status": null
+    },
+    {
+      "name": "Quinshon Judkins",
+      "position": "RB",
+      "nflTeam": "CLE",
+      "status": null
+    },
+    {
+      "name": "Jaxon Smith-Njigba",
+      "position": "WR",
+      "nflTeam": "SEA",
+      "status": null
+    },
+    {
+      "name": "CeeDee Lamb",
+      "position": "WR",
+      "nflTeam": "DAL",
+      "status": null
+    },
+    {
+      "name": "Tyler Warren",
+      "position": "TE",
+      "nflTeam": "IND",
+      "status": "Q - Groin"
+    },
+    {
+      "name": "Mike Evans",
+      "position": "W/R/T",
+      "nflTeam": "SF",
+      "status": "Q - Groin"
+    },
+    {
+      "name": "Marvin Harrison Jr.",
+      "position": "BN",
+      "nflTeam": "ARI",
+      "status": null
+    },
+    {
+      "name": "Michael Wilson",
+      "position": "BN",
+      "nflTeam": "ARI",
+      "status": null
+    },
+    {
+      "name": "RJ Harvey",
+      "position": "BN",
+      "nflTeam": "DEN",
+      "status": null
+    },
+    {
+      "name": "Kenny Gainwell",
+      "position": "BN",
+      "nflTeam": "TB",
+      "status": null
+    },
+    {
+      "name": "Wan'Dale Robinson",
+      "position": "BN",
+      "nflTeam": "TEN",
+      "status": "Q - Head"
+    },
+    {
+      "name": "Keaton Mitchell",
+      "position": "BN",
+      "nflTeam": "LAC",
+      "status": "Q - Undisclosed"
+    },
+    {
+      "name": "Evan McPherson",
+      "position": "K",
+      "nflTeam": "CIN",
+      "status": null
+    },
+    {
+      "name": "Eagles",
+      "position": "DEF",
+      "nflTeam": "PHI",
+      "status": null
+    }
+  ],
+  "Touchdown fever": [
+    {
+      "name": "Caleb Williams",
+      "position": "QB",
+      "nflTeam": "CHI",
+      "status": null
+    },
+    {
+      "name": "James Cook III",
+      "position": "RB",
+      "nflTeam": "BUF",
+      "status": null
+    },
+    {
+      "name": "Omarion Hampton",
+      "position": "RB",
+      "nflTeam": "LAC",
+      "status": null
+    },
+    {
+      "name": "DeVonta Smith",
+      "position": "WR",
+      "nflTeam": "PHI",
+      "status": null
+    },
+    {
+      "name": "Rashee Rice",
+      "position": "WR",
+      "nflTeam": "KC",
+      "status": null
+    },
+    {
+      "name": "Isaiah Likely",
+      "position": "TE",
+      "nflTeam": "NYG",
+      "status": null
+    },
+    {
+      "name": "Bucky Irving",
+      "position": "W/R/T",
+      "nflTeam": "TB",
+      "status": null
+    },
+    {
+      "name": "Parker Washington",
+      "position": "BN",
+      "nflTeam": "JAX",
+      "status": null
+    },
+    {
+      "name": "MarShawn Lloyd",
+      "position": "BN",
+      "nflTeam": "GB",
+      "status": null
+    },
+    {
+      "name": "Josh Downs",
+      "position": "BN",
+      "nflTeam": "IND",
+      "status": "Q - Calf"
+    },
+    {
+      "name": "De'Zhaun Stribling",
+      "position": "BN",
+      "nflTeam": "SF",
+      "status": "Q - Shoulder"
+    },
+    {
+      "name": "Kyle Monangai",
+      "position": "BN",
+      "nflTeam": "CHI",
+      "status": "Q - Knee"
+    },
+    {
+      "name": "Jordan Love",
+      "position": "BN",
+      "nflTeam": "GB",
+      "status": null
+    },
+    {
+      "name": "Brandon Aubrey",
+      "position": "K",
+      "nflTeam": "DAL",
+      "status": null
+    },
+    {
+      "name": "Chargers",
+      "position": "DEF",
+      "nflTeam": "LAC",
+      "status": null
+    }
+  ],
+  "The Uncles Team": [
+    {
+      "name": "Lamar Jackson",
+      "position": "QB",
+      "nflTeam": "BAL",
+      "status": null
+    },
+    {
+      "name": "Christian McCaffrey",
+      "position": "RB",
+      "nflTeam": "SF",
+      "status": "Q - Undisclosed"
+    },
+    {
+      "name": "Breece Hall",
+      "position": "RB",
+      "nflTeam": "NYJ",
+      "status": "Q - Groin"
+    },
+    {
+      "name": "Justin Jefferson",
+      "position": "WR",
+      "nflTeam": "MIN",
+      "status": null
+    },
+    {
+      "name": "Malik Nabers",
+      "position": "WR",
+      "nflTeam": "NYG",
+      "status": "Q - Knee - ACL"
+    },
+    {
+      "name": "Kyle Pitts Sr.",
+      "position": "TE",
+      "nflTeam": "ATL",
+      "status": null
+    },
+    {
+      "name": "Emeka Egbuka",
+      "position": "W/R/T",
+      "nflTeam": "TB",
+      "status": "Q - Toe"
+    },
+    {
+      "name": "Rome Odunze",
+      "position": "BN",
+      "nflTeam": "CHI",
+      "status": "Q - Leg"
+    },
+    {
+      "name": "Jonathon Brooks",
+      "position": "BN",
+      "nflTeam": "CAR",
+      "status": "Q - General Soreness"
+    },
+    {
+      "name": "George Kittle",
+      "position": "BN",
+      "nflTeam": "SF",
+      "status": "Q - Achilles"
+    },
+    {
+      "name": "Stefon Diggs",
+      "position": "BN",
+      "nflTeam": "WAS",
+      "status": null
+    },
+    {
+      "name": "Patrick Mahomes",
+      "position": "BN",
+      "nflTeam": "KC",
+      "status": "Q - Knee - ACL"
+    },
+    {
+      "name": "Josh Jacobs",
+      "position": "BN",
+      "nflTeam": "GB",
+      "status": "CEL - Personal"
+    },
+    {
+      "name": "Will Reichard",
+      "position": "K",
+      "nflTeam": "MIN",
+      "status": null
+    },
+    {
+      "name": "Texans",
+      "position": "DEF",
+      "nflTeam": "HOU",
+      "status": null
+    }
+  ],
+  "49ers": [
+    {
+      "name": "Matthew Stafford",
+      "position": "QB",
+      "nflTeam": "LAR",
+      "status": null
+    },
+    {
+      "name": "Kenneth Walker III",
+      "position": "RB",
+      "nflTeam": "KC",
+      "status": null
+    },
+    {
+      "name": "Jeremiyah Love",
+      "position": "RB",
+      "nflTeam": "ARI",
+      "status": "Q - Ankle"
+    },
+    {
+      "name": "Amon-Ra St. Brown",
+      "position": "WR",
+      "nflTeam": "DET",
+      "status": null
+    },
+    {
+      "name": "George Pickens",
+      "position": "WR",
+      "nflTeam": "DAL",
+      "status": null
+    },
+    {
+      "name": "Harold Fannin Jr.",
+      "position": "TE",
+      "nflTeam": "CLE",
+      "status": null
+    },
+    {
+      "name": "Terry McLaurin",
+      "position": "W/R/T",
+      "nflTeam": "WAS",
+      "status": null
+    },
+    {
+      "name": "Davante Adams",
+      "position": "BN",
+      "nflTeam": "LAR",
+      "status": null
+    },
+    {
+      "name": "Dak Prescott",
+      "position": "BN",
+      "nflTeam": "DAL",
+      "status": null
+    },
+    {
+      "name": "Chuba Hubbard",
+      "position": "BN",
+      "nflTeam": "CAR",
+      "status": "Q - Hamstring"
+    },
+    {
+      "name": "Jordan Addison",
+      "position": "BN",
+      "nflTeam": "MIN",
+      "status": null
+    },
+    {
+      "name": "Zach Charbonnet",
+      "position": "BN",
+      "nflTeam": "SEA",
+      "status": "PUP-R - Knee - ACL"
+    },
+    {
+      "name": "Tyler Allgeier",
+      "position": "BN",
+      "nflTeam": "ARI",
+      "status": null
+    },
+    {
+      "name": "Eddy Pineiro",
+      "position": "K",
+      "nflTeam": "SF",
+      "status": null
+    },
+    {
+      "name": "Seahawks",
+      "position": "DEF",
+      "nflTeam": "SEA",
+      "status": null
+    }
+  ],
+  "Bear Claw": [
+    {
+      "name": "Justin Herbert",
+      "position": "QB",
+      "nflTeam": "LAC",
+      "status": null
+    },
+    {
+      "name": "Saquon Barkley",
+      "position": "RB",
+      "nflTeam": "PHI",
+      "status": null
+    },
+    {
+      "name": "Chase Brown",
+      "position": "RB",
+      "nflTeam": "CIN",
+      "status": null
+    },
+    {
+      "name": "Zay Flowers",
+      "position": "WR",
+      "nflTeam": "BAL",
+      "status": "Q - Lower Body"
+    },
+    {
+      "name": "Jaylen Waddle",
+      "position": "WR",
+      "nflTeam": "DEN",
+      "status": null
+    },
+    {
+      "name": "Dalton Kincaid",
+      "position": "TE",
+      "nflTeam": "BUF",
+      "status": null
+    },
+    {
+      "name": "Christian Watson",
+      "position": "W/R/T",
+      "nflTeam": "GB",
+      "status": null
+    },
+    {
+      "name": "Jaylen Warren",
+      "position": "BN",
+      "nflTeam": "PIT",
+      "status": null
+    },
+    {
+      "name": "Bhayshul Tuten",
+      "position": "BN",
+      "nflTeam": "JAX",
+      "status": "Q - Illness"
+    },
+    {
+      "name": "Alec Pierce",
+      "position": "BN",
+      "nflTeam": "IND",
+      "status": null
+    },
+    {
+      "name": "KC Concepcion",
+      "position": "BN",
+      "nflTeam": "CLE",
+      "status": null
+    },
+    {
+      "name": "Matthew Golden",
+      "position": "BN",
+      "nflTeam": "GB",
+      "status": null
+    },
+    {
+      "name": "Woody Marks",
+      "position": "BN",
+      "nflTeam": "HOU",
+      "status": null
+    },
+    {
+      "name": "Harrison Mevis",
+      "position": "K",
+      "nflTeam": "LAR",
+      "status": null
+    },
+    {
+      "name": "Broncos",
+      "position": "DEF",
+      "nflTeam": "DEN",
+      "status": null
+    }
+  ]
+}
