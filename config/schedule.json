@@ -5,5 +5,33 @@
     ["Touchdown fever", "Steelers"],
     ["Fly High Eagles", "Launch Play VJ"],
     ["4th Down Sagar", "49ers"]
+  ],
+  "2": [
+    ["The Uncles Team", "4th Down Sagar"],
+    ["Insane in the End Zone", "Launch Play VJ"],
+    ["ALLEN'S LAMB BIRYANI", "Touchdown fever"],
+    ["Fly High Eagles", "49ers"],
+    ["Bear Claw", "Steelers"]
+  ],
+  "3": [
+    ["The Uncles Team", "Fly High Eagles"],
+    ["Insane in the End Zone", "49ers"],
+    ["ALLEN'S LAMB BIRYANI", "4th Down Sagar"],
+    ["Touchdown fever", "Bear Claw"],
+    ["Steelers", "Launch Play VJ"]
+  ],
+  "4": [
+    ["The Uncles Team", "Insane in the End Zone"],
+    ["ALLEN'S LAMB BIRYANI", "Bear Claw"],
+    ["Touchdown fever", "Launch Play VJ"],
+    ["Fly High Eagles", "4th Down Sagar"],
+    ["Steelers", "49ers"]
+  ],
+  "5": [
+    ["The Uncles Team", "Steelers"],
+    ["Insane in the End Zone", "4th Down Sagar"],
+    ["ALLEN'S LAMB BIRYANI", "Fly High Eagles"],
+    ["Touchdown fever", "49ers"],
+    ["Bear Claw", "Launch Play VJ"]
   ]
 }
