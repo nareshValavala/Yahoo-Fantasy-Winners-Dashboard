@@ -5,6 +5,7 @@
       {
         "name": "Jalen Hurts",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "PHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/rxsu3cY0VkambYSUhFcSwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/32723.1.png",
@@ -13,6 +14,7 @@
       {
         "name": "Jahmyr Gibbs",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "DET",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/3Db3mVG6L8BChPBXjWMyCg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40059.1.png",
@@ -21,6 +23,7 @@
       {
         "name": "D'Andre Swift",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "CHI",
         "status": "Q - Abdomen",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/UEDVsA6XOLm0yRT1kxN65Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/32705.1.png",
@@ -29,6 +32,7 @@
       {
         "name": "Nico Collins",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "HOU",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XaIf3oUtj4rr.CpsGxqvDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33477.2.png",
@@ -37,6 +41,7 @@
       {
         "name": "Garrett Wilson",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "NYJ",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/R.E9_N6rpL3Cob_DpH4i1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33965.1.png",
@@ -45,6 +50,7 @@
       {
         "name": "Brock Bowers",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "LV",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2BDzPCSW.w29RpeJ.Sw.bw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40878.2.png",
@@ -53,6 +59,7 @@
       {
         "name": "Jameson Williams",
         "position": "W/R/T",
+        "primaryPosition": "WR",
         "nflTeam": "DET",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/owMvSONLoM2eNK8dufTo8w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33967.1.png",
@@ -61,6 +68,7 @@
       {
         "name": "Jayden Daniels",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "WAS",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/CQnydoRKTgjiOU.ERkugfQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/40896.1.png",
@@ -69,6 +77,7 @@
       {
         "name": "Brian Thomas Jr.",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "JAX",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/DlPTVpS2tEMQGLfyE70LRw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202025/40883.png",
@@ -77,6 +86,7 @@
       {
         "name": "Quentin Johnston",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "LAC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/b8mxoqsW0Ac1lsta6umDjw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07312025/40051.png",
@@ -85,6 +95,7 @@
       {
         "name": "Blake Corum",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "LAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VMUSaW4q_.UehllmRZwFXA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252025/40962.png",
@@ -93,6 +104,7 @@
       {
         "name": "Travis Kelce",
         "position": "BN",
+        "primaryPosition": "TE",
         "nflTeam": "KC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ynhkrbJAJKmF5XgXM2ydDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/26686.png",
@@ -101,6 +113,7 @@
       {
         "name": "Jaxson Dart",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "NYG",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QJOKptxyTVChDYyVem2K3A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/41810.1.png",
@@ -109,6 +122,7 @@
       {
         "name": "Cam Little",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "JAX",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/t7UkDRo.julV_UT4jZ7CHA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/41062.1.png",
@@ -117,6 +131,7 @@
       {
         "name": "Ravens",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "BAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/bal_2.gif",
@@ -130,6 +145,7 @@
       {
         "name": "Joe Burrow",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "CIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VnU.xoV9ZxUJeMYKyjssZg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/32671.1.png",
@@ -138,6 +154,7 @@
       {
         "name": "Bijan Robinson",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "ATL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/V5nNwT6sRKYHH3N.NzXTlw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/40055.1.png",
@@ -146,6 +163,7 @@
       {
         "name": "Javonte Williams",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "DAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/DL1fPcbDhk5P_YDOYfDTZw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33423.1.png",
@@ -154,6 +172,7 @@
       {
         "name": "Drake London",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "ATL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/vFbuoZ42dGVpV5gz3aWkBQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/33963.1.png",
@@ -162,6 +181,7 @@
       {
         "name": "Tetairoa McMillan",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "CAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/bjURNY7S3oVoIbPP221sKw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/41793.1.png",
@@ -170,6 +190,7 @@
       {
         "name": "Tucker Kraft",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "GB",
         "status": "Q - Knee - ACL",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2_S7FBVe7Hbf_HH2HcLn3g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40102.3.png",
@@ -178,6 +199,7 @@
       {
         "name": "Luther Burden III",
         "position": "W/R/T",
+        "primaryPosition": "WR",
         "nflTeam": "CHI",
         "status": "Q - Groin",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/vcs_38fMP0TS1vIlbumWRg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/41824.1.png",
@@ -186,6 +208,7 @@
       {
         "name": "Jayden Reed",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "GB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/jFju8pccim6PicNIcu6Gjw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40063.3.png",
@@ -194,6 +217,7 @@
       {
         "name": "DK Metcalf",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "PIT",
         "status": "Q - Undisclosed",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xNQy._m0pGTaF4D.WKgjsA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/31896.1.png",
@@ -202,6 +226,7 @@
       {
         "name": "Jordan Mason",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "MIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Kj_YpmnK_Kt47Ey7h47seg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/34320.1.png",
@@ -210,6 +235,7 @@
       {
         "name": "Courtland Sutton",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "DEN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Q5hbrclpQZeVJXmHy3X_8w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/31010.1.png",
@@ -218,6 +244,7 @@
       {
         "name": "Xavier Worthy",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "KC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/sfFEJ.MKkGLfVHKpFy45Lw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40877.png",
@@ -226,6 +253,7 @@
       {
         "name": "Denzel Boston",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "CLE",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Ahmp6D7MimpQQdTFNlE2vg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/42661.1.png",
@@ -234,6 +262,7 @@
       {
         "name": "Tyler Loop",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "BAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/drRfrYZU6.gqEiMhBwX0og--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/41988.1.png",
@@ -247,6 +276,7 @@
       {
         "name": "Drake Maye",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "NE",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/3cTm93LmVVwV1Y1Wpli0KQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40881.1.png",
@@ -255,6 +285,7 @@
       {
         "name": "Derrick Henry",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "BAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/OwHwpsZEkLgy3PwDzhfnAQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/29279.1.png",
@@ -263,6 +294,7 @@
       {
         "name": "Ashton Jeanty",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "LV",
         "status": "Q - Ankle",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/k2bG2c3Hj.AqkE8fsH7VQw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07282025/41791.png",
@@ -271,6 +303,7 @@
       {
         "name": "Ja'Marr Chase",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "CIN",
         "status": "Q - Knee",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/8DFQtQd4gJsvWGpzq0rbag--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/33393.1.png",
@@ -279,6 +312,7 @@
       {
         "name": "Tee Higgins",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "CIN",
         "status": "Q - Heel",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/tnaQRYhrRk4F6NEhfyierg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/32703.1.png",
@@ -287,6 +321,7 @@
       {
         "name": "Colston Loveland",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "CHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/4OWJA89uWT_AgmMrHcSkUQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/41795.1.png",
@@ -295,6 +330,7 @@
       {
         "name": "Rhamondre Stevenson",
         "position": "W/R/T",
+        "primaryPosition": "RB",
         "nflTeam": "NE",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/HK04kawluEOXeR62foha3g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/33508.1.png",
@@ -303,6 +339,7 @@
       {
         "name": "TreVeyon Henderson",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "NE",
         "status": "Q - Ankle",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SGM4Z8veK9SctATKC_6Luw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/41823.1.png",
@@ -311,6 +348,7 @@
       {
         "name": "Carnell Tate",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "TEN",
         "status": "Q - Undisclosed",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/k9TrMbXiaW_YxKds95cjag--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/42626.1.png",
@@ -319,6 +357,7 @@
       {
         "name": "Rico Dowdle",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "PIT",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ywTo2aUjogCZOwXb2d4J.Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/33100.1.png",
@@ -327,6 +366,7 @@
       {
         "name": "Bo Nix",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "DEN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/3YuKds1ZJjg51OHa8OArCg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40875.1.png",
@@ -335,6 +375,7 @@
       {
         "name": "Dallas Goedert",
         "position": "BN",
+        "primaryPosition": "TE",
         "nflTeam": "PHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/GIIf5pQFjmXq8NZNwyi.GA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/31019.1.png",
@@ -343,6 +384,7 @@
       {
         "name": "Chris Rodriguez Jr.",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "JAX",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/91cDvEedAYb2rXG1ayul_A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09022025/40231.png",
@@ -351,6 +393,7 @@
       {
         "name": "Cameron Dicker",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "LAC",
         "status": "Q - Undisclosed",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/yj1kLvD0JiGQPUpso1fQMg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07312025/34344.png",
@@ -359,6 +402,7 @@
       {
         "name": "Vikings",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "MIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/xe/ipt/50x50w.6.gif",
@@ -372,6 +416,7 @@
       {
         "name": "Trevor Lawrence",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "JAX",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/pdL0oUN6aHME_5HpUxmz_A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/33389.1.png",
@@ -380,6 +425,7 @@
       {
         "name": "Jonathan Taylor",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "IND",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/gdJl658WYcV.dR7omhnwcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/32711.1.png",
@@ -388,6 +434,7 @@
       {
         "name": "De'Von Achane",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "MIA",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/cpa5epszKjuhpDyB9KP.og--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40118.2.png",
@@ -396,6 +443,7 @@
       {
         "name": "Chris Olave",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "NO",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LU_EjbVkQPNC7pNEvkf6PA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/33966.1.png",
@@ -404,6 +452,7 @@
       {
         "name": "Ladd McConkey",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "LAC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/y31xmkleRUtS4KTP1.rpWw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09042024/40908.png",
@@ -412,6 +461,7 @@
       {
         "name": "Sam LaPorta",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "DET",
         "status": "Q - Hip",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/DAB5MlcJkzT9XGIrxkPM_g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40064.1.png",
@@ -420,6 +470,7 @@
       {
         "name": "DJ Moore",
         "position": "W/R/T",
+        "primaryPosition": "WR",
         "nflTeam": "BUF",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/cRf0PZjrcxCx9Oqer9Uo3Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/30994.1.png",
@@ -428,6 +479,7 @@
       {
         "name": "Jadarian Price",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "SEA",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hU4wrCOTpxi92OmU9C4hqQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/42654.1.png",
@@ -436,6 +488,7 @@
       {
         "name": "Jared Goff",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "DET",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/vlSRP_qdMOJ70LchIWUPXg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/29235.1.png",
@@ -444,6 +497,7 @@
       {
         "name": "Tony Pollard",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "TEN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XsoQGZvz8ZOH8aRKvCq03g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/31960.1.png",
@@ -452,6 +506,7 @@
       {
         "name": "Jacory Croskey-Merritt",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "WAS",
         "status": "Q - Lower Body",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/OyiNPym5zFBeEVu4nQO05w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/42010.1.png",
@@ -460,6 +515,7 @@
       {
         "name": "Makai Lemon",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "PHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/w8pWbu3pal5BSGT3tA4CzA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/42642.1.png",
@@ -468,6 +524,7 @@
       {
         "name": "Jalen Coker",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "CAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/65k_7o4BvaoaSdVEIhckoQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/41293.1.png",
@@ -476,6 +533,7 @@
       {
         "name": "Ka'imi Fairbairn",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "HOU",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/.c6NIw1lGRTM_O_gZeDW4w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192025/29792.png",
@@ -484,6 +542,7 @@
       {
         "name": "Jaguars",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "JAX",
         "status": null,
         "photoUrl": "https://s.yimg.com/xe/ipt/50x50w.3.gif",
@@ -497,6 +556,7 @@
       {
         "name": "Kyler Murray",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "MIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/frZpvK9Afq1vRWbaZXv_FQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/31833.1.png",
@@ -505,6 +565,7 @@
       {
         "name": "Kyren Williams",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "LAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/4Zm8cAtYPpfXJusJwXTSQg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252025/34120.png",
@@ -513,6 +574,7 @@
       {
         "name": "Cam Skattebo",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "NYG",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/5C0WxNfiXvtIcIHk86i4EA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/41922.1.png",
@@ -521,6 +583,7 @@
       {
         "name": "Puka Nacua",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "LAR",
         "status": "Q - Groin",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ScG6X1txLlmgHXWOsHYFzg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40168.2.png",
@@ -529,6 +592,7 @@
       {
         "name": "A.J. Brown",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "NE",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Leb8ZAI2V3gAyK1JvopPMg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/31883.1.png",
@@ -537,6 +601,7 @@
       {
         "name": "Trey McBride",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "ARI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QX9EaUKzZi_04dPcWOdP7A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/34010.1.png",
@@ -545,6 +610,7 @@
       {
         "name": "David Montgomery",
         "position": "W/R/T",
+        "primaryPosition": "RB",
         "nflTeam": "HOU",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hN80sQ635x90TiKS2KvZZA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/31905.2.png",
@@ -553,6 +619,7 @@
       {
         "name": "Brock Purdy",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "SF",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/v43spyTnux57VJwfxJgwkg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/34218.1.png",
@@ -561,6 +628,7 @@
       {
         "name": "Chris Godwin Jr.",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "TB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aHKek31FKO3SZXCZKXYJpQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08282025/30197.png",
@@ -569,6 +637,7 @@
       {
         "name": "J.K. Dobbins",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "DEN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/qIw9czTCGxW94slu_jv4AA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/32725.1.png",
@@ -577,6 +646,7 @@
       {
         "name": "Michael Pittman Jr.",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "PIT",
         "status": "Q - Hamstring",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/RbfOdQEOZa.kBRGSNDS2OQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/03132026/32704.1.png",
@@ -585,6 +655,7 @@
       {
         "name": "Juwan Johnson",
         "position": "BN",
+        "primaryPosition": "TE",
         "nflTeam": "NO",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/BKGuH.LGDGTpzRsgfzS9fg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/33113.1.png",
@@ -593,6 +664,7 @@
       {
         "name": "Rachaad White",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "WAS",
         "status": "Q - Hamstring",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QeZuoLZbQeAXC43hGJWcPQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/34047.1.png",
@@ -601,6 +673,7 @@
       {
         "name": "Jason Myers",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "SEA",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/INl0_KrycGL0EGMm.WaPKQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072026/28378.1.png",
@@ -609,6 +682,7 @@
       {
         "name": "Rams",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "LAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/stl.gif",
@@ -622,6 +696,7 @@
       {
         "name": "Josh Allen",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "BUF",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/z4qe7sEEXVyMrm0j1CeEww--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/30977.1.png",
@@ -630,6 +705,7 @@
       {
         "name": "Travis Etienne Jr.",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "NO",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/d1.LupJEmS3KPe1qzKNJsg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/03102026/33413.2.png",
@@ -638,6 +714,7 @@
       {
         "name": "Quinshon Judkins",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "CLE",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/iKMDtA9FvYCUnZ6eTkX7Ng--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08272025/41821.png",
@@ -646,6 +723,7 @@
       {
         "name": "Jaxon Smith-Njigba",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "SEA",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/WH5iLZg9SOqbBd5cLeHEbw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072026/40041.1.png",
@@ -654,6 +732,7 @@
       {
         "name": "CeeDee Lamb",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "DAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/sBp9juMSUtYIa4b6zogEcw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/32687.1.png",
@@ -662,6 +741,7 @@
       {
         "name": "Tyler Warren",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "IND",
         "status": "Q - Groin",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/AuBgYfyEoSIbVVTm9laKLQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/41799.1.png",
@@ -670,6 +750,7 @@
       {
         "name": "Mike Evans",
         "position": "W/R/T",
+        "primaryPosition": "WR",
         "nflTeam": "SF",
         "status": "Q - Groin",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/p0VIf5c2cdr0EjVuJakKvw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/27535.1.png",
@@ -678,6 +759,7 @@
       {
         "name": "Marvin Harrison Jr.",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "ARI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/.R9CFc9Db80x1IW2euM1dw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/40893.1.png",
@@ -686,6 +768,7 @@
       {
         "name": "Michael Wilson",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "ARI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/W8_S7Ff5gcMbMBpBx_63rQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/40121.1.png",
@@ -694,6 +777,7 @@
       {
         "name": "RJ Harvey",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "DEN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aAqi80yyrSD1W2OGK.E8Kg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/41845.1.png",
@@ -702,6 +786,7 @@
       {
         "name": "Kenny Gainwell",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "TB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/rxD6H5vuSS4JvG_obspF1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08262026/33538.1.png",
@@ -710,6 +795,7 @@
       {
         "name": "Wan'Dale Robinson",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "TEN",
         "status": "Q - Head",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/yzOboZCDxSxe5MurJYRGmA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/33998.1.png",
@@ -718,6 +804,7 @@
       {
         "name": "Keaton Mitchell",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "LAC",
         "status": "Q - Undisclosed",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Id3.jQtZGa7rUi3Tx7t5ig--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07292024/40641.png",
@@ -726,6 +813,7 @@
       {
         "name": "Evan McPherson",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "CIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/a.gGbSeP5d9HGqnqxc4e6A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/33537.1.png",
@@ -734,6 +822,7 @@
       {
         "name": "Eagles",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "PHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/phi.gif",
@@ -747,6 +836,7 @@
       {
         "name": "Caleb Williams",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "CHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/bfYvPX2QyI.HTH.3UabvKg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08012025/40900.png",
@@ -755,6 +845,7 @@
       {
         "name": "James Cook III",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "BUF",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/phPvtlUh.MceOTZItKh_AA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08282024/34019.png",
@@ -763,6 +854,7 @@
       {
         "name": "Omarion Hampton",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "LAC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/kDjxveZsLOmf9KDCIKwBVw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07292025/41807.png",
@@ -771,6 +863,7 @@
       {
         "name": "DeVonta Smith",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "PHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/0OsYYjR30ceCxcRp8cStbw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33398.1.png",
@@ -779,6 +872,7 @@
       {
         "name": "Rashee Rice",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "KC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/qY36psYIl_c63byOJeu4Rg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40084.png",
@@ -787,6 +881,7 @@
       {
         "name": "Isaiah Likely",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "NYG",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/EHF10aQeyuo41zClRCGe5A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/34095.1.png",
@@ -795,6 +890,7 @@
       {
         "name": "Bucky Irving",
         "position": "W/R/T",
+        "primaryPosition": "RB",
         "nflTeam": "TB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/m_qM8NCZ0Axr7R49oWPTwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/40993.1.png",
@@ -803,6 +899,7 @@
       {
         "name": "Parker Washington",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "JAX",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/X77XymjeUdDCpWFiI0lOtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/40234.1.png",
@@ -811,6 +908,7 @@
       {
         "name": "MarShawn Lloyd",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "GB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Q32rawxvCvcLx7Co.N1P0Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40971.3.png",
@@ -819,6 +917,7 @@
       {
         "name": "Josh Downs",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "IND",
         "status": "Q - Calf",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2N3fbHpcxarK6OYUackvOQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40126.1.png",
@@ -827,6 +926,7 @@
       {
         "name": "De'Zhaun Stribling",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "SF",
         "status": "Q - Shoulder",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/e_j0dbRT5a04wE6TzewF5w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/42655.1.png",
@@ -835,6 +935,7 @@
       {
         "name": "Kyle Monangai",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "CHI",
         "status": "Q - Knee",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/YUTcqEGrvr2pHk80c6HhWg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/42025.1.png",
@@ -843,6 +944,7 @@
       {
         "name": "Jordan Love",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "GB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/kr.cv9_CzEvW8_R.diHvcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/32696.3.png",
@@ -851,6 +953,7 @@
       {
         "name": "Brandon Aubrey",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "DAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QFhJ3YtUbKOBqoSm.lOY6Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40819.1.png",
@@ -859,6 +962,7 @@
       {
         "name": "Chargers",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "LAC",
         "status": null,
         "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sdg3.jpg",
@@ -872,6 +976,7 @@
       {
         "name": "Lamar Jackson",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "BAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LlCKxy3ouhI2arFK1ZfnBw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/31002.1.png",
@@ -880,6 +985,7 @@
       {
         "name": "Christian McCaffrey",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "SF",
         "status": "Q - Undisclosed",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hidp2GbL3wMTfnQeMjwvnw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/30121.1.png",
@@ -888,6 +994,7 @@
       {
         "name": "Breece Hall",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "NYJ",
         "status": "Q - Groin",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hHpTYsLBJEJYOLfU1Fer1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33991.1.png",
@@ -896,6 +1003,7 @@
       {
         "name": "Justin Jefferson",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "MIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/JF1Q3UluAPM6YajgyY.MjA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/32692.1.png",
@@ -904,6 +1012,7 @@
       {
         "name": "Malik Nabers",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "NYG",
         "status": "Q - Knee - ACL",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Df0fqJ37.bWIf7UIcdW35g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092025/40899.png",
@@ -912,6 +1021,7 @@
       {
         "name": "Kyle Pitts Sr.",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "ATL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oXa30OfMZKt5hdoFxa2qeg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/33392.1.png",
@@ -920,6 +1030,7 @@
       {
         "name": "Emeka Egbuka",
         "position": "W/R/T",
+        "primaryPosition": "WR",
         "nflTeam": "TB",
         "status": "Q - Toe",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oa3IjOXHfHvlhvd8L3dGYQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/41804.1.png",
@@ -928,6 +1039,7 @@
       {
         "name": "Rome Odunze",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "CHI",
         "status": "Q - Leg",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/7mOuM7u9usQ7ge8D.SKj_w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40901.1.png",
@@ -936,6 +1048,7 @@
       {
         "name": "Jonathon Brooks",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "CAR",
         "status": "Q - General Soreness",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/fwYiJZOr3h3WFoOfy53osA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/40926.1.png",
@@ -944,6 +1057,7 @@
       {
         "name": "George Kittle",
         "position": "BN",
+        "primaryPosition": "TE",
         "nflTeam": "SF",
         "status": "Q - Achilles",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/bz8CzByPT.XVa.jFd.6aDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/30259.1.png",
@@ -952,6 +1066,7 @@
       {
         "name": "Stefon Diggs",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "WAS",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2jXx5MZN2eJU2odJvRk8VQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09022026/28534.2.png",
@@ -960,6 +1075,7 @@
       {
         "name": "Patrick Mahomes",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "KC",
         "status": "Q - Knee - ACL",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/.W3ZQBDoQG_ZvIlbaJbUqg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/30123.png",
@@ -968,6 +1084,7 @@
       {
         "name": "Josh Jacobs",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "GB",
         "status": "CEL - Personal",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/iCoq42m.6mMZL544UDDUMQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/31856.3.png",
@@ -976,6 +1093,7 @@
       {
         "name": "Will Reichard",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "MIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/raWX2nlQ5byL7dpG1YPu1w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/41093.1.png",
@@ -984,6 +1102,7 @@
       {
         "name": "Texans",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "HOU",
         "status": null,
         "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/hou.gif",
@@ -997,6 +1116,7 @@
       {
         "name": "Matthew Stafford",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "LAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/WB0VYA2W5C4vPf8BtjcFdg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/9265.2.png",
@@ -1005,6 +1125,7 @@
       {
         "name": "Kenneth Walker III",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "KC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/J19j1xe4AIAERekP6cF8xQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/33996.png",
@@ -1013,6 +1134,7 @@
       {
         "name": "Jeremiyah Love",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "ARI",
         "status": "Q - Ankle",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SF3YXcxMZ_izNcxZVQQdtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/42625.1.png",
@@ -1021,6 +1143,7 @@
       {
         "name": "Amon-Ra St. Brown",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "DET",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LQZl1Mo7u0KUzLXU9RSw2g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07312025/33500.png",
@@ -1029,6 +1152,7 @@
       {
         "name": "George Pickens",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "DAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/tL4TO41aAirHrtd5rFiVBg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072025/34007.png",
@@ -1037,6 +1161,7 @@
       {
         "name": "Harold Fannin Jr.",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "CLE",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/JwOZzpNOcx7X.3gWJWdGHg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062025/41877.png",
@@ -1045,6 +1170,7 @@
       {
         "name": "Terry McLaurin",
         "position": "W/R/T",
+        "primaryPosition": "WR",
         "nflTeam": "WAS",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oOjiUdKATa9lZ_1mx_JpaA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/31908.1.png",
@@ -1053,6 +1179,7 @@
       {
         "name": "Davante Adams",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "LAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Lq0buOz6WeFBtJha4zFsjQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252025/27581.png",
@@ -1061,6 +1188,7 @@
       {
         "name": "Dak Prescott",
         "position": "BN",
+        "primaryPosition": "QB",
         "nflTeam": "DAL",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/7qieJGO_VZyuf0v74QNeEg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/29369.1.png",
@@ -1069,6 +1197,7 @@
       {
         "name": "Chuba Hubbard",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "CAR",
         "status": "Q - Hamstring",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/84nO7y.ExPfjb.8M689CSQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/33514.1.png",
@@ -1077,6 +1206,7 @@
       {
         "name": "Jordan Addison",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "MIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/nn3eSJYNQea549YDPeNwQg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40042.1.png",
@@ -1085,6 +1215,7 @@
       {
         "name": "Zach Charbonnet",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "SEA",
         "status": "PUP-R - Knee - ACL",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ds39bFEU6VoBXxj_kl1Gpg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072026/40075.1.png",
@@ -1093,6 +1224,7 @@
       {
         "name": "Tyler Allgeier",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "ARI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/pC47EHB57nX4d9A.s1HYIw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/34107.1.png",
@@ -1101,6 +1233,7 @@
       {
         "name": "Eddy Pineiro",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "SF",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/FoPa..d_yQ0yI6zV0nIY_Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/31482.1.png",
@@ -1109,6 +1242,7 @@
       {
         "name": "Seahawks",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "SEA",
         "status": null,
         "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sea.gif",
@@ -1122,6 +1256,7 @@
       {
         "name": "Justin Herbert",
         "position": "QB",
+        "primaryPosition": "QB",
         "nflTeam": "LAC",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XHEcBJZ_yNFQJIHpQC79sQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07312025/32676.png",
@@ -1130,6 +1265,7 @@
       {
         "name": "Saquon Barkley",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "PHI",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VXOmjaMBllUqGug6vTs48A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/30972.1.png",
@@ -1138,6 +1274,7 @@
       {
         "name": "Chase Brown",
         "position": "RB",
+        "primaryPosition": "RB",
         "nflTeam": "CIN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ybmXLgb43ePXwalSnaelLw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40196.1.png",
@@ -1146,6 +1283,7 @@
       {
         "name": "Zay Flowers",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "BAL",
         "status": "Q - Lower Body",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xxTmCvgTcZ_kNWR4QFRqSw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/40039.1.png",
@@ -1154,6 +1292,7 @@
       {
         "name": "Jaylen Waddle",
         "position": "WR",
+        "primaryPosition": "WR",
         "nflTeam": "DEN",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LraqgG.r4S.LNyMAd6RSnQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33394.1.png",
@@ -1162,6 +1301,7 @@
       {
         "name": "Dalton Kincaid",
         "position": "TE",
+        "primaryPosition": "TE",
         "nflTeam": "BUF",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2S58M4.ijx2yJ7WNMMBjyw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40048.1.png",
@@ -1170,6 +1310,7 @@
       {
         "name": "Christian Watson",
         "position": "W/R/T",
+        "primaryPosition": "WR",
         "nflTeam": "GB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/zdZ4n05lF0SOcdt4FXNbRw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33989.3.png",
@@ -1178,6 +1319,7 @@
       {
         "name": "Jaylen Warren",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "PIT",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aeLJ6CcF9iHNAnYV3xe0YA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/34447.1.png",
@@ -1186,6 +1328,7 @@
       {
         "name": "Bhayshul Tuten",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "JAX",
         "status": "Q - Illness",
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SRCXwZGkVsSbMwKupYpvLw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/41900.1.png",
@@ -1194,6 +1337,7 @@
       {
         "name": "Alec Pierce",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "IND",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xHFK1rmuD7EbSz1bTBuXtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/34008.1.png",
@@ -1202,6 +1346,7 @@
       {
         "name": "KC Concepcion",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "CLE",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hiQScgAqjz9rvRk_yQdxcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/42646.1.png",
@@ -1210,6 +1355,7 @@
       {
         "name": "Matthew Golden",
         "position": "BN",
+        "primaryPosition": "WR",
         "nflTeam": "GB",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aw7YkgM1GuypR0QPgCdxFA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/41808.1.png",
@@ -1218,6 +1364,7 @@
       {
         "name": "Woody Marks",
         "position": "BN",
+        "primaryPosition": "RB",
         "nflTeam": "HOU",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/YmBtiLg_3bZPt6c51A6Ngg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/41902.2.png",
@@ -1226,6 +1373,7 @@
       {
         "name": "Harrison Mevis",
         "position": "K",
+        "primaryPosition": "K",
         "nflTeam": "LAR",
         "status": null,
         "photoUrl": "https://s.yimg.com/iu/api/res/1.2/y3t1lgmXypqtZ__kodxkwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/41312.2.png",
@@ -1234,6 +1382,7 @@
       {
         "name": "Broncos",
         "position": "DEF",
+        "primaryPosition": "DEF",
         "nflTeam": "DEN",
         "status": null,
         "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/den.gif",

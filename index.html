@@ -177,7 +177,7 @@
         }
 
         .roster-section {
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .roster-section:last-child {
@@ -185,26 +185,92 @@
         }
 
         .roster-section h4 {
-            margin: 0 0 8px 0;
-            font-size: 0.85em;
+            margin: 0 0 10px 0;
+            font-size: 0.8em;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
             color: #7f8c8d;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .roster-section table {
-            width: 100%;
+        .roster-section h4::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #eee;
         }
 
-        .roster-section td {
-            padding: 6px 4px;
-            border-bottom: 1px solid #f5f5f5;
+        .roster-player-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 9px 6px;
+            border-radius: 8px;
         }
 
-        .roster-section tr:last-child td {
-            border-bottom: none;
+        .roster-player-row:hover {
+            background: #f8f9fa;
+        }
+
+        .position-badge {
+            flex-shrink: 0;
+            display: inline-block;
+            min-width: 34px;
+            padding: 3px 6px;
+            border-radius: 6px;
+            color: white;
+            font-size: 0.72em;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        .roster-player-photo {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #eee;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #eee;
+        }
+
+        .roster-player-info {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .roster-player-name {
+            font-weight: 600;
+            color: #2c3e50;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .roster-player-meta {
+            font-size: 0.78em;
+            color: #7f8c8d;
+        }
+
+        .roster-value {
+            flex-shrink: 0;
+            text-align: right;
+        }
+
+        .roster-value .amount {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .roster-value .rank {
+            font-size: 0.75em;
+            color: #7f8c8d;
         }
 
         .rank-pill {
@@ -216,24 +282,6 @@
             font-size: 0.8em;
             font-weight: bold;
             text-align: center;
-        }
-
-        .roster-slot {
-            display: inline-block;
-            min-width: 32px;
-            font-weight: bold;
-            color: #3498db;
-            font-size: 0.85em;
-        }
-
-        .player-photo {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            object-fit: cover;
-            vertical-align: middle;
-            margin-right: 8px;
-            background: #eee;
         }
 
         .team-link {
@@ -323,7 +371,7 @@
         .modal-box {
             background: white;
             border-radius: 15px;
-            max-width: 500px;
+            max-width: 560px;
             width: 100%;
             max-height: 80vh;
             overflow-y: auto;
@@ -1239,15 +1287,33 @@
             `).join('');
         }
 
+        const POSITION_COLORS = {
+            QB: '#e74c3c', RB: '#27ae60', WR: '#2980b9', TE: '#e67e22',
+            K: '#8e44ad', DEF: '#34495e', 'W/R/T': '#16a085', FLEX: '#16a085'
+        };
+
         function playerRow(p) {
             const value = tradeValuesCache?.[p.yahooPlayerId];
+            // On the bench/IR the assigned slot (BN/IR) isn't meaningful -- show their real position instead.
+            const badgePos = (p.position === 'BN' || p.position === 'IR') ? (p.primaryPosition || p.position) : p.position;
+            const photo = p.photoUrl
+                ? `<img class="roster-player-photo" src="${p.photoUrl}" alt="${p.name}" loading="lazy">`
+                : `<div class="roster-player-photo"></div>`;
+
             return `
-                <tr>
-                    <td><span class="roster-slot">${p.position}</span></td>
-                    <td>${p.photoUrl ? `<img class="player-photo" src="${p.photoUrl}" alt="${p.name}" loading="lazy">` : ''}${p.name}${p.status ? ` <span class="badge status">${p.status}</span>` : ''}</td>
-                    <td>${p.nflTeam || '—'}</td>
-                    <td>${value ? `${value.tradeValue} <small style="color:#7f8c8d;">(${value.positionRank}${p.position})</small>` : '—'}</td>
-                </tr>
+                <div class="roster-player-row">
+                    <span class="position-badge" style="background:${POSITION_COLORS[badgePos] || '#7f8c8d'}">${badgePos}</span>
+                    ${photo}
+                    <div class="roster-player-info">
+                        <span class="roster-player-name">${p.name}</span>
+                        <span class="roster-player-meta">${p.nflTeam || '—'}${p.status ? ` · <span class="badge status">${p.status}</span>` : ''}</span>
+                    </div>
+                    <div class="roster-value">
+                        ${value
+                            ? `<div class="amount">${value.tradeValue.toLocaleString()}</div><div class="rank">#${value.positionRank} ${badgePos}</div>`
+                            : '<div class="rank">—</div>'}
+                    </div>
+                </div>
             `;
         }
 
@@ -1255,10 +1321,8 @@
             if (!players.length) return '';
             return `
                 <div class="roster-section">
-                    <h4>${title} (${players.length})</h4>
-                    <div class="table-scroll">
-                        <table><tbody>${players.map(playerRow).join('')}</tbody></table>
-                    </div>
+                    <h4>${title} · ${players.length}</h4>
+                    ${players.map(playerRow).join('')}
                 </div>
             `;
         }

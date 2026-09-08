@@ -50,9 +50,12 @@ function parseRosterHtml(html) {
 
       if (!nameMatch) return null;
 
+      const primaryPosition = teamPosMatch ? teamPosMatch[2].split(",")[0].trim() : null;
+
       return {
         name: decodeHtmlEntities(nameMatch[1].trim()),
-        position: posMatch ? posMatch[1].trim() : (teamPosMatch ? teamPosMatch[2].split(",")[0].trim() : "—"),
+        position: posMatch ? posMatch[1].trim() : (primaryPosition || "—"),
+        primaryPosition,
         nflTeam: teamPosMatch ? teamPosMatch[1].trim().toUpperCase() : "",
         status: statusMatch ? decodeHtmlEntities(statusMatch[1].trim()) : null,
         photoUrl,
