@@ -1,100 +1,16 @@
 {
-  "1": [
-    ["The Uncles Team", "ALLEN'S LAMB BIRYANI"],
-    ["Insane in the End Zone", "Bear Claw"],
-    ["Touchdown fever", "Steelers"],
-    ["Fly High Eagles", "Launch Play VJ"],
-    ["4th Down Sagar", "49ers"]
-  ],
-  "2": [
-    ["The Uncles Team", "4th Down Sagar"],
-    ["Insane in the End Zone", "Launch Play VJ"],
-    ["ALLEN'S LAMB BIRYANI", "Touchdown fever"],
-    ["Fly High Eagles", "49ers"],
-    ["Bear Claw", "Steelers"]
-  ],
-  "3": [
-    ["The Uncles Team", "Fly High Eagles"],
-    ["Insane in the End Zone", "49ers"],
-    ["ALLEN'S LAMB BIRYANI", "4th Down Sagar"],
-    ["Touchdown fever", "Bear Claw"],
-    ["Steelers", "Launch Play VJ"]
-  ],
-  "4": [
-    ["The Uncles Team", "Insane in the End Zone"],
-    ["ALLEN'S LAMB BIRYANI", "Bear Claw"],
-    ["Touchdown fever", "Launch Play VJ"],
-    ["Fly High Eagles", "4th Down Sagar"],
-    ["Steelers", "49ers"]
-  ],
-  "5": [
-    ["The Uncles Team", "Steelers"],
-    ["Insane in the End Zone", "4th Down Sagar"],
-    ["ALLEN'S LAMB BIRYANI", "Fly High Eagles"],
-    ["Touchdown fever", "49ers"],
-    ["Bear Claw", "Launch Play VJ"]
-  ],
-  "6": [
-    ["The Uncles Team", "Touchdown fever"],
-    ["Insane in the End Zone", "Fly High Eagles"],
-    ["ALLEN'S LAMB BIRYANI", "Launch Play VJ"],
-    ["4th Down Sagar", "Steelers"],
-    ["Bear Claw", "49ers"]
-  ],
-  "7": [
-    ["The Uncles Team", "Bear Claw"],
-    ["Insane in the End Zone", "ALLEN'S LAMB BIRYANI"],
-    ["Touchdown fever", "4th Down Sagar"],
-    ["Fly High Eagles", "Steelers"],
-    ["Launch Play VJ", "49ers"]
-  ],
-  "8": [
-    ["The Uncles Team", "Launch Play VJ"],
-    ["ALLEN'S LAMB BIRYANI", "49ers"],
-    ["Touchdown fever", "Fly High Eagles"],
-    ["4th Down Sagar", "Bear Claw"],
-    ["Insane in the End Zone", "Steelers"]
-  ],
-  "9": [
-    ["The Uncles Team", "49ers"],
-    ["Insane in the End Zone", "Touchdown fever"],
-    ["ALLEN'S LAMB BIRYANI", "Steelers"],
-    ["Fly High Eagles", "Bear Claw"],
-    ["4th Down Sagar", "Launch Play VJ"]
-  ],
-  "10": [
-    ["The Uncles Team", "ALLEN'S LAMB BIRYANI"],
-    ["Insane in the End Zone", "Bear Claw"],
-    ["Touchdown fever", "Steelers"],
-    ["Fly High Eagles", "Launch Play VJ"],
-    ["4th Down Sagar", "49ers"]
-  ],
-  "11": [
-    ["The Uncles Team", "4th Down Sagar"],
-    ["Insane in the End Zone", "Launch Play VJ"],
-    ["ALLEN'S LAMB BIRYANI", "Touchdown fever"],
-    ["Fly High Eagles", "49ers"],
-    ["Bear Claw", "Steelers"]
-  ],
-  "12": [
-    ["The Uncles Team", "Fly High Eagles"],
-    ["Insane in the End Zone", "49ers"],
-    ["ALLEN'S LAMB BIRYANI", "4th Down Sagar"],
-    ["Touchdown fever", "Bear Claw"],
-    ["Steelers", "Launch Play VJ"]
-  ],
-  "13": [
-    ["The Uncles Team", "Insane in the End Zone"],
-    ["ALLEN'S LAMB BIRYANI", "Bear Claw"],
-    ["Touchdown fever", "Launch Play VJ"],
-    ["Fly High Eagles", "4th Down Sagar"],
-    ["Steelers", "49ers"]
-  ],
-  "14": [
-    ["The Uncles Team", "Steelers"],
-    ["Insane in the End Zone", "4th Down Sagar"],
-    ["ALLEN'S LAMB BIRYANI", "Fly High Eagles"],
-    ["Touchdown fever", "49ers"],
-    ["Bear Claw", "Launch Play VJ"]
-  ]
+  "1": [["1", "3"], ["2", "7"], ["4", "8"], ["5", "9"], ["6", "10"]],
+  "2": [["1", "6"], ["2", "9"], ["3", "4"], ["5", "10"], ["7", "8"]],
+  "3": [["1", "5"], ["2", "10"], ["3", "6"], ["4", "7"], ["8", "9"]],
+  "4": [["1", "2"], ["3", "7"], ["4", "9"], ["5", "6"], ["8", "10"]],
+  "5": [["1", "8"], ["2", "6"], ["3", "5"], ["4", "10"], ["7", "9"]],
+  "6": [["1", "4"], ["2", "5"], ["3", "9"], ["6", "8"], ["7", "10"]],
+  "7": [["1", "7"], ["2", "3"], ["4", "6"], ["5", "8"], ["9", "10"]],
+  "8": [["1", "9"], ["3", "10"], ["4", "5"], ["6", "7"], ["2", "8"]],
+  "9": [["1", "10"], ["2", "4"], ["3", "8"], ["5", "7"], ["6", "9"]],
+  "10": [["1", "3"], ["2", "7"], ["4", "8"], ["5", "9"], ["6", "10"]],
+  "11": [["1", "6"], ["2", "9"], ["3", "4"], ["5", "10"], ["7", "8"]],
+  "12": [["1", "5"], ["2", "10"], ["3", "6"], ["4", "7"], ["8", "9"]],
+  "13": [["1", "2"], ["3", "7"], ["4", "9"], ["5", "6"], ["8", "10"]],
+  "14": [["1", "8"], ["2", "6"], ["3", "5"], ["4", "10"], ["7", "9"]]
 }

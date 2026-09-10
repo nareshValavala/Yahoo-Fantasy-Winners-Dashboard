@@ -877,19 +877,33 @@
 
         // ---- Manual data mode (used until the Yahoo automation is connected) ----
 
+        function currentTeamName(t) {
+            const id = String(t.fantasyHelperTeamId);
+            return rostersCache?.[id]?.currentName || t.team;
+        }
+
         function computeManualTeams(weeklyWinners) {
-            const winsByTeam = {};
-            const cashByTeam = {};
+            // Keyed by teamId when the record has one (current entries); older
+            // records recorded before a rename get keyed by whatever name was
+            // current at the time, which still resolves correctly as long as
+            // that team hasn't since renamed again.
+            const winsByKey = {};
+            const cashByKey = {};
             (weeklyWinners || []).forEach(w => {
-                winsByTeam[w.teamName] = (winsByTeam[w.teamName] || 0) + 1;
-                cashByTeam[w.teamName] = (cashByTeam[w.teamName] || 0) + Number(w.prize || 0);
+                const key = w.teamId != null ? String(w.teamId) : w.teamName;
+                winsByKey[key] = (winsByKey[key] || 0) + 1;
+                cashByKey[key] = (cashByKey[key] || 0) + Number(w.prize || 0);
             });
 
-            return (teamsConfigCache?.teams || []).map((t, i) => {
-                const weeklyCash = cashByTeam[t.team] || 0;
+            return (teamsConfigCache?.teams || []).map(t => {
+                const id = String(t.fantasyHelperTeamId);
+                const name = currentTeamName(t);
+                const weeklyWins = (winsByKey[id] || 0) + (winsByKey[name] || 0);
+                const weeklyCash = (cashByKey[id] || 0) + (cashByKey[name] || 0);
                 return {
-                    teamKey: `manual.${i + 1}`,
-                    name: t.team,
+                    teamKey: `manual.${id}`,
+                    fantasyHelperTeamId: id,
+                    name,
                     manager: t.manager,
                     draftPosition: t.draftPosition,
                     duesPaid: t.paid,
@@ -898,13 +912,13 @@
                     losses: 0,
                     ties: 0,
                     pointsFor: 0,
-                    weeklyWins: winsByTeam[t.team] || 0,
+                    weeklyWins,
                     weeklyCash,
                     placementCash: 0,
                     totalCash: weeklyCash,
-                    logoUrl: rostersCache?.[t.team]?.logoUrl || null,
+                    logoUrl: rostersCache?.[id]?.logoUrl || null,
                     waiverPriority: null,
-                    roster: rostersCache?.[t.team]?.players || []
+                    roster: rostersCache?.[id]?.players || []
                 };
             });
         }
@@ -949,22 +963,23 @@
 
         async function saveManualWinner() {
             const week = parseInt(document.getElementById('manualWeek').value, 10);
-            const teamName = document.getElementById('manualTeam').value;
+            const teamId = document.getElementById('manualTeam').value;
             const score = parseFloat(document.getElementById('manualScore').value);
 
-            if (!week || !teamName || isNaN(score)) {
+            if (!week || !teamId || isNaN(score)) {
                 toast('Fill in week, team, and score.', 'error');
                 return;
             }
 
-            const team = teamsConfigCache?.teams.find(t => t.team === teamName);
+            const team = teamsConfigCache?.teams.find(t => String(t.fantasyHelperTeamId) === teamId);
+            const teamName = team ? currentTeamName(team) : `Team ${teamId}`;
             const prize = currentData?.payouts?.weeklyPrize ?? 20;
 
             try {
                 await saveManualDataFile(existingWinners => {
                     const withoutThisWeek = existingWinners.filter(w => w.week !== week);
                     withoutThisWeek.push({
-                        week, teamName, manager: team?.manager || 'Unknown', score, prize, tied: false, source: 'manual'
+                        week, teamId, teamName, manager: team?.manager || 'Unknown', score, prize, tied: false, source: 'manual'
                     });
                     return withoutThisWeek;
                 });
@@ -1016,7 +1031,9 @@
         function populateManualTeamSelect() {
             const select = document.getElementById('manualTeam');
             if (!select || !teamsConfigCache) return;
-            select.innerHTML = teamsConfigCache.teams.map(t => `<option value="${t.team}">${t.team}</option>`).join('');
+            select.innerHTML = teamsConfigCache.teams
+                .map(t => `<option value="${t.fantasyHelperTeamId}">${currentTeamName(t)}</option>`)
+                .join('');
         }
 
         // ---- Matchups (manually-sourced schedule, until Yahoo supplies it live) ----
@@ -1058,27 +1075,28 @@
             document.getElementById('prevWeekBtn').disabled = week === weeks[0];
             document.getElementById('nextWeekBtn').disabled = week === weeks[weeks.length - 1];
 
-            const managerOf = (teamName) =>
-                teamsConfigCache?.teams.find(t => t.team === teamName)?.manager || '';
-            const logoOf = (teamName) => rostersCache?.[teamName]?.logoUrl || null;
+            const teamById = (id) => teamsConfigCache?.teams.find(t => String(t.fantasyHelperTeamId) === String(id));
+            const nameOf = (id) => rostersCache?.[id]?.currentName || teamById(id)?.team || `Team ${id}`;
+            const managerOf = (id) => teamById(id)?.manager || '';
+            const logoOf = (id) => rostersCache?.[id]?.logoUrl || null;
 
             const pairs = scheduleCache[String(week)] || [];
             list.innerHTML = pairs.map(([a, b]) => `
                 <div class="matchup-row">
                     <div class="matchup-team">
-                        ${logoImg(logoOf(a), a)}
+                        ${logoImg(logoOf(a), nameOf(a))}
                         <div>
-                            <strong>${a}</strong>
+                            <strong>${nameOf(a)}</strong>
                             <span class="matchup-manager">${managerOf(a)}</span>
                         </div>
                     </div>
                     <div class="matchup-vs">vs</div>
                     <div class="matchup-team right">
                         <div>
-                            <strong>${b}</strong>
+                            <strong>${nameOf(b)}</strong>
                             <span class="matchup-manager">${managerOf(b)}</span>
                         </div>
-                        ${logoImg(logoOf(b), b)}
+                        ${logoImg(logoOf(b), nameOf(b))}
                     </div>
                 </div>
             `).join('');
@@ -1155,16 +1173,16 @@
             }
         }
 
-        async function saveDuesPaid(teamName, newPaidValue) {
+        async function saveDuesPaid(teamId, newPaidValue) {
             const config = await githubReadModifyWrite(
                 TEAMS_CONFIG_PATH,
                 (current) => {
-                    const team = current.teams.find(t => t.team === teamName);
-                    if (!team) throw new Error(`Team "${teamName}" not found in config/teams.json`);
+                    const team = current.teams.find(t => String(t.fantasyHelperTeamId) === String(teamId));
+                    if (!team) throw new Error(`Team id "${teamId}" not found in config/teams.json`);
                     team.paid = newPaidValue;
                     return current;
                 },
-                `Update dues: ${teamName} -> ${newPaidValue ? 'paid' : 'unpaid'}`
+                `Update dues: team ${teamId} -> ${newPaidValue ? 'paid' : 'unpaid'}`
             );
             teamsConfigCache = config;
 
@@ -1177,11 +1195,11 @@
             }
         }
 
-        async function handleDuesToggle(teamName, checked, checkboxEl) {
+        async function handleDuesToggle(teamId, checked, checkboxEl) {
             checkboxEl.disabled = true;
             const wasYahoo = currentData?.dataSource === 'yahoo';
             try {
-                await saveDuesPaid(teamName, checked);
+                await saveDuesPaid(teamId, checked);
                 toast(wasYahoo ? 'Saved — the site will refresh with the new data in a minute or two.' : 'Saved.');
             } catch (error) {
                 checkboxEl.checked = !checked;
@@ -1476,7 +1494,7 @@
                     <td>${team.manager}</td>
                     <td>${isAdmin
                         ? `<input type="checkbox" class="dues-checkbox" ${team.duesPaid ? 'checked' : ''}
-                             onchange="handleDuesToggle('${team.name.replace(/'/g, "\\'")}', this.checked, this)">`
+                             onchange="handleDuesToggle('${team.fantasyHelperTeamId}', this.checked, this)">`
                         : (team.duesPaid
                             ? '<span class="badge paid">Paid</span>'
                             : '<span class="badge unpaid">Unpaid</span>')}</td>

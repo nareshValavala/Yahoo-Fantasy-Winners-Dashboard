@@ -38,7 +38,10 @@ const payouts = JSON.parse(
 const duesConfig = JSON.parse(
   await readFile(path.join(rootDir, "config", "teams.json"), "utf8")
 );
-const duesByTeamName = new Map(duesConfig.teams.map((t) => [t.team, t]));
+// Keyed by the numeric Yahoo team id (matches fantasyHelperTeamId too, since
+// Fantasy Helper mirrors Yahoo's own team ids) rather than by name -- a
+// manager renaming their team on Yahoo must not break this lookup.
+const duesByTeamId = new Map(duesConfig.teams.map((t) => [String(t.fantasyHelperTeamId), t]));
 
 // Must match the redirect URI used in bootstrap-auth.mjs when the current
 // refresh token was issued (not actually used for refresh-token requests,
@@ -71,9 +74,11 @@ const leagueKey = `${GAME_KEY}.l.${LEAGUE_ID}`;
 const leagueStandings = await yf.league.standings(leagueKey);
 
 const teams = leagueStandings.standings.map((team) => {
-  const dues = duesByTeamName.get(team.name);
+  const teamId = team.team_key.split(".t.").pop();
+  const dues = duesByTeamId.get(teamId);
   return {
     teamKey: team.team_key,
+    fantasyHelperTeamId: teamId,
     name: team.name,
     manager: dues?.manager || team.managers?.[0]?.nickname || "Unknown",
     draftPosition: dues?.draftPosition ?? null,
@@ -121,6 +126,7 @@ for (let week = startWeek; week <= lastWeeklyPrizeWeek; week++) {
   for (const t of topTeams) {
     weeklyWinners.push({
       week,
+      teamId: t.teamKey.split(".t.").pop(),
       teamName: t.name,
       manager: t.manager,
       score: t.score,

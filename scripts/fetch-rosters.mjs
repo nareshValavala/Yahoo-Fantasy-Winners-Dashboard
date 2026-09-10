@@ -1,10 +1,13 @@
-// Fetches team rosters (with player photos) and team logos from Fantasy
-// Helper's public pages and writes data/rosters.json. Unlike scores,
-// standings, or matchup results -- which every source gates behind a real
-// login -- these specific pages are viewable without logging in, confirmed
-// by checking multiple teams directly. This is a stopgap for roster/branding
-// display only, until Yahoo API access is approved; it does not touch
-// scores or standings, which stay on manual entry.
+// Fetches team rosters (with player photos), team logos, and current team
+// names from Fantasy Helper's public pages and writes data/rosters.json,
+// keyed by fantasyHelperTeamId (stable, matches Yahoo's own team_id) rather
+// than by team name -- names change when a manager renames their team, but
+// the id never does. Unlike scores, standings, or matchup results -- which
+// every source gates behind a real login -- these specific pages are
+// viewable without logging in, confirmed by checking multiple teams
+// directly. This is a stopgap for roster/branding display only, until
+// Yahoo API access is approved; it does not touch scores or standings,
+// which stay on manual entry.
 //
 // Usage: node scripts/fetch-rosters.mjs
 
@@ -72,6 +75,11 @@ function parseTeamLogo(html) {
   return match ? match[1] : null;
 }
 
+function parseTeamName(html) {
+  const match = html.match(/<h3 class="sticky-top[^"]*"[^>]*>\s*([^<]+?)\s*<\/h3>/);
+  return match ? decodeHtmlEntities(match[1].trim()) : null;
+}
+
 const rosters = {};
 
 for (const team of teamsConfig.teams) {
@@ -80,7 +88,8 @@ for (const team of teamsConfig.teams) {
     continue;
   }
 
-  const base = `https://fantasyhelper.net/Yahoo/${GAME_ID}.l.${LEAGUE_ID}/${GAME_ID}.l.${LEAGUE_ID}.t.${team.fantasyHelperTeamId}`;
+  const id = String(team.fantasyHelperTeamId);
+  const base = `https://fantasyhelper.net/Yahoo/${GAME_ID}.l.${LEAGUE_ID}/${GAME_ID}.l.${LEAGUE_ID}.t.${id}`;
 
   const [teamRes, rosterRes] = await Promise.all([
     fetch(base, { headers: FETCH_HEADERS }),
@@ -88,8 +97,11 @@ for (const team of teamsConfig.teams) {
   ]);
 
   let logoUrl = null;
+  let currentName = null;
   if (teamRes.ok) {
-    logoUrl = parseTeamLogo(await teamRes.text());
+    const teamHtml = await teamRes.text();
+    logoUrl = parseTeamLogo(teamHtml);
+    currentName = parseTeamName(teamHtml);
   } else {
     console.warn(`Failed to fetch team page for ${team.team}: HTTP ${teamRes.status}`);
   }
@@ -101,8 +113,10 @@ for (const team of teamsConfig.teams) {
     console.warn(`Failed to fetch roster for ${team.team}: HTTP ${rosterRes.status}`);
   }
 
-  rosters[team.team] = { logoUrl, players };
-  console.log(`${team.team}: ${players.length} players, logo ${logoUrl ? "found" : "missing"}`);
+  rosters[id] = { currentName: currentName || team.team, logoUrl, players };
+  console.log(
+    `#${id} (${team.team}): now "${rosters[id].currentName}", ${players.length} players, logo ${logoUrl ? "found" : "missing"}`
+  );
 }
 
 await writeFile(
