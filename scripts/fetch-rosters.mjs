@@ -80,6 +80,18 @@ function parseTeamName(html) {
   return match ? decodeHtmlEntities(match[1].trim()) : null;
 }
 
+// Load the last-known-good data so a transient failure for one team (a bad
+// redirect, a 5xx, unparseable HTML) can fall back to what we already had
+// instead of silently overwriting it with a worse guess.
+let previousRosters = {};
+try {
+  previousRosters = JSON.parse(
+    await readFile(path.join(rootDir, "data", "rosters.json"), "utf8")
+  );
+} catch {
+  // no previous file -- fine on a first run
+}
+
 const rosters = {};
 
 for (const team of teamsConfig.teams) {
@@ -90,27 +102,49 @@ for (const team of teamsConfig.teams) {
 
   const id = String(team.fantasyHelperTeamId);
   const base = `https://fantasyhelper.net/Yahoo/${GAME_ID}.l.${LEAGUE_ID}/${GAME_ID}.l.${LEAGUE_ID}.t.${id}`;
+  const previous = previousRosters[id] || null;
 
   const [teamRes, rosterRes] = await Promise.all([
     fetch(base, { headers: FETCH_HEADERS }),
     fetch(`${base}/roster`, { headers: FETCH_HEADERS }),
   ]);
 
-  let logoUrl = null;
-  let currentName = null;
-  if (teamRes.ok) {
+  // Fantasy Helper has occasionally redirected these paths to their generic
+  // homepage (an Azure routing hiccup on their end) instead of erroring --
+  // that still resolves as a 200, so also check we weren't bounced away.
+  const teamPageOk = teamRes.ok && !teamRes.redirected;
+  const rosterPageOk = rosterRes.ok && !rosterRes.redirected;
+
+  let logoUrl = previous?.logoUrl ?? null;
+  let currentName = previous?.currentName ?? null;
+  if (teamPageOk) {
     const teamHtml = await teamRes.text();
-    logoUrl = parseTeamLogo(teamHtml);
-    currentName = parseTeamName(teamHtml);
+    const parsedLogo = parseTeamLogo(teamHtml);
+    const parsedName = parseTeamName(teamHtml);
+    if (parsedLogo || parsedName) {
+      logoUrl = parsedLogo ?? logoUrl;
+      currentName = parsedName ?? currentName;
+    } else {
+      console.warn(`Team page for ${team.team} didn't parse as expected -- keeping previous data.`);
+    }
   } else {
-    console.warn(`Failed to fetch team page for ${team.team}: HTTP ${teamRes.status}`);
+    console.warn(
+      `Team page fetch for ${team.team} failed or redirected (status ${teamRes.status}, redirected=${teamRes.redirected}) -- keeping previous data.`
+    );
   }
 
-  let players = [];
-  if (rosterRes.ok) {
-    players = parseRosterHtml(await rosterRes.text());
+  let players = previous?.players ?? [];
+  if (rosterPageOk) {
+    const parsedPlayers = parseRosterHtml(await rosterRes.text());
+    if (parsedPlayers.length) {
+      players = parsedPlayers;
+    } else {
+      console.warn(`Roster page for ${team.team} didn't parse as expected -- keeping previous data.`);
+    }
   } else {
-    console.warn(`Failed to fetch roster for ${team.team}: HTTP ${rosterRes.status}`);
+    console.warn(
+      `Roster page fetch for ${team.team} failed or redirected (status ${rosterRes.status}, redirected=${rosterRes.redirected}) -- keeping previous data.`
+    );
   }
 
   rosters[id] = { currentName: currentName || team.team, logoUrl, players };
