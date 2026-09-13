@@ -2,7 +2,7 @@
   "7200": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 588
+    "overallRank": 589
   },
   "8795": {
     "tradeValue": 0,
@@ -10,14 +10,14 @@
     "overallRank": 341
   },
   "9265": {
-    "tradeValue": 1431,
+    "tradeValue": 1444,
     "positionRank": 14,
     "overallRank": 96
   },
   "24822": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 568
+    "overallRank": 570
   },
   "24967": {
     "tradeValue": 0,
@@ -32,7 +32,7 @@
   "25812": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 592
+    "overallRank": 583
   },
   "26650": {
     "tradeValue": 0,
@@ -47,25 +47,25 @@
   "26662": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 600
+    "overallRank": 590
   },
   "26686": {
-    "tradeValue": 1259,
+    "tradeValue": 1263,
     "positionRank": 12,
     "overallRank": 104
   },
   "26699": {
-    "tradeValue": 111,
+    "tradeValue": 110,
     "positionRank": 75,
-    "overallRank": 192
+    "overallRank": 193
   },
   "27277": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 301
+    "overallRank": 300
   },
   "27535": {
-    "tradeValue": 2063,
+    "tradeValue": 2070,
     "positionRank": 31,
     "overallRank": 73
   },
@@ -77,7 +77,7 @@
   "27548": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 309
+    "overallRank": 308
   },
   "27564": {
     "tradeValue": 0,
@@ -85,14 +85,14 @@
     "overallRank": 435
   },
   "27581": {
-    "tradeValue": 2752,
+    "tradeValue": 2760,
     "positionRank": 23,
     "overallRank": 54
   },
   "27590": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 561
+    "overallRank": 563
   },
   "28389": {
     "tradeValue": 0,
@@ -107,7 +107,7 @@
   "28408": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 562
+    "overallRank": 564
   },
   "28442": {
     "tradeValue": 0,
@@ -120,14 +120,14 @@
     "overallRank": 289
   },
   "28534": {
-    "tradeValue": 1211,
+    "tradeValue": 1210,
     "positionRank": 43,
     "overallRank": 105
   },
   "28592": {
     "tradeValue": 439,
     "positionRank": 22,
-    "overallRank": 156
+    "overallRank": 155
   },
   "28654": {
     "tradeValue": 0,
@@ -142,7 +142,7 @@
   "29235": {
     "tradeValue": 848,
     "positionRank": 17,
-    "overallRank": 128
+    "overallRank": 129
   },
   "29236": {
     "tradeValue": 0,
@@ -150,7 +150,7 @@
     "overallRank": 425
   },
   "29269": {
-    "tradeValue": 220,
+    "tradeValue": 223,
     "positionRank": 25,
     "overallRank": 165
   },
@@ -160,14 +160,14 @@
     "overallRank": 283
   },
   "29279": {
-    "tradeValue": 5897,
+    "tradeValue": 5899,
     "positionRank": 10,
     "overallRank": 17
   },
   "29288": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 593
+    "overallRank": 594
   },
   "29315": {
     "tradeValue": 0,
@@ -177,7 +177,7 @@
   "29325": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 601
+    "overallRank": 597
   },
   "29344": {
     "tradeValue": 0,
@@ -190,19 +190,19 @@
     "overallRank": 484
   },
   "29369": {
-    "tradeValue": 2011,
+    "tradeValue": 2012,
     "positionRank": 9,
     "overallRank": 75
   },
   "29399": {
-    "tradeValue": 3193,
-    "positionRank": 21,
-    "overallRank": 48
+    "tradeValue": 2850,
+    "positionRank": 22,
+    "overallRank": 52
   },
   "29631": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 529
+    "overallRank": 530
   },
   "30115": {
     "tradeValue": 0,
@@ -210,19 +210,19 @@
     "overallRank": 233
   },
   "30121": {
-    "tradeValue": 8586,
+    "tradeValue": 8585,
     "positionRank": 3,
     "overallRank": 6
   },
   "30123": {
-    "tradeValue": 1857,
+    "tradeValue": 1884,
     "positionRank": 10,
     "overallRank": 77
   },
   "30125": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 299
+    "overallRank": 336
   },
   "30136": {
     "tradeValue": 0,
@@ -230,14 +230,14 @@
     "overallRank": 387
   },
   "30142": {
-    "tradeValue": 1780,
+    "tradeValue": 1771,
     "positionRank": 8,
-    "overallRank": 81
+    "overallRank": 82
   },
   "30150": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 603
+    "overallRank": 604
   },
   "30153": {
     "tradeValue": 0,
@@ -247,7 +247,7 @@
   "30157": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 489
+    "overallRank": 490
   },
   "30161": {
     "tradeValue": 0,
@@ -262,15 +262,15 @@
   "30180": {
     "tradeValue": 151,
     "positionRank": 59,
-    "overallRank": 174
+    "overallRank": 173
   },
   "30182": {
-    "tradeValue": 86,
-    "positionRank": 79,
-    "overallRank": 202
+    "tradeValue": 74,
+    "positionRank": 81,
+    "overallRank": 205
   },
   "30197": {
-    "tradeValue": 1330,
+    "tradeValue": 1332,
     "positionRank": 40,
     "overallRank": 101
   },
@@ -290,14 +290,14 @@
     "overallRank": 232
   },
   "30218": {
-    "tradeValue": 450,
+    "tradeValue": 441,
     "positionRank": 50,
     "overallRank": 154
   },
   "30227": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 604
+    "overallRank": 605
   },
   "30230": {
     "tradeValue": 0,
@@ -312,7 +312,7 @@
   "30247": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 504
+    "overallRank": 505
   },
   "30248": {
     "tradeValue": 0,
@@ -320,7 +320,7 @@
     "overallRank": 216
   },
   "30259": {
-    "tradeValue": 1715,
+    "tradeValue": 1719,
     "positionRank": 9,
     "overallRank": 84
   },
@@ -330,9 +330,9 @@
     "overallRank": 414
   },
   "30295": {
-    "tradeValue": 664,
-    "positionRank": 46,
-    "overallRank": 144
+    "tradeValue": 665,
+    "positionRank": 47,
+    "overallRank": 145
   },
   "30339": {
     "tradeValue": 0,
@@ -347,12 +347,12 @@
   "30423": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 509
+    "overallRank": 510
   },
   "30511": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 583
+    "overallRank": 584
   },
   "30551": {
     "tradeValue": 0,
@@ -367,15 +367,15 @@
   "30788": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 521
+    "overallRank": 522
   },
   "30971": {
-    "tradeValue": 1011,
+    "tradeValue": 1012,
     "positionRank": 16,
     "overallRank": 119
   },
   "30972": {
-    "tradeValue": 6295,
+    "tradeValue": 6296,
     "positionRank": 7,
     "overallRank": 13
   },
@@ -385,19 +385,19 @@
     "overallRank": 162
   },
   "30977": {
-    "tradeValue": 5958,
+    "tradeValue": 5957,
     "positionRank": 1,
     "overallRank": 15
   },
   "30994": {
-    "tradeValue": 2690,
+    "tradeValue": 2700,
     "positionRank": 25,
     "overallRank": 57
   },
   "30995": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 493
+    "overallRank": 494
   },
   "30996": {
     "tradeValue": 0,
@@ -405,9 +405,9 @@
     "overallRank": 353
   },
   "31002": {
-    "tradeValue": 4878,
+    "tradeValue": 4995,
     "positionRank": 2,
-    "overallRank": 27
+    "overallRank": 26
   },
   "31005": {
     "tradeValue": 0,
@@ -415,14 +415,14 @@
     "overallRank": 228
   },
   "31010": {
-    "tradeValue": 1277,
+    "tradeValue": 1280,
     "positionRank": 42,
     "overallRank": 103
   },
   "31012": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 330
+    "overallRank": 329
   },
   "31017": {
     "tradeValue": 0,
@@ -432,7 +432,7 @@
   "31019": {
     "tradeValue": 862,
     "positionRank": 18,
-    "overallRank": 126
+    "overallRank": 127
   },
   "31046": {
     "tradeValue": 0,
@@ -442,12 +442,12 @@
   "31056": {
     "tradeValue": 740,
     "positionRank": 20,
-    "overallRank": 138
+    "overallRank": 139
   },
   "31071": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 494
+    "overallRank": 495
   },
   "31090": {
     "tradeValue": 0,
@@ -462,12 +462,12 @@
   "31107": {
     "tradeValue": 103,
     "positionRank": 30,
-    "overallRank": 196
+    "overallRank": 197
   },
   "31114": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 526
+    "overallRank": 527
   },
   "31127": {
     "tradeValue": 0,
@@ -502,12 +502,12 @@
   "31394": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 512
+    "overallRank": 513
   },
   "31424": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 491
+    "overallRank": 492
   },
   "31641": {
     "tradeValue": 0,
@@ -515,27 +515,27 @@
     "overallRank": 449
   },
   "31833": {
-    "tradeValue": 724,
+    "tradeValue": 717,
     "positionRank": 19,
-    "overallRank": 139
+    "overallRank": 141
   },
   "31838": {
-    "tradeValue": 143,
+    "tradeValue": 148,
     "positionRank": 24,
     "overallRank": 177
   },
   "31840": {
-    "tradeValue": 152,
+    "tradeValue": 149,
     "positionRank": 26,
-    "overallRank": 172
+    "overallRank": 175
   },
   "31852": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 313
+    "overallRank": 312
   },
   "31856": {
-    "tradeValue": 2500,
+    "tradeValue": 2508,
     "positionRank": 24,
     "overallRank": 60
   },
@@ -545,7 +545,7 @@
     "overallRank": 376
   },
   "31868": {
-    "tradeValue": 1032,
+    "tradeValue": 1033,
     "positionRank": 47,
     "overallRank": 117
   },
@@ -557,7 +557,7 @@
   "31882": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 496
+    "overallRank": 497
   },
   "31883": {
     "tradeValue": 5310,
@@ -577,42 +577,42 @@
   "31888": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 559
+    "overallRank": 561
   },
   "31891": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 564
+    "overallRank": 566
   },
   "31896": {
-    "tradeValue": 1643,
+    "tradeValue": 1653,
     "positionRank": 36,
     "overallRank": 86
   },
   "31898": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 565
+    "overallRank": 567
   },
   "31901": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 522
+    "overallRank": 523
   },
   "31905": {
     "tradeValue": 3068,
     "positionRank": 21,
-    "overallRank": 51
+    "overallRank": 50
   },
   "31906": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 528
+    "overallRank": 529
   },
   "31908": {
-    "tradeValue": 2161,
+    "tradeValue": 2164,
     "positionRank": 27,
-    "overallRank": 64
+    "overallRank": 65
   },
   "31928": {
     "tradeValue": 0,
@@ -625,19 +625,19 @@
     "overallRank": 438
   },
   "31945": {
-    "tradeValue": 402,
-    "positionRank": 52,
-    "overallRank": 158
+    "tradeValue": 976,
+    "positionRank": 42,
+    "overallRank": 120
   },
   "31960": {
-    "tradeValue": 1581,
+    "tradeValue": 1586,
     "positionRank": 31,
     "overallRank": 89
   },
   "31965": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 530
+    "overallRank": 531
   },
   "31969": {
     "tradeValue": 0,
@@ -662,7 +662,7 @@
   "32014": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 587
+    "overallRank": 588
   },
   "32018": {
     "tradeValue": 0,
@@ -672,7 +672,7 @@
   "32036": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 586
+    "overallRank": 587
   },
   "32040": {
     "tradeValue": 0,
@@ -690,7 +690,7 @@
     "overallRank": 372
   },
   "32231": {
-    "tradeValue": 551,
+    "tradeValue": 554,
     "positionRank": 64,
     "overallRank": 153
   },
@@ -702,7 +702,7 @@
   "32494": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 306
+    "overallRank": 305
   },
   "32523": {
     "tradeValue": 0,
@@ -720,39 +720,39 @@
     "overallRank": 468
   },
   "32671": {
-    "tradeValue": 3344,
+    "tradeValue": 3417,
     "positionRank": 3,
     "overallRank": 42
   },
   "32675": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 570
+    "overallRank": 487
   },
   "32676": {
-    "tradeValue": 2282,
+    "tradeValue": 2220,
     "positionRank": 8,
     "overallRank": 63
   },
   "32685": {
-    "tradeValue": 29,
-    "positionRank": 85,
-    "overallRank": 212
+    "tradeValue": 103,
+    "positionRank": 77,
+    "overallRank": 198
   },
   "32687": {
-    "tradeValue": 6723,
+    "tradeValue": 6734,
     "positionRank": 6,
     "overallRank": 12
   },
   "32691": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 503
+    "overallRank": 504
   },
   "32692": {
-    "tradeValue": 6880,
+    "tradeValue": 6895,
     "positionRank": 5,
-    "overallRank": 10
+    "overallRank": 11
   },
   "32695": {
     "tradeValue": 0,
@@ -760,9 +760,9 @@
     "overallRank": 428
   },
   "32696": {
-    "tradeValue": 764,
+    "tradeValue": 758,
     "positionRank": 18,
-    "overallRank": 135
+    "overallRank": 137
   },
   "32702": {
     "tradeValue": 0,
@@ -770,22 +770,22 @@
     "overallRank": 460
   },
   "32703": {
-    "tradeValue": 3490,
+    "tradeValue": 3495,
     "positionRank": 19,
     "overallRank": 41
   },
   "32704": {
-    "tradeValue": 1116,
+    "tradeValue": 1117,
     "positionRank": 45,
     "overallRank": 111
   },
   "32705": {
-    "tradeValue": 3220,
+    "tradeValue": 3225,
     "positionRank": 18,
-    "overallRank": 44
+    "overallRank": 45
   },
   "32711": {
-    "tradeValue": 8335,
+    "tradeValue": 8346,
     "positionRank": 4,
     "overallRank": 7
   },
@@ -797,21 +797,21 @@
   "32716": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 534
+    "overallRank": 535
   },
   "32722": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 598
+    "overallRank": 600
   },
   "32723": {
-    "tradeValue": 2739,
+    "tradeValue": 2752,
     "positionRank": 6,
     "overallRank": 55
   },
   "32725": {
-    "tradeValue": 1358,
-    "positionRank": 34,
+    "tradeValue": 1360,
+    "positionRank": 35,
     "overallRank": 100
   },
   "32727": {
@@ -847,7 +847,7 @@
   "32785": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 492
+    "overallRank": 493
   },
   "32798": {
     "tradeValue": 0,
@@ -867,7 +867,7 @@
   "32831": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 595
+    "overallRank": 596
   },
   "32843": {
     "tradeValue": 0,
@@ -877,7 +877,7 @@
   "32846": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 535
+    "overallRank": 536
   },
   "32857": {
     "tradeValue": 0,
@@ -891,8 +891,8 @@
   },
   "32887": {
     "tradeValue": 70,
-    "positionRank": 82,
-    "overallRank": 208
+    "positionRank": 84,
+    "overallRank": 209
   },
   "32993": {
     "tradeValue": 0,
@@ -900,17 +900,17 @@
     "overallRank": 288
   },
   "33100": {
-    "tradeValue": 1745,
+    "tradeValue": 1749,
     "positionRank": 30,
     "overallRank": 83
   },
   "33109": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 549
+    "overallRank": 551
   },
   "33113": {
-    "tradeValue": 714,
+    "tradeValue": 717,
     "positionRank": 21,
     "overallRank": 140
   },
@@ -920,7 +920,7 @@
     "overallRank": 411
   },
   "33389": {
-    "tradeValue": 1825,
+    "tradeValue": 1831,
     "positionRank": 11,
     "overallRank": 80
   },
@@ -932,25 +932,25 @@
   "33391": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 610
+    "overallRank": 611
   },
   "33392": {
-    "tradeValue": 1834,
+    "tradeValue": 1839,
     "positionRank": 7,
     "overallRank": 79
   },
   "33393": {
-    "tradeValue": 9204,
+    "tradeValue": 9197,
     "positionRank": 1,
     "overallRank": 3
   },
   "33394": {
-    "tradeValue": 3704,
+    "tradeValue": 3755,
     "positionRank": 17,
     "overallRank": 39
   },
   "33398": {
-    "tradeValue": 4174,
+    "tradeValue": 4200,
     "positionRank": 14,
     "overallRank": 33
   },
@@ -962,22 +962,22 @@
   "33403": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 325
+    "overallRank": 324
   },
   "33412": {
-    "tradeValue": 107,
+    "tradeValue": 112,
     "positionRank": 62,
-    "overallRank": 194
+    "overallRank": 192
   },
   "33413": {
-    "tradeValue": 3844,
+    "tradeValue": 3827,
     "positionRank": 17,
     "overallRank": 38
   },
   "33415": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 335
+    "overallRank": 334
   },
   "33422": {
     "tradeValue": 0,
@@ -985,9 +985,9 @@
     "overallRank": 426
   },
   "33423": {
-    "tradeValue": 4487,
-    "positionRank": 13,
-    "overallRank": 29
+    "tradeValue": 4488,
+    "positionRank": 14,
+    "overallRank": 30
   },
   "33437": {
     "tradeValue": 0,
@@ -1012,12 +1012,12 @@
   "33452": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 539
+    "overallRank": 540
   },
   "33455": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 487
+    "overallRank": 488
   },
   "33465": {
     "tradeValue": 0,
@@ -1037,15 +1037,15 @@
   "33471": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 608
+    "overallRank": 609
   },
   "33476": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 589
+    "overallRank": 591
   },
   "33477": {
-    "tradeValue": 5288,
+    "tradeValue": 5286,
     "positionRank": 8,
     "overallRank": 23
   },
@@ -1060,34 +1060,34 @@
     "overallRank": 230
   },
   "33500": {
-    "tradeValue": 8297,
+    "tradeValue": 8281,
     "positionRank": 4,
     "overallRank": 8
   },
   "33508": {
-    "tradeValue": 2099,
+    "tradeValue": 2109,
     "positionRank": 28,
     "overallRank": 71
   },
   "33514": {
-    "tradeValue": 1365,
+    "tradeValue": 1368,
     "positionRank": 33,
     "overallRank": 98
   },
   "33515": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 538
+    "overallRank": 539
   },
   "33517": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 498
+    "overallRank": 499
   },
   "33519": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 591
+    "overallRank": 593
   },
   "33535": {
     "tradeValue": 0,
@@ -1095,14 +1095,14 @@
     "overallRank": 451
   },
   "33538": {
-    "tradeValue": 1113,
+    "tradeValue": 1115,
     "positionRank": 39,
     "overallRank": 112
   },
   "33545": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 495
+    "overallRank": 496
   },
   "33550": {
     "tradeValue": 0,
@@ -1122,7 +1122,7 @@
   "33605": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 533
+    "overallRank": 534
   },
   "33637": {
     "tradeValue": 0,
@@ -1132,7 +1132,7 @@
   "33774": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 302
+    "overallRank": 301
   },
   "33813": {
     "tradeValue": 0,
@@ -1140,29 +1140,29 @@
     "overallRank": 473
   },
   "33963": {
-    "tradeValue": 5114,
+    "tradeValue": 5108,
     "positionRank": 10,
     "overallRank": 25
   },
   "33965": {
-    "tradeValue": 3668,
+    "tradeValue": 3728,
     "positionRank": 18,
     "overallRank": 40
   },
   "33966": {
-    "tradeValue": 4755,
+    "tradeValue": 4765,
     "positionRank": 12,
     "overallRank": 28
   },
   "33967": {
-    "tradeValue": 2569,
+    "tradeValue": 2579,
     "positionRank": 26,
     "overallRank": 59
   },
   "33971": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 524
+    "overallRank": 525
   },
   "33973": {
     "tradeValue": 0,
@@ -1175,24 +1175,24 @@
     "overallRank": 374
   },
   "33989": {
-    "tradeValue": 2090,
+    "tradeValue": 2097,
     "positionRank": 30,
     "overallRank": 72
   },
   "33991": {
-    "tradeValue": 3994,
+    "tradeValue": 4024,
     "positionRank": 16,
     "overallRank": 35
   },
   "33996": {
-    "tradeValue": 5687,
+    "tradeValue": 5691,
     "positionRank": 11,
     "overallRank": 18
   },
   "33998": {
-    "tradeValue": 808,
+    "tradeValue": 809,
     "positionRank": 51,
-    "overallRank": 131
+    "overallRank": 132
   },
   "33999": {
     "tradeValue": 0,
@@ -1205,12 +1205,12 @@
     "overallRank": 480
   },
   "34007": {
-    "tradeValue": 5142,
+    "tradeValue": 5144,
     "positionRank": 9,
     "overallRank": 24
   },
   "34008": {
-    "tradeValue": 1063,
+    "tradeValue": 1065,
     "positionRank": 46,
     "overallRank": 116
   },
@@ -1220,19 +1220,19 @@
     "overallRank": 231
   },
   "34010": {
-    "tradeValue": 5618,
+    "tradeValue": 5619,
     "positionRank": 1,
     "overallRank": 19
   },
   "34019": {
-    "tradeValue": 7662,
+    "tradeValue": 7658,
     "positionRank": 5,
     "overallRank": 9
   },
   "34029": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 513
+    "overallRank": 514
   },
   "34030": {
     "tradeValue": 0,
@@ -1242,12 +1242,12 @@
   "34036": {
     "tradeValue": 853,
     "positionRank": 19,
-    "overallRank": 127
+    "overallRank": 128
   },
   "34042": {
-    "tradeValue": 137,
+    "tradeValue": 135,
     "positionRank": 25,
-    "overallRank": 180
+    "overallRank": 181
   },
   "34044": {
     "tradeValue": 0,
@@ -1255,14 +1255,14 @@
     "overallRank": 369
   },
   "34047": {
-    "tradeValue": 938,
-    "positionRank": 42,
-    "overallRank": 120
+    "tradeValue": 941,
+    "positionRank": 43,
+    "overallRank": 121
   },
   "34054": {
-    "tradeValue": 151,
+    "tradeValue": 153,
     "positionRank": 58,
-    "overallRank": 173
+    "overallRank": 172
   },
   "34055": {
     "tradeValue": 0,
@@ -1272,17 +1272,17 @@
   "34057": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 514
+    "overallRank": 515
   },
   "34062": {
-    "tradeValue": 904,
+    "tradeValue": 900,
     "positionRank": 16,
-    "overallRank": 121
+    "overallRank": 122
   },
   "34063": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 488
+    "overallRank": 489
   },
   "34068": {
     "tradeValue": 0,
@@ -1297,7 +1297,7 @@
   "34079": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 497
+    "overallRank": 498
   },
   "34081": {
     "tradeValue": 0,
@@ -1307,7 +1307,7 @@
   "34083": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 567
+    "overallRank": 569
   },
   "34084": {
     "tradeValue": 0,
@@ -1315,9 +1315,9 @@
     "overallRank": 405
   },
   "34085": {
-    "tradeValue": 873,
+    "tradeValue": 874,
     "positionRank": 17,
-    "overallRank": 124
+    "overallRank": 125
   },
   "34087": {
     "tradeValue": 0,
@@ -1337,32 +1337,32 @@
   "34094": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 303
+    "overallRank": 302
   },
   "34095": {
-    "tradeValue": 1109,
+    "tradeValue": 1106,
     "positionRank": 14,
     "overallRank": 113
   },
   "34099": {
-    "tradeValue": 135,
+    "tradeValue": 134,
     "positionRank": 28,
-    "overallRank": 183
+    "overallRank": 182
   },
   "34100": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 307
+    "overallRank": 306
   },
   "34104": {
-    "tradeValue": 584,
+    "tradeValue": 587,
     "positionRank": 63,
     "overallRank": 151
   },
   "34107": {
-    "tradeValue": 831,
-    "positionRank": 44,
-    "overallRank": 130
+    "tradeValue": 832,
+    "positionRank": 45,
+    "overallRank": 131
   },
   "34112": {
     "tradeValue": 0,
@@ -1370,19 +1370,19 @@
     "overallRank": 215
   },
   "34120": {
-    "tradeValue": 4481,
-    "positionRank": 14,
-    "overallRank": 30
+    "tradeValue": 4495,
+    "positionRank": 13,
+    "overallRank": 29
   },
   "34125": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 590
+    "overallRank": 592
   },
   "34147": {
     "tradeValue": 122,
     "positionRank": 72,
-    "overallRank": 186
+    "overallRank": 187
   },
   "34148": {
     "tradeValue": 0,
@@ -1392,12 +1392,12 @@
   "34152": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 611
+    "overallRank": 612
   },
   "34154": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 490
+    "overallRank": 491
   },
   "34185": {
     "tradeValue": 0,
@@ -1405,19 +1405,19 @@
     "overallRank": 448
   },
   "34207": {
-    "tradeValue": 39,
+    "tradeValue": 40,
     "positionRank": 69,
-    "overallRank": 211
+    "overallRank": 212
   },
   "34218": {
-    "tradeValue": 1512,
+    "tradeValue": 1537,
     "positionRank": 12,
-    "overallRank": 93
+    "overallRank": 92
   },
   "34261": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 594
+    "overallRank": 595
   },
   "34310": {
     "tradeValue": 0,
@@ -1425,27 +1425,27 @@
     "overallRank": 574
   },
   "34320": {
-    "tradeValue": 1132,
+    "tradeValue": 1134,
     "positionRank": 38,
     "overallRank": 110
   },
   "34357": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 511
+    "overallRank": 512
   },
   "34374": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 553
+    "overallRank": 555
   },
   "34440": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 527
+    "overallRank": 528
   },
   "34447": {
-    "tradeValue": 2145,
+    "tradeValue": 2154,
     "positionRank": 26,
     "overallRank": 67
   },
@@ -1467,10 +1467,10 @@
   "34607": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 566
+    "overallRank": 568
   },
   "34610": {
-    "tradeValue": 78,
+    "tradeValue": 77,
     "positionRank": 67,
     "overallRank": 204
   },
@@ -1482,10 +1482,10 @@
   "34654": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 541
+    "overallRank": 542
   },
   "34659": {
-    "tradeValue": 400,
+    "tradeValue": 396,
     "positionRank": 65,
     "overallRank": 159
   },
@@ -1495,17 +1495,17 @@
     "overallRank": 229
   },
   "40029": {
-    "tradeValue": 130,
-    "positionRank": 26,
-    "overallRank": 185
+    "tradeValue": 121,
+    "positionRank": 27,
+    "overallRank": 189
   },
   "40030": {
-    "tradeValue": 172,
+    "tradeValue": 171,
     "positionRank": 22,
     "overallRank": 168
   },
   "40039": {
-    "tradeValue": 3861,
+    "tradeValue": 3881,
     "positionRank": 16,
     "overallRank": 37
   },
@@ -1515,22 +1515,22 @@
     "overallRank": 362
   },
   "40041": {
-    "tradeValue": 8714,
+    "tradeValue": 8704,
     "positionRank": 3,
     "overallRank": 5
   },
   "40042": {
-    "tradeValue": 875,
+    "tradeValue": 877,
     "positionRank": 49,
-    "overallRank": 123
+    "overallRank": 124
   },
   "40048": {
-    "tradeValue": 1100,
+    "tradeValue": 1102,
     "positionRank": 15,
     "overallRank": 114
   },
   "40051": {
-    "tradeValue": 1192,
+    "tradeValue": 1193,
     "positionRank": 44,
     "overallRank": 107
   },
@@ -1550,29 +1550,29 @@
     "overallRank": 265
   },
   "40063": {
-    "tradeValue": 880,
+    "tradeValue": 881,
     "positionRank": 48,
-    "overallRank": 122
+    "overallRank": 123
   },
   "40064": {
-    "tradeValue": 2157,
+    "tradeValue": 2171,
     "positionRank": 6,
-    "overallRank": 65
+    "overallRank": 64
   },
   "40065": {
-    "tradeValue": 335,
+    "tradeValue": 332,
     "positionRank": 23,
     "overallRank": 160
   },
   "40068": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 548
+    "overallRank": 550
   },
   "40073": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 613
+    "overallRank": 614
   },
   "40074": {
     "tradeValue": 0,
@@ -1580,24 +1580,24 @@
     "overallRank": 338
   },
   "40075": {
-    "tradeValue": 257,
+    "tradeValue": 256,
     "positionRank": 53,
     "overallRank": 161
   },
   "40078": {
-    "tradeValue": 232,
+    "tradeValue": 233,
     "positionRank": 24,
     "overallRank": 164
   },
   "40084": {
-    "tradeValue": 4177,
+    "tradeValue": 4249,
     "positionRank": 13,
     "overallRank": 32
   },
   "40090": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 327
+    "overallRank": 326
   },
   "40093": {
     "tradeValue": 0,
@@ -1610,9 +1610,9 @@
     "overallRank": 346
   },
   "40095": {
-    "tradeValue": 136,
+    "tradeValue": 137,
     "positionRank": 60,
-    "overallRank": 181
+    "overallRank": 179
   },
   "40096": {
     "tradeValue": 0,
@@ -1620,19 +1620,19 @@
     "overallRank": 436
   },
   "40097": {
-    "tradeValue": 100,
-    "positionRank": 77,
-    "overallRank": 198
+    "tradeValue": 99,
+    "positionRank": 78,
+    "overallRank": 199
   },
   "40102": {
-    "tradeValue": 2309,
+    "tradeValue": 2319,
     "positionRank": 5,
-    "overallRank": 62
+    "overallRank": 61
   },
   "40108": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 551
+    "overallRank": 553
   },
   "40114": {
     "tradeValue": 140,
@@ -1640,29 +1640,29 @@
     "overallRank": 178
   },
   "40118": {
-    "tradeValue": 6755,
+    "tradeValue": 6905,
     "positionRank": 6,
-    "overallRank": 11
+    "overallRank": 10
   },
   "40119": {
-    "tradeValue": 165,
-    "positionRank": 56,
-    "overallRank": 170
+    "tradeValue": 164,
+    "positionRank": 57,
+    "overallRank": 171
   },
   "40121": {
-    "tradeValue": 1318,
+    "tradeValue": 1321,
     "positionRank": 41,
     "overallRank": 102
   },
   "40126": {
-    "tradeValue": 766,
+    "tradeValue": 768,
     "positionRank": 54,
-    "overallRank": 134
+    "overallRank": 135
   },
   "40128": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 544
+    "overallRank": 546
   },
   "40133": {
     "tradeValue": 0,
@@ -1672,7 +1672,7 @@
   "40138": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 612
+    "overallRank": 613
   },
   "40141": {
     "tradeValue": 0,
@@ -1682,12 +1682,12 @@
   "40144": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 501
+    "overallRank": 502
   },
   "40153": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 311
+    "overallRank": 310
   },
   "40158": {
     "tradeValue": 0,
@@ -1695,9 +1695,9 @@
     "overallRank": 456
   },
   "40162": {
-    "tradeValue": 430,
-    "positionRank": 51,
-    "overallRank": 157
+    "tradeValue": 420,
+    "positionRank": 52,
+    "overallRank": 158
   },
   "40164": {
     "tradeValue": 0,
@@ -1712,22 +1712,22 @@
   "40167": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 525
+    "overallRank": 526
   },
   "40168": {
-    "tradeValue": 8959,
+    "tradeValue": 8941,
     "positionRank": 2,
     "overallRank": 4
   },
   "40180": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 597
+    "overallRank": 599
   },
   "40182": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 523
+    "overallRank": 524
   },
   "40188": {
     "tradeValue": 0,
@@ -1735,7 +1735,7 @@
     "overallRank": 459
   },
   "40196": {
-    "tradeValue": 6086,
+    "tradeValue": 6096,
     "positionRank": 8,
     "overallRank": 14
   },
@@ -1745,9 +1745,9 @@
     "overallRank": 482
   },
   "40201": {
-    "tradeValue": 96,
-    "positionRank": 78,
-    "overallRank": 199
+    "tradeValue": 95,
+    "positionRank": 79,
+    "overallRank": 200
   },
   "40211": {
     "tradeValue": 0,
@@ -1757,7 +1757,7 @@
   "40220": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 596
+    "overallRank": 598
   },
   "40222": {
     "tradeValue": 0,
@@ -1770,9 +1770,9 @@
     "overallRank": 415
   },
   "40224": {
-    "tradeValue": 135,
+    "tradeValue": 133,
     "positionRank": 70,
-    "overallRank": 182
+    "overallRank": 183
   },
   "40226": {
     "tradeValue": 0,
@@ -1780,17 +1780,17 @@
     "overallRank": 479
   },
   "40231": {
-    "tradeValue": 610,
-    "positionRank": 48,
-    "overallRank": 148
+    "tradeValue": 425,
+    "positionRank": 51,
+    "overallRank": 157
   },
   "40232": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 550
+    "overallRank": 552
   },
   "40234": {
-    "tradeValue": 2131,
+    "tradeValue": 2136,
     "positionRank": 29,
     "overallRank": 69
   },
@@ -1817,22 +1817,22 @@
   "40290": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 545
+    "overallRank": 547
   },
   "40430": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 515
+    "overallRank": 516
   },
   "40445": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 546
+    "overallRank": 548
   },
   "40452": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 500
+    "overallRank": 501
   },
   "40474": {
     "tradeValue": 1026,
@@ -1852,7 +1852,7 @@
   "40533": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 585
+    "overallRank": 586
   },
   "40539": {
     "tradeValue": 0,
@@ -1862,7 +1862,7 @@
   "40548": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 599
+    "overallRank": 601
   },
   "40625": {
     "tradeValue": 0,
@@ -1875,14 +1875,14 @@
     "overallRank": 249
   },
   "40641": {
-    "tradeValue": 118,
+    "tradeValue": 119,
     "positionRank": 61,
-    "overallRank": 189
+    "overallRank": 191
   },
   "40671": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 569
+    "overallRank": 571
   },
   "40696": {
     "tradeValue": 0,
@@ -1900,12 +1900,12 @@
     "overallRank": 390
   },
   "40875": {
-    "tradeValue": 1460,
+    "tradeValue": 1467,
     "positionRank": 13,
     "overallRank": 95
   },
   "40877": {
-    "tradeValue": 589,
+    "tradeValue": 596,
     "positionRank": 62,
     "overallRank": 150
   },
@@ -1915,19 +1915,19 @@
     "overallRank": 21
   },
   "40881": {
-    "tradeValue": 3208,
+    "tradeValue": 3200,
     "positionRank": 4,
     "overallRank": 46
   },
   "40883": {
-    "tradeValue": 1567,
+    "tradeValue": 1573,
     "positionRank": 38,
     "overallRank": 90
   },
   "40889": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 571
+    "overallRank": 545
   },
   "40890": {
     "tradeValue": 0,
@@ -1937,47 +1937,47 @@
   "40892": {
     "tradeValue": 121,
     "positionRank": 73,
-    "overallRank": 187
+    "overallRank": 188
   },
   "40893": {
-    "tradeValue": 1703,
+    "tradeValue": 1707,
     "positionRank": 35,
     "overallRank": 85
   },
   "40896": {
-    "tradeValue": 2320,
+    "tradeValue": 2312,
     "positionRank": 7,
-    "overallRank": 61
+    "overallRank": 62
   },
   "40899": {
-    "tradeValue": 4889,
+    "tradeValue": 4891,
     "positionRank": 11,
-    "overallRank": 26
+    "overallRank": 27
   },
   "40900": {
-    "tradeValue": 2787,
+    "tradeValue": 2797,
     "positionRank": 5,
     "overallRank": 53
   },
   "40901": {
-    "tradeValue": 1966,
+    "tradeValue": 1971,
     "positionRank": 32,
     "overallRank": 76
   },
   "40905": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 315
+    "overallRank": 314
   },
   "40908": {
-    "tradeValue": 3986,
+    "tradeValue": 3989,
     "positionRank": 15,
     "overallRank": 36
   },
   "40911": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 320
+    "overallRank": 319
   },
   "40914": {
     "tradeValue": 0,
@@ -1987,17 +1987,17 @@
   "40915": {
     "tradeValue": 690,
     "positionRank": 58,
-    "overallRank": 143
+    "overallRank": 144
   },
   "40926": {
-    "tradeValue": 1063,
+    "tradeValue": 1066,
     "positionRank": 40,
     "overallRank": 115
   },
   "40931": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 310
+    "overallRank": 309
   },
   "40944": {
     "tradeValue": 0,
@@ -2010,9 +2010,9 @@
     "overallRank": 279
   },
   "40954": {
-    "tradeValue": 52,
-    "positionRank": 84,
-    "overallRank": 210
+    "tradeValue": 56,
+    "positionRank": 85,
+    "overallRank": 211
   },
   "40958": {
     "tradeValue": 0,
@@ -2022,11 +2022,11 @@
   "40959": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 584
+    "overallRank": 585
   },
   "40962": {
-    "tradeValue": 1358,
-    "positionRank": 35,
+    "tradeValue": 1362,
+    "positionRank": 34,
     "overallRank": 99
   },
   "40964": {
@@ -2035,44 +2035,44 @@
     "overallRank": 273
   },
   "40971": {
-    "tradeValue": 1200,
+    "tradeValue": 1202,
     "positionRank": 36,
     "overallRank": 106
   },
   "40974": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 300
+    "overallRank": 299
   },
   "40978": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 506
+    "overallRank": 507
   },
   "40980": {
-    "tradeValue": 2042,
+    "tradeValue": 2039,
     "positionRank": 29,
     "overallRank": 74
   },
   "40981": {
-    "tradeValue": 61,
+    "tradeValue": 65,
     "positionRank": 68,
-    "overallRank": 209
+    "overallRank": 210
   },
   "40982": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 607
+    "overallRank": 608
   },
   "40987": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 532
+    "overallRank": 533
   },
   "40989": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 605
+    "overallRank": 606
   },
   "40991": {
     "tradeValue": 0,
@@ -2080,19 +2080,19 @@
     "overallRank": 272
   },
   "40993": {
-    "tradeValue": 3084,
+    "tradeValue": 3087,
     "positionRank": 20,
-    "overallRank": 50
+    "overallRank": 49
   },
   "40995": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 554
+    "overallRank": 556
   },
   "40996": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 314
+    "overallRank": 313
   },
   "40998": {
     "tradeValue": 0,
@@ -2100,9 +2100,9 @@
     "overallRank": 368
   },
   "41001": {
-    "tradeValue": 120,
+    "tradeValue": 124,
     "positionRank": 29,
-    "overallRank": 188
+    "overallRank": 185
   },
   "41002": {
     "tradeValue": 0,
@@ -2127,7 +2127,7 @@
   "41010": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 556
+    "overallRank": 558
   },
   "41016": {
     "tradeValue": 0,
@@ -2152,12 +2152,12 @@
   "41033": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 502
+    "overallRank": 503
   },
   "41037": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 520
+    "overallRank": 521
   },
   "41043": {
     "tradeValue": 0,
@@ -2170,14 +2170,14 @@
     "overallRank": 453
   },
   "41048": {
-    "tradeValue": 90,
+    "tradeValue": 92,
     "positionRank": 65,
-    "overallRank": 200
+    "overallRank": 201
   },
   "41052": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 322
+    "overallRank": 321
   },
   "41054": {
     "tradeValue": 0,
@@ -2202,27 +2202,27 @@
   "41075": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 508
+    "overallRank": 509
   },
   "41083": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 518
+    "overallRank": 519
   },
   "41087": {
-    "tradeValue": 2138,
+    "tradeValue": 2150,
     "positionRank": 28,
     "overallRank": 68
   },
   "41089": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 519
+    "overallRank": 520
   },
   "41097": {
-    "tradeValue": 70,
+    "tradeValue": 72,
     "positionRank": 83,
-    "overallRank": 207
+    "overallRank": 208
   },
   "41098": {
     "tradeValue": 0,
@@ -2237,17 +2237,17 @@
   "41106": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 499
+    "overallRank": 500
   },
   "41130": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 560
+    "overallRank": 562
   },
   "41188": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 558
+    "overallRank": 560
   },
   "41243": {
     "tradeValue": 0,
@@ -2255,9 +2255,9 @@
     "overallRank": 486
   },
   "41293": {
-    "tradeValue": 613,
+    "tradeValue": 615,
     "positionRank": 59,
-    "overallRank": 146
+    "overallRank": 147
   },
   "41300": {
     "tradeValue": 0,
@@ -2265,14 +2265,14 @@
     "overallRank": 268
   },
   "41344": {
-    "tradeValue": 163,
-    "positionRank": 57,
-    "overallRank": 171
+    "tradeValue": 170,
+    "positionRank": 56,
+    "overallRank": 169
   },
   "41377": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 531
+    "overallRank": 532
   },
   "41388": {
     "tradeValue": 0,
@@ -2287,82 +2287,82 @@
   "41713": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 304
+    "overallRank": 303
   },
   "41786": {
     "tradeValue": 167,
     "positionRank": 23,
-    "overallRank": 169
+    "overallRank": 170
   },
   "41791": {
-    "tradeValue": 5513,
+    "tradeValue": 5520,
     "positionRank": 12,
     "overallRank": 20
   },
   "41793": {
-    "tradeValue": 3223,
+    "tradeValue": 3232,
     "positionRank": 20,
-    "overallRank": 43
+    "overallRank": 44
   },
   "41795": {
-    "tradeValue": 4013,
+    "tradeValue": 4064,
     "positionRank": 3,
     "overallRank": 34
   },
   "41799": {
-    "tradeValue": 3214,
+    "tradeValue": 3234,
     "positionRank": 4,
-    "overallRank": 45
+    "overallRank": 43
   },
   "41804": {
-    "tradeValue": 3180,
-    "positionRank": 22,
-    "overallRank": 49
+    "tradeValue": 3187,
+    "positionRank": 21,
+    "overallRank": 48
   },
   "41807": {
-    "tradeValue": 5939,
+    "tradeValue": 5946,
     "positionRank": 9,
     "overallRank": 16
   },
   "41808": {
     "tradeValue": 695,
     "positionRank": 57,
-    "overallRank": 142
+    "overallRank": 143
   },
   "41810": {
-    "tradeValue": 1428,
+    "tradeValue": 1438,
     "positionRank": 15,
     "overallRank": 97
   },
   "41819": {
     "tradeValue": 792,
     "positionRank": 53,
-    "overallRank": 133
+    "overallRank": 134
   },
   "41821": {
-    "tradeValue": 2961,
+    "tradeValue": 2970,
     "positionRank": 22,
-    "overallRank": 52
+    "overallRank": 51
   },
   "41823": {
-    "tradeValue": 2114,
+    "tradeValue": 2124,
     "positionRank": 27,
     "overallRank": 70
   },
   "41824": {
-    "tradeValue": 2704,
+    "tradeValue": 2715,
     "positionRank": 24,
     "overallRank": 56
   },
   "41825": {
-    "tradeValue": 441,
+    "tradeValue": 438,
     "positionRank": 20,
-    "overallRank": 155
+    "overallRank": 156
   },
   "41827": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 328
+    "overallRank": 327
   },
   "41831": {
     "tradeValue": 28,
@@ -2382,10 +2382,10 @@
   "41843": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 552
+    "overallRank": 554
   },
   "41845": {
-    "tradeValue": 1469,
+    "tradeValue": 1474,
     "positionRank": 32,
     "overallRank": 94
   },
@@ -2397,12 +2397,12 @@
   "41859": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 609
+    "overallRank": 610
   },
   "41860": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 333
+    "overallRank": 332
   },
   "41861": {
     "tradeValue": 0,
@@ -2412,22 +2412,22 @@
   "41864": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 323
+    "overallRank": 322
   },
   "41865": {
-    "tradeValue": 1632,
+    "tradeValue": 1627,
     "positionRank": 37,
     "overallRank": 88
   },
   "41877": {
-    "tradeValue": 1543,
+    "tradeValue": 1553,
     "positionRank": 11,
-    "overallRank": 92
+    "overallRank": 91
   },
   "41881": {
-    "tradeValue": 88,
+    "tradeValue": 89,
     "positionRank": 66,
-    "overallRank": 201
+    "overallRank": 202
   },
   "41882": {
     "tradeValue": 0,
@@ -2437,7 +2437,7 @@
   "41885": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 557
+    "overallRank": 559
   },
   "41891": {
     "tradeValue": 0,
@@ -2455,12 +2455,12 @@
     "overallRank": 430
   },
   "41900": {
-    "tradeValue": 2155,
+    "tradeValue": 2163,
     "positionRank": 25,
     "overallRank": 66
   },
   "41902": {
-    "tradeValue": 575,
+    "tradeValue": 574,
     "positionRank": 49,
     "overallRank": 152
   },
@@ -2475,14 +2475,14 @@
     "overallRank": 379
   },
   "41905": {
-    "tradeValue": 1140,
+    "tradeValue": 1142,
     "positionRank": 13,
     "overallRank": 109
   },
   "41907": {
-    "tradeValue": 104,
+    "tradeValue": 108,
     "positionRank": 63,
-    "overallRank": 195
+    "overallRank": 194
   },
   "41913": {
     "tradeValue": 0,
@@ -2492,7 +2492,7 @@
   "41917": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 517
+    "overallRank": 518
   },
   "41919": {
     "tradeValue": 0,
@@ -2505,24 +2505,24 @@
     "overallRank": 293
   },
   "41922": {
-    "tradeValue": 3195,
+    "tradeValue": 3193,
     "positionRank": 19,
     "overallRank": 47
   },
   "41930": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 614
+    "overallRank": 603
   },
   "41933": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 317
+    "overallRank": 316
   },
   "41935": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 555
+    "overallRank": 557
   },
   "41937": {
     "tradeValue": 0,
@@ -2542,7 +2542,7 @@
   "41951": {
     "tradeValue": 73,
     "positionRank": 31,
-    "overallRank": 205
+    "overallRank": 206
   },
   "41952": {
     "tradeValue": 0,
@@ -2552,7 +2552,7 @@
   "41964": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 606
+    "overallRank": 607
   },
   "41968": {
     "tradeValue": 0,
@@ -2562,12 +2562,12 @@
   "41969": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 331
+    "overallRank": 330
   },
   "41971": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 537
+    "overallRank": 538
   },
   "41972": {
     "tradeValue": 0,
@@ -2582,7 +2582,7 @@
   "41986": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 547
+    "overallRank": 549
   },
   "41989": {
     "tradeValue": 0,
@@ -2597,25 +2597,25 @@
   "42000": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 540
+    "overallRank": 541
   },
   "42004": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 312
+    "overallRank": 311
   },
   "42007": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 324
+    "overallRank": 323
   },
   "42009": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 536
+    "overallRank": 537
   },
   "42010": {
-    "tradeValue": 1164,
+    "tradeValue": 1167,
     "positionRank": 37,
     "overallRank": 108
   },
@@ -2627,7 +2627,7 @@
   "42015": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 308
+    "overallRank": 307
   },
   "42018": {
     "tradeValue": 0,
@@ -2635,9 +2635,9 @@
     "overallRank": 257
   },
   "42025": {
-    "tradeValue": 870,
-    "positionRank": 43,
-    "overallRank": 125
+    "tradeValue": 872,
+    "positionRank": 44,
+    "overallRank": 126
   },
   "42030": {
     "tradeValue": 0,
@@ -2652,12 +2652,12 @@
   "42037": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 334
+    "overallRank": 333
   },
   "42041": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 542
+    "overallRank": 543
   },
   "42075": {
     "tradeValue": 0,
@@ -2667,7 +2667,7 @@
   "42139": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 543
+    "overallRank": 544
   },
   "42185": {
     "tradeValue": 0,
@@ -2677,12 +2677,12 @@
   "42196": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 516
+    "overallRank": 517
   },
   "42226": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 507
+    "overallRank": 508
   },
   "42296": {
     "tradeValue": 0,
@@ -2710,24 +2710,24 @@
     "overallRank": 582
   },
   "42623": {
-    "tradeValue": 115,
-    "positionRank": 27,
-    "overallRank": 191
+    "tradeValue": 123,
+    "positionRank": 26,
+    "overallRank": 186
   },
   "42625": {
-    "tradeValue": 4254,
+    "tradeValue": 4294,
     "positionRank": 15,
     "overallRank": 31
   },
   "42626": {
-    "tradeValue": 1767,
+    "tradeValue": 1774,
     "positionRank": 34,
-    "overallRank": 82
+    "overallRank": 81
   },
   "42630": {
-    "tradeValue": 607,
-    "positionRank": 61,
-    "overallRank": 149
+    "tradeValue": 608,
+    "positionRank": 60,
+    "overallRank": 148
   },
   "42635": {
     "tradeValue": 0,
@@ -2735,19 +2735,19 @@
     "overallRank": 401
   },
   "42638": {
-    "tradeValue": 138,
+    "tradeValue": 135,
     "positionRank": 27,
-    "overallRank": 179
+    "overallRank": 180
   },
   "42642": {
     "tradeValue": 805,
     "positionRank": 52,
-    "overallRank": 132
+    "overallRank": 133
   },
   "42646": {
-    "tradeValue": 837,
+    "tradeValue": 838,
     "positionRank": 50,
-    "overallRank": 129
+    "overallRank": 130
   },
   "42652": {
     "tradeValue": 148,
@@ -2755,19 +2755,19 @@
     "overallRank": 176
   },
   "42654": {
-    "tradeValue": 2648,
+    "tradeValue": 2653,
     "positionRank": 23,
     "overallRank": 58
   },
   "42655": {
-    "tradeValue": 713,
+    "tradeValue": 714,
     "positionRank": 56,
-    "overallRank": 141
+    "overallRank": 142
   },
   "42661": {
     "tradeValue": 151,
     "positionRank": 67,
-    "overallRank": 175
+    "overallRank": 174
   },
   "42669": {
     "tradeValue": 0,
@@ -2792,7 +2792,7 @@
   "42683": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 329
+    "overallRank": 328
   },
   "42687": {
     "tradeValue": 0,
@@ -2805,22 +2805,22 @@
     "overallRank": 217
   },
   "42693": {
-    "tradeValue": 1554,
+    "tradeValue": 1482,
     "positionRank": 39,
-    "overallRank": 91
+    "overallRank": 93
   },
   "42695": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 332
+    "overallRank": 331
   },
   "42696": {
-    "tradeValue": 83,
+    "tradeValue": 82,
     "positionRank": 80,
     "overallRank": 203
   },
   "42697": {
-    "tradeValue": 117,
+    "tradeValue": 120,
     "positionRank": 74,
     "overallRank": 190
   },
@@ -2830,12 +2830,12 @@
     "overallRank": 235
   },
   "42701": {
-    "tradeValue": 610,
-    "positionRank": 60,
-    "overallRank": 147
+    "tradeValue": 607,
+    "positionRank": 61,
+    "overallRank": 149
   },
   "42702": {
-    "tradeValue": 250,
+    "tradeValue": 248,
     "positionRank": 66,
     "overallRank": 163
   },
@@ -2855,14 +2855,14 @@
     "overallRank": 291
   },
   "42712": {
-    "tradeValue": 191,
+    "tradeValue": 192,
     "positionRank": 55,
     "overallRank": 167
   },
   "42716": {
-    "tradeValue": 111,
+    "tradeValue": 106,
     "positionRank": 76,
-    "overallRank": 193
+    "overallRank": 195
   },
   "42717": {
     "tradeValue": 0,
@@ -2890,9 +2890,9 @@
     "overallRank": 381
   },
   "42744": {
-    "tradeValue": 639,
-    "positionRank": 47,
-    "overallRank": 145
+    "tradeValue": 640,
+    "positionRank": 48,
+    "overallRank": 146
   },
   "42747": {
     "tradeValue": 0,
@@ -2902,7 +2902,7 @@
   "42755": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 305
+    "overallRank": 304
   },
   "42758": {
     "tradeValue": 0,
@@ -2912,27 +2912,27 @@
   "42762": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 505
+    "overallRank": 506
   },
   "42763": {
-    "tradeValue": 741,
-    "positionRank": 45,
-    "overallRank": 137
+    "tradeValue": 743,
+    "positionRank": 46,
+    "overallRank": 138
   },
   "42764": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 318
+    "overallRank": 317
   },
   "42768": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 321
+    "overallRank": 320
   },
   "42773": {
     "tradeValue": 72,
-    "positionRank": 81,
-    "overallRank": 206
+    "positionRank": 82,
+    "overallRank": 207
   },
   "42780": {
     "tradeValue": 0,
@@ -2945,9 +2945,9 @@
     "overallRank": 409
   },
   "42796": {
-    "tradeValue": 101,
+    "tradeValue": 106,
     "positionRank": 64,
-    "overallRank": 197
+    "overallRank": 196
   },
   "42797": {
     "tradeValue": 0,
@@ -2967,17 +2967,17 @@
   "42809": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 319
+    "overallRank": 318
   },
   "42812": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 336
+    "overallRank": 335
   },
   "42817": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 563
+    "overallRank": 565
   },
   "42819": {
     "tradeValue": 0,
@@ -3027,7 +3027,7 @@
   "42882": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 316
+    "overallRank": 315
   },
   "42887": {
     "tradeValue": 0,
@@ -3047,12 +3047,12 @@
   "42899": {
     "tradeValue": 0,
     "positionRank": null,
-    "overallRank": 510
+    "overallRank": 511
   },
   "42919": {
     "tradeValue": 0,
     "positionRank": 0,
-    "overallRank": 326
+    "overallRank": 325
   },
   "42986": {
     "tradeValue": 0,
