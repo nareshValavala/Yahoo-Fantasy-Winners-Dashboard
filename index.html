@@ -568,6 +568,19 @@
             color: #2c3e50;
         }
 
+        .matchup-score.winner {
+            color: #27ae60;
+        }
+
+        .matchup-team.loser strong,
+        .matchup-team.loser .matchup-manager {
+            color: #aaa;
+        }
+
+        .matchup-team.winner strong {
+            color: #27ae60;
+        }
+
         .remove-link {
             background: none;
             border: none;
@@ -1019,23 +1032,26 @@
                 list.innerHTML = liveMatchups.map(m => {
                     const [a, b] = m.teams;
                     const started = m.status !== 'preevent';
+                    const isFinal = m.status === 'postevent';
+                    const aWon = isFinal && a.score > b.score;
+                    const bWon = isFinal && b.score > a.score;
                     const teamA = teamById[a.teamId];
                     const teamB = teamById[b.teamId];
                     return `
                         <div class="matchup-row">
-                            <div class="matchup-team">
+                            <div class="matchup-team ${aWon ? 'winner' : isFinal ? 'loser' : ''}">
                                 ${logoImg(teamA?.logoUrl, a.name)}
                                 <div>
-                                    <strong>${a.name}</strong>
+                                    <strong>${a.name}</strong>${aWon ? ' <span class="badge paid">W</span>' : ''}
                                     <span class="matchup-manager">${teamA?.manager || ''}</span>
                                 </div>
                             </div>
-                            <div class="matchup-score">${started ? a.score.toFixed(2) : ''}</div>
+                            <div class="matchup-score ${aWon ? 'winner' : ''}">${started ? a.score.toFixed(2) : ''}</div>
                             <div class="matchup-vs">vs</div>
-                            <div class="matchup-score">${started ? b.score.toFixed(2) : ''}</div>
-                            <div class="matchup-team right">
+                            <div class="matchup-score ${bWon ? 'winner' : ''}">${started ? b.score.toFixed(2) : ''}</div>
+                            <div class="matchup-team right ${bWon ? 'winner' : isFinal ? 'loser' : ''}">
                                 <div>
-                                    <strong>${b.name}</strong>
+                                    ${bWon ? '<span class="badge paid">W</span> ' : ''}<strong>${b.name}</strong>
                                     <span class="matchup-manager">${teamB?.manager || ''}</span>
                                 </div>
                                 ${logoImg(teamB?.logoUrl, b.name)}
