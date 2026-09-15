@@ -100,15 +100,31 @@ const isFinished = Boolean(Number(leagueStandings.is_finished));
 const weeklyWinners = [];
 const weeklyCashByTeam = {};
 const weeklyWinsByTeam = {};
+const matchupsByWeek = {};
 
-const lastWeeklyPrizeWeek = Math.min(currentWeek, payouts.weeklyPrizeWeeks);
-for (let week = startWeek; week <= lastWeeklyPrizeWeek; week++) {
+// Pull matchups for the whole regular season (plus however far the season
+// has progressed, in case that runs past it) so the Matchups tab can show
+// real live/final scores, not just who's playing whom.
+const endWeek = Number(leagueStandings.end_week || payouts.weeklyPrizeWeeks);
+const lastMatchupWeek = Math.min(Math.max(currentWeek, payouts.weeklyPrizeWeeks), endWeek);
+
+for (let week = startWeek; week <= lastMatchupWeek; week++) {
   const scoreboard = await yf.league.scoreboard(leagueKey, week);
   const matchups = scoreboard.scoreboard.matchups;
+  if (!matchups.length) continue;
 
-  if (!matchups.length || !matchups.every((m) => m.status === "postevent")) {
-    continue; // week hasn't finished scoring yet
-  }
+  matchupsByWeek[week] = matchups.map((m) => ({
+    status: m.status,
+    teams: m.teams.map((t) => ({
+      teamId: t.team_key.split(".t.").pop(),
+      name: t.name,
+      score: Number(t.points?.total || 0),
+    })),
+  }));
+
+  const isWeeklyPrizeEligible = week <= payouts.weeklyPrizeWeeks;
+  const isComplete = matchups.every((m) => m.status === "postevent");
+  if (!isWeeklyPrizeEligible || !isComplete) continue; // no prize awarded yet for this week
 
   const weekTeams = matchups.flatMap((m) =>
     m.teams.map((t) => ({
@@ -152,8 +168,11 @@ for (const team of teams) {
   rosterByTeam[team.teamKey] = (teamWithRoster.roster || []).map((p) => ({
     name: p.name?.full || "Unknown",
     position: p.selected_position || p.display_position || "—",
+    primaryPosition: p.primary_position || p.display_position || null,
     nflTeam: (p.editorial_team_abbr || "").toUpperCase(),
     status: p.status || null,
+    photoUrl: p.headshot?.url || p.image_url || null,
+    yahooPlayerId: p.player_id || null,
   }));
 }
 
@@ -187,6 +206,7 @@ const output = {
   },
   teams: teamsWithCash,
   weeklyWinners,
+  matchups: matchupsByWeek,
 };
 
 await writeFile(

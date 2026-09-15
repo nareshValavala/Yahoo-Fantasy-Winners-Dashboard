@@ -258,32 +258,6 @@
             color: #7f8c8d;
         }
 
-        .roster-value {
-            flex-shrink: 0;
-            text-align: right;
-        }
-
-        .roster-value .amount {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        .roster-value .rank {
-            font-size: 0.75em;
-            color: #7f8c8d;
-        }
-
-        .rank-pill {
-            display: inline-block;
-            min-width: 22px;
-            padding: 2px 7px;
-            border-radius: 10px;
-            color: white;
-            font-size: 0.8em;
-            font-weight: bold;
-            text-align: center;
-        }
-
         .team-link {
             background: none;
             border: none;
@@ -586,6 +560,14 @@
             font-weight: bold;
         }
 
+        .matchup-score {
+            min-width: 60px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+
         .remove-link {
             background: none;
             border: none;
@@ -622,7 +604,6 @@
         <div class="tabs" id="tabBar">
             <button class="tab-btn" data-tab="standings" onclick="switchTab('standings')">🥇 Standings</button>
             <button class="tab-btn" data-tab="teams" onclick="switchTab('teams')">👥 Teams</button>
-            <button class="tab-btn" data-tab="power" onclick="switchTab('power')">⚡ Power Rankings</button>
             <button class="tab-btn" data-tab="matchups" onclick="switchTab('matchups')">🏈 Matchups</button>
             <button class="tab-btn" data-tab="winners" onclick="switchTab('winners')">📋 Weekly Winners</button>
             <button class="tab-btn" data-tab="dues" onclick="switchTab('dues')">🧾 Dues &amp; Payouts</button>
@@ -647,32 +628,6 @@
                             <th>Team</th>
                             <th>Manager</th>
                             <th>Waiver Order</th>
-                            <th>Power Rank</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="section tab-panel" data-tab="power">
-            <p style="margin-top: 0; color: #7f8c8d;">
-                Roster strength by position, computed from each team's starting lineup value
-                (<a href="https://dynasty-daddy.com/help/api-documentation" target="_blank" rel="noopener">Dynasty Daddy player values</a>).
-                Not a prediction of who wins — just who's holding the most value.
-            </p>
-            <div class="table-scroll">
-                <table id="powerTable">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Team</th>
-                            <th>Total Value</th>
-                            <th>QB</th>
-                            <th>RB</th>
-                            <th>WR</th>
-                            <th>TE</th>
-                            <th>FLEX</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -799,8 +754,6 @@
         let teamsByKey = {};
         let isAdmin = false;
         let teamsConfigCache = null; // ./config/teams.json — roster + dues, public/static
-        let rostersCache = null; // ./data/rosters.json — player rosters, from Fantasy Helper until Yahoo is live
-        let tradeValuesCache = null; // ./data/trade-values.json — Dynasty Daddy player trade values, keyed by Yahoo player id
 
         // ---- Shared GitHub Contents API helpers (admin writes only) ----
 
@@ -875,11 +828,10 @@
             );
         }
 
-        // ---- Manual data mode (used until the Yahoo automation is connected) ----
+        // ---- Manual data mode (fallback only -- Yahoo automation is the live source now) ----
 
         function currentTeamName(t) {
-            const id = String(t.fantasyHelperTeamId);
-            return rostersCache?.[id]?.currentName || t.team;
+            return t.team;
         }
 
         function computeManualTeams(weeklyWinners) {
@@ -916,9 +868,9 @@
                     weeklyCash,
                     placementCash: 0,
                     totalCash: weeklyCash,
-                    logoUrl: rostersCache?.[id]?.logoUrl || null,
+                    logoUrl: null,
                     waiverPriority: null,
-                    roster: rostersCache?.[id]?.players || []
+                    roster: []
                 };
             });
         }
@@ -1010,24 +962,6 @@
             }
         }
 
-        async function loadRosters() {
-            try {
-                const res = await fetch('./data/rosters.json', { cache: 'no-store' });
-                if (res.ok) rostersCache = await res.json();
-            } catch (error) {
-                console.error('Failed to load rosters:', error);
-            }
-        }
-
-        async function loadTradeValues() {
-            try {
-                const res = await fetch('./data/trade-values.json', { cache: 'no-store' });
-                if (res.ok) tradeValuesCache = await res.json();
-            } catch (error) {
-                console.error('Failed to load trade values:', error);
-            }
-        }
-
         function populateManualTeamSelect() {
             const select = document.getElementById('manualTeam');
             if (!select || !teamsConfigCache) return;
@@ -1051,8 +985,9 @@
         }
 
         function getScheduleWeeks() {
-            if (!scheduleCache) return [];
-            return Object.keys(scheduleCache).map(Number).sort((a, b) => a - b);
+            const liveWeeks = currentData?.matchups ? Object.keys(currentData.matchups) : [];
+            const weeks = liveWeeks.length ? liveWeeks : Object.keys(scheduleCache || {});
+            return weeks.map(Number).sort((a, b) => a - b);
         }
 
         function renderMatchups(week) {
@@ -1075,16 +1010,51 @@
             document.getElementById('prevWeekBtn').disabled = week === weeks[0];
             document.getElementById('nextWeekBtn').disabled = week === weeks[weeks.length - 1];
 
-            const teamById = (id) => teamsConfigCache?.teams.find(t => String(t.fantasyHelperTeamId) === String(id));
-            const nameOf = (id) => rostersCache?.[id]?.currentName || teamById(id)?.team || `Team ${id}`;
-            const managerOf = (id) => teamById(id)?.manager || '';
-            const logoOf = (id) => rostersCache?.[id]?.logoUrl || null;
+            const liveMatchups = currentData?.matchups?.[String(week)];
 
-            const pairs = scheduleCache[String(week)] || [];
+            if (liveMatchups && liveMatchups.length) {
+                const teamById = {};
+                (currentData.teams || []).forEach(t => { teamById[t.fantasyHelperTeamId] = t; });
+
+                list.innerHTML = liveMatchups.map(m => {
+                    const [a, b] = m.teams;
+                    const started = m.status !== 'preevent';
+                    const teamA = teamById[a.teamId];
+                    const teamB = teamById[b.teamId];
+                    return `
+                        <div class="matchup-row">
+                            <div class="matchup-team">
+                                ${logoImg(teamA?.logoUrl, a.name)}
+                                <div>
+                                    <strong>${a.name}</strong>
+                                    <span class="matchup-manager">${teamA?.manager || ''}</span>
+                                </div>
+                            </div>
+                            <div class="matchup-score">${started ? a.score.toFixed(2) : ''}</div>
+                            <div class="matchup-vs">vs</div>
+                            <div class="matchup-score">${started ? b.score.toFixed(2) : ''}</div>
+                            <div class="matchup-team right">
+                                <div>
+                                    <strong>${b.name}</strong>
+                                    <span class="matchup-manager">${teamB?.manager || ''}</span>
+                                </div>
+                                ${logoImg(teamB?.logoUrl, b.name)}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                return;
+            }
+
+            // Fallback: static, manually-sourced schedule (pairings only, no live scores)
+            const teamById = (id) => teamsConfigCache?.teams.find(t => String(t.fantasyHelperTeamId) === String(id));
+            const nameOf = (id) => teamById(id)?.team || `Team ${id}`;
+            const managerOf = (id) => teamById(id)?.manager || '';
+
+            const pairs = scheduleCache?.[String(week)] || [];
             list.innerHTML = pairs.map(([a, b]) => `
                 <div class="matchup-row">
                     <div class="matchup-team">
-                        ${logoImg(logoOf(a), nameOf(a))}
                         <div>
                             <strong>${nameOf(a)}</strong>
                             <span class="matchup-manager">${managerOf(a)}</span>
@@ -1096,7 +1066,6 @@
                             <strong>${nameOf(b)}</strong>
                             <span class="matchup-manager">${managerOf(b)}</span>
                         </div>
-                        ${logoImg(logoOf(b), nameOf(b))}
                     </div>
                 </div>
             `).join('');
@@ -1243,75 +1212,12 @@
 
         const STARTING_SLOT_ORDER = ['QB', 'RB', 'WR', 'TE', 'W/R/T', 'FLEX', 'K', 'DEF'];
 
-        // ---- Power rankings: computed entirely from our own roster + trade-value
-        // data (no dependency on any third party's private per-league view) ----
-
-        const POWER_GROUPS = { QB: ['QB'], RB: ['RB'], WR: ['WR'], TE: ['TE'], FLEX: ['W/R/T', 'FLEX'] };
-
-        function computePowerRankings(teams) {
-            const rows = teams.map(team => {
-                const starters = (team.roster || []).filter(p => p.position !== 'BN' && p.position !== 'IR');
-                const byGroup = { QB: 0, RB: 0, WR: 0, TE: 0, FLEX: 0 };
-                let total = 0;
-                starters.forEach(p => {
-                    const value = tradeValuesCache?.[p.yahooPlayerId]?.tradeValue || 0;
-                    total += value;
-                    const group = Object.keys(POWER_GROUPS).find(g => POWER_GROUPS[g].includes(p.position));
-                    if (group) byGroup[group] += value;
-                });
-                return {
-                    teamKey: team.teamKey, name: team.name, manager: team.manager,
-                    logoUrl: team.logoUrl, total, byGroup, groupRank: {}
-                };
-            });
-
-            rows.sort((a, b) => b.total - a.total);
-            rows.forEach((r, i) => { r.rank = i + 1; });
-
-            Object.keys(POWER_GROUPS).forEach(group => {
-                [...rows].sort((a, b) => b.byGroup[group] - a.byGroup[group])
-                    .forEach((r, i) => { r.groupRank[group] = i + 1; });
-            });
-
-            rows.sort((a, b) => a.rank - b.rank);
-            return rows;
-        }
-
-        function rankPill(rank, total) {
-            if (rank == null || !total) return '—';
-            const t = total <= 1 ? 0 : (rank - 1) / (total - 1);
-            const hue = 120 - t * 120; // 120 green -> 0 red
-            return `<span class="rank-pill" style="background:hsl(${hue}, 65%, 45%)">${rank}</span>`;
-        }
-
-        function renderPowerRankings(rows) {
-            const tbody = document.querySelector('#powerTable tbody');
-            if (!rows.length) {
-                tbody.innerHTML = '<tr><td colspan="8">No roster/value data yet.</td></tr>';
-                return;
-            }
-            const n = rows.length;
-            tbody.innerHTML = rows.map(r => `
-                <tr>
-                    <td>${rankPill(r.rank, n)}</td>
-                    <td>${logoImg(r.logoUrl, r.name)}<strong>${r.name}</strong><br><small style="color:#7f8c8d;">${r.manager}</small></td>
-                    <td>${r.total.toLocaleString()}</td>
-                    <td>${rankPill(r.groupRank.QB, n)}</td>
-                    <td>${rankPill(r.groupRank.RB, n)}</td>
-                    <td>${rankPill(r.groupRank.WR, n)}</td>
-                    <td>${rankPill(r.groupRank.TE, n)}</td>
-                    <td>${rankPill(r.groupRank.FLEX, n)}</td>
-                </tr>
-            `).join('');
-        }
-
         const POSITION_COLORS = {
             QB: '#e74c3c', RB: '#27ae60', WR: '#2980b9', TE: '#e67e22',
             K: '#8e44ad', DEF: '#34495e', 'W/R/T': '#16a085', FLEX: '#16a085'
         };
 
         function playerRow(p) {
-            const value = tradeValuesCache?.[p.yahooPlayerId];
             // On the bench/IR the assigned slot (BN/IR) isn't meaningful -- show their real position instead.
             const badgePos = (p.position === 'BN' || p.position === 'IR') ? (p.primaryPosition || p.position) : p.position;
             const photo = p.photoUrl
@@ -1325,11 +1231,6 @@
                     <div class="roster-player-info">
                         <span class="roster-player-name">${p.name}</span>
                         <span class="roster-player-meta">${p.nflTeam || '—'}${p.status ? ` · <span class="badge status">${p.status}</span>` : ''}</span>
-                    </div>
-                    <div class="roster-value">
-                        ${value
-                            ? `<div class="amount">${value.tradeValue.toLocaleString()}</div><div class="rank">#${value.positionRank} ${badgePos}</div>`
-                            : '<div class="rank">—</div>'}
                     </div>
                 </div>
             `;
@@ -1441,16 +1342,24 @@
             teamsByKey = {};
             teams.forEach(t => { teamsByKey[t.teamKey] = t; });
 
-            const powerRankings = computePowerRankings(teams);
-            const powerRankByTeamKey = {};
-            powerRankings.forEach(r => { powerRankByTeamKey[r.teamKey] = r.rank; });
+            const weeksWonByKey = {};
+            (data.weeklyWinners || []).forEach(w => {
+                const key = w.teamId != null ? String(w.teamId) : w.teamName;
+                (weeksWonByKey[key] = weeksWonByKey[key] || []).push(w.week);
+            });
+            const weeksWonFor = (team) => {
+                const byId = weeksWonByKey[String(team.fantasyHelperTeamId)] || [];
+                const byName = weeksWonByKey[team.name] || [];
+                const weeks = [...new Set([...byId, ...byName])];
+                return weeks.sort((a, b) => a - b);
+            };
 
             renderPayouts(data.payouts);
             renderDues(dues, teams);
-            renderTeams(teams, powerRankByTeamKey);
-            renderPowerRankings(powerRankings);
-            renderStandings(teams, data.dataSource);
+            renderTeams(teams);
+            renderStandings(teams, data.dataSource, weeksWonFor);
             renderWinners(data.weeklyWinners || []);
+            renderMatchups(currentMatchupWeek);
 
             document.getElementById('lastUpdated').textContent =
                 data.lastUpdated ? `Last updated: ${new Date(data.lastUpdated).toLocaleString()}` : '';
@@ -1507,15 +1416,14 @@
             }
         }
 
-        function renderTeams(teams, powerRankByTeamKey) {
+        function renderTeams(teams) {
             const tbody = document.querySelector('#teamsTable tbody');
             if (!teams.length) {
-                tbody.innerHTML = '<tr><td colspan="5">No team data yet.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="4">No team data yet.</td></tr>';
                 return;
             }
 
             const sorted = [...teams].sort((a, b) => (a.draftPosition ?? 999) - (b.draftPosition ?? 999));
-            const n = teams.length;
 
             tbody.innerHTML = sorted.map(team => `
                 <tr>
@@ -1523,19 +1431,22 @@
                     <td>${logoImg(team.logoUrl, team.name)}<button class="team-link" onclick="showRoster('${team.teamKey}')">${team.name}</button></td>
                     <td>${team.manager}</td>
                     <td>${team.waiverPriority ?? '—'}</td>
-                    <td>${rankPill(powerRankByTeamKey?.[team.teamKey], n)}</td>
                 </tr>
             `).join('');
         }
 
-        function renderStandings(teams, dataSource) {
+        function renderStandings(teams, dataSource, weeksWonFor) {
             const thead = document.getElementById('standingsHead');
             const tbody = document.querySelector('#standingsTable tbody');
             const isYahoo = dataSource === 'yahoo';
+            const weeksWonLabel = (team) => {
+                const weeks = weeksWonFor ? weeksWonFor(team) : [];
+                return weeks.length ? weeks.join(', ') : '—';
+            };
 
             thead.innerHTML = isYahoo
-                ? '<tr><th>Rank</th><th>Team</th><th>Manager</th><th>W-L-T</th><th>Points For</th><th>Weekly Wins</th><th>Cash Won</th></tr>'
-                : '<tr><th>Team</th><th>Manager</th><th>Weekly Wins</th><th>Cash Won</th></tr>';
+                ? '<tr><th>Rank</th><th>Team</th><th>Manager</th><th>W-L-T</th><th>Points For</th><th>Weeks Won</th><th>Cash Won</th></tr>'
+                : '<tr><th>Team</th><th>Manager</th><th>Weeks Won</th><th>Cash Won</th></tr>';
 
             if (!teams.length) {
                 tbody.innerHTML = `<tr><td colspan="${isYahoo ? 7 : 4}">No standings data yet.</td></tr>`;
@@ -1549,14 +1460,14 @@
                     <td>${team.manager}</td>
                     <td>${team.wins}-${team.losses}-${team.ties}</td>
                     <td>${Number(team.pointsFor).toFixed(2)}</td>
-                    <td>${team.weeklyWins || 0}</td>
+                    <td>${weeksWonLabel(team)}</td>
                     <td class="cash">${fmtMoney(team.totalCash)}</td>
                 </tr>
             ` : `
                 <tr>
                     <td>${logoImg(team.logoUrl, team.name)}<strong>${team.name}</strong></td>
                     <td>${team.manager}</td>
-                    <td>${team.weeklyWins || 0}</td>
+                    <td>${weeksWonLabel(team)}</td>
                     <td class="cash">${fmtMoney(team.totalCash)}</td>
                 </tr>
             `).join('');
@@ -1586,8 +1497,6 @@
             isAdmin = !!getAdminToken();
             await loadTeamsConfig();
             await loadSchedule();
-            await loadRosters();
-            await loadTradeValues();
             renderAdminBar();
             renderMatchups();
             switchTab(getInitialTab());
