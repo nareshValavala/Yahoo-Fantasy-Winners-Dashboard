@@ -119,6 +119,7 @@ for (let week = startWeek; week <= lastMatchupWeek; week++) {
       teamId: t.team_key.split(".t.").pop(),
       name: t.name,
       score: Number(t.points?.total || 0),
+      projectedScore: Number(t.projected_points?.total || 0),
     })),
   }));
 

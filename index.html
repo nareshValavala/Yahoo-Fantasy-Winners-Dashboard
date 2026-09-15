@@ -572,6 +572,23 @@
             color: #27ae60;
         }
 
+        .matchup-score.proj {
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+        .matchup-score-col {
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .matchup-score-label {
+            font-size: 0.7em;
+            color: #95a5a6;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
         .matchup-team.loser strong,
         .matchup-team.loser .matchup-manager {
             color: #aaa;
@@ -1029,9 +1046,21 @@
                 const teamById = {};
                 (currentData.teams || []).forEach(t => { teamById[t.fantasyHelperTeamId] = t; });
 
+                const scoreCell = (team, status, isWinner) => {
+                    if (status === 'preevent') {
+                        return `
+                            <div class="matchup-score proj">${Number(team.projectedScore || 0).toFixed(2)}</div>
+                            <div class="matchup-score-label">proj</div>
+                        `;
+                    }
+                    const label = status === 'midevent'
+                        ? `<div class="matchup-score-label">proj ${Number(team.projectedScore || 0).toFixed(2)}</div>`
+                        : '';
+                    return `<div class="matchup-score ${isWinner ? 'winner' : ''}">${team.score.toFixed(2)}</div>${label}`;
+                };
+
                 list.innerHTML = liveMatchups.map(m => {
                     const [a, b] = m.teams;
-                    const started = m.status !== 'preevent';
                     const isFinal = m.status === 'postevent';
                     const aWon = isFinal && a.score > b.score;
                     const bWon = isFinal && b.score > a.score;
@@ -1046,9 +1075,9 @@
                                     <span class="matchup-manager">${teamA?.manager || ''}</span>
                                 </div>
                             </div>
-                            <div class="matchup-score ${aWon ? 'winner' : ''}">${started ? a.score.toFixed(2) : ''}</div>
+                            <div class="matchup-score-col">${scoreCell(a, m.status, aWon)}</div>
                             <div class="matchup-vs">vs</div>
-                            <div class="matchup-score ${bWon ? 'winner' : ''}">${started ? b.score.toFixed(2) : ''}</div>
+                            <div class="matchup-score-col">${scoreCell(b, m.status, bWon)}</div>
                             <div class="matchup-team right ${bWon ? 'winner' : isFinal ? 'loser' : ''}">
                                 <div>
                                     ${bWon ? '<span class="badge paid">W</span> ' : ''}<strong>${b.name}</strong>
