@@ -1003,6 +1003,7 @@
 
         let scheduleCache = null;
         let currentMatchupWeek = null;
+        let matchupWeekInitialized = false; // only auto-jump to the current week once, not on every refresh
 
         async function loadSchedule() {
             try {
@@ -1403,6 +1404,11 @@
             renderTeams(teams);
             renderStandings(teams, data.dataSource, weeksWonFor);
             renderWinners(data.weeklyWinners || []);
+
+            if (!matchupWeekInitialized && data.currentWeek) {
+                currentMatchupWeek = data.currentWeek;
+                matchupWeekInitialized = true;
+            }
             renderMatchups(currentMatchupWeek);
 
             document.getElementById('lastUpdated').textContent =
