@@ -9,12 +9,7 @@
 const ALLOWED_WORKFLOWS = {
   'update-league-data': {
     file: 'update-league-data.yml',
-    message: 'Update triggered. Check the "✓ Live from Yahoo" badge in a minute or two — ' +
-      'it only succeeds once Yahoo API access is approved; until then this run is expected to fail.',
-  },
-  'fetch-rosters': {
-    file: 'fetch-rosters.yml',
-    message: 'Roster refresh triggered — check back in about a minute.',
+    message: 'Update triggered — check back in a minute or two for fresh Yahoo data.',
   },
 };
 
