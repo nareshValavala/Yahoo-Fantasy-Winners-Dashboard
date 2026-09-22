@@ -3,9 +3,9 @@
   "leagueName": "2026 NFL League",
   "leagueKey": "nfl.l.529714",
   "season": "2026",
-  "currentWeek": 2,
+  "currentWeek": 3,
   "isFinished": false,
-  "lastUpdated": "2026-09-16T17:26:17.399Z",
+  "lastUpdated": "2026-09-22T17:30:03.108Z",
   "payouts": {
     "weeklyPrize": 20,
     "weeklyPrizeWeeks": 14,
@@ -22,179 +22,23 @@
   },
   "teams": [
     {
-      "teamKey": "470.l.529714.t.8",
-      "fantasyHelperTeamId": "8",
-      "name": "Steelers",
-      "manager": "chandrakanth",
-      "draftPosition": 1,
-      "duesPaid": true,
-      "rank": 1,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "pointsFor": 180.42,
-      "logoUrl": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/25199198912_af85e7dc8e.png",
-      "waiverPriority": 4,
-      "weeklyWins": 1,
-      "weeklyCash": 20,
-      "placementCash": 0,
-      "totalCash": 20,
-      "roster": [
-        {
-          "name": "Jalen Hurts",
-          "position": "QB",
-          "primaryPosition": "QB",
-          "nflTeam": "PHI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/rxsu3cY0VkambYSUhFcSwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/32723.1.png",
-          "yahooPlayerId": "32723"
-        },
-        {
-          "name": "Jahmyr Gibbs",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "DET",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/3Db3mVG6L8BChPBXjWMyCg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40059.1.png",
-          "yahooPlayerId": "40059"
-        },
-        {
-          "name": "D'Andre Swift",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "CHI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/UEDVsA6XOLm0yRT1kxN65Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/32705.1.png",
-          "yahooPlayerId": "32705"
-        },
-        {
-          "name": "Nico Collins",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "HOU",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XaIf3oUtj4rr.CpsGxqvDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33477.2.png",
-          "yahooPlayerId": "33477"
-        },
-        {
-          "name": "Garrett Wilson",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "NYJ",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/R.E9_N6rpL3Cob_DpH4i1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33965.1.png",
-          "yahooPlayerId": "33965"
-        },
-        {
-          "name": "Travis Kelce",
-          "position": "TE",
-          "primaryPosition": "TE",
-          "nflTeam": "KC",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ynhkrbJAJKmF5XgXM2ydDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/26686.png",
-          "yahooPlayerId": "26686"
-        },
-        {
-          "name": "Jameson Williams",
-          "position": "W/R/T",
-          "primaryPosition": "WR",
-          "nflTeam": "DET",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/owMvSONLoM2eNK8dufTo8w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33967.1.png",
-          "yahooPlayerId": "33967"
-        },
-        {
-          "name": "Brock Bowers",
-          "position": "BN",
-          "primaryPosition": "TE",
-          "nflTeam": "LV",
-          "status": "Q",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2BDzPCSW.w29RpeJ.Sw.bw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40878.2.png",
-          "yahooPlayerId": "40878"
-        },
-        {
-          "name": "Jayden Daniels",
-          "position": "BN",
-          "primaryPosition": "QB",
-          "nflTeam": "WAS",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/CQnydoRKTgjiOU.ERkugfQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/40896.1.png",
-          "yahooPlayerId": "40896"
-        },
-        {
-          "name": "Brian Thomas Jr.",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "JAX",
-          "status": "Q",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/DlPTVpS2tEMQGLfyE70LRw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202025/40883.png",
-          "yahooPlayerId": "40883"
-        },
-        {
-          "name": "Quentin Johnston",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "LAC",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/9LCk06L.TL66ftWwm8L68g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/40051.1.png",
-          "yahooPlayerId": "40051"
-        },
-        {
-          "name": "Blake Corum",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "LAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VMUSaW4q_.UehllmRZwFXA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252025/40962.png",
-          "yahooPlayerId": "40962"
-        },
-        {
-          "name": "Jaxson Dart",
-          "position": "BN",
-          "primaryPosition": "QB",
-          "nflTeam": "NYG",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QJOKptxyTVChDYyVem2K3A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/41810.1.png",
-          "yahooPlayerId": "41810"
-        },
-        {
-          "name": "Cam Little",
-          "position": "K",
-          "primaryPosition": "K",
-          "nflTeam": "JAX",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/t7UkDRo.julV_UT4jZ7CHA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/41062.1.png",
-          "yahooPlayerId": "41062"
-        },
-        {
-          "name": "Ravens",
-          "position": "DEF",
-          "primaryPosition": "DEF",
-          "nflTeam": "BAL",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/bal_2.gif",
-          "yahooPlayerId": "100033"
-        }
-      ]
-    },
-    {
       "teamKey": "470.l.529714.t.3",
       "fantasyHelperTeamId": "3",
       "name": "ALLEN'S LAMB BIRYANI",
       "manager": "Sai",
       "draftPosition": 6,
       "duesPaid": true,
-      "rank": 2,
-      "wins": 1,
+      "rank": 1,
+      "wins": 2,
       "losses": 0,
       "ties": 0,
-      "pointsFor": 169.26,
+      "pointsFor": 361.58,
       "logoUrl": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/7be6fba92308d192cbfa17ed0d80513811caf0ae5d3bcc2ebebb92578156b010.png",
-      "waiverPriority": 6,
-      "weeklyWins": 0,
-      "weeklyCash": 0,
+      "waiverPriority": 4,
+      "weeklyWins": 1,
+      "weeklyCash": 20,
       "placementCash": 0,
-      "totalCash": 0,
+      "totalCash": 20,
       "roster": [
         {
           "name": "Josh Allen",
@@ -255,7 +99,7 @@
           "position": "W/R/T",
           "primaryPosition": "WR",
           "nflTeam": "SF",
-          "status": null,
+          "status": "Q",
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/p0VIf5c2cdr0EjVuJakKvw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/27535.1.png",
           "yahooPlayerId": "27535"
         },
@@ -287,15 +131,6 @@
           "yahooPlayerId": "40121"
         },
         {
-          "name": "RJ Harvey",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "DEN",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aAqi80yyrSD1W2OGK.E8Kg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/41845.1.png",
-          "yahooPlayerId": "41845"
-        },
-        {
           "name": "Kaelon Black",
           "position": "BN",
           "primaryPosition": "RB",
@@ -312,6 +147,15 @@
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/iB9NZ9TKn576z7LoLfE_Lg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/34088.1.png",
           "yahooPlayerId": "34088"
+        },
+        {
+          "name": "RJ Harvey",
+          "position": "IR",
+          "primaryPosition": "RB",
+          "nflTeam": "DEN",
+          "status": "O",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aAqi80yyrSD1W2OGK.E8Kg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/41845.1.png",
+          "yahooPlayerId": "41845"
         },
         {
           "name": "James Conner",
@@ -343,19 +187,340 @@
       ]
     },
     {
+      "teamKey": "470.l.529714.t.10",
+      "fantasyHelperTeamId": "10",
+      "name": "49ers",
+      "manager": "ashok",
+      "draftPosition": 9,
+      "duesPaid": true,
+      "rank": 2,
+      "wins": 2,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 285.28,
+      "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-helmet-1-png_1721176614976.png",
+      "waiverPriority": 7,
+      "weeklyWins": 0,
+      "weeklyCash": 0,
+      "placementCash": 0,
+      "totalCash": 0,
+      "roster": [
+        {
+          "name": "Matthew Stafford",
+          "position": "QB",
+          "primaryPosition": "QB",
+          "nflTeam": "LAR",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/WB0VYA2W5C4vPf8BtjcFdg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/9265.2.png",
+          "yahooPlayerId": "9265"
+        },
+        {
+          "name": "Kenneth Walker III",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "KC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/J19j1xe4AIAERekP6cF8xQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/33996.png",
+          "yahooPlayerId": "33996"
+        },
+        {
+          "name": "Chuba Hubbard",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "CAR",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/84nO7y.ExPfjb.8M689CSQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/33514.1.png",
+          "yahooPlayerId": "33514"
+        },
+        {
+          "name": "Amon-Ra St. Brown",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "DET",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LQZl1Mo7u0KUzLXU9RSw2g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07312025/33500.png",
+          "yahooPlayerId": "33500"
+        },
+        {
+          "name": "George Pickens",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "DAL",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/tL4TO41aAirHrtd5rFiVBg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072025/34007.png",
+          "yahooPlayerId": "34007"
+        },
+        {
+          "name": "Harold Fannin Jr.",
+          "position": "TE",
+          "primaryPosition": "TE",
+          "nflTeam": "CLE",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/JwOZzpNOcx7X.3gWJWdGHg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062025/41877.png",
+          "yahooPlayerId": "41877"
+        },
+        {
+          "name": "Davante Adams",
+          "position": "W/R/T",
+          "primaryPosition": "WR",
+          "nflTeam": "LAR",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Lq0buOz6WeFBtJha4zFsjQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252025/27581.png",
+          "yahooPlayerId": "27581"
+        },
+        {
+          "name": "Aaron Jones Sr.",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "MIN",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/PghAktupcNVLfkjAyCUacQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08152025/30295.png",
+          "yahooPlayerId": "30295"
+        },
+        {
+          "name": "Terry McLaurin",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "WAS",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oOjiUdKATa9lZ_1mx_JpaA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/31908.1.png",
+          "yahooPlayerId": "31908"
+        },
+        {
+          "name": "Jordan Love",
+          "position": "BN",
+          "primaryPosition": "QB",
+          "nflTeam": "GB",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/kr.cv9_CzEvW8_R.diHvcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/32696.3.png",
+          "yahooPlayerId": "32696"
+        },
+        {
+          "name": "Jeremiyah Love",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "ARI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SF3YXcxMZ_izNcxZVQQdtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/42625.1.png",
+          "yahooPlayerId": "42625"
+        },
+        {
+          "name": "Tyler Allgeier",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "ARI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/pC47EHB57nX4d9A.s1HYIw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/34107.1.png",
+          "yahooPlayerId": "34107"
+        },
+        {
+          "name": "Zach Charbonnet",
+          "position": "IR",
+          "primaryPosition": "RB",
+          "nflTeam": "SEA",
+          "status": "PUP-R",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ds39bFEU6VoBXxj_kl1Gpg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072026/40075.1.png",
+          "yahooPlayerId": "40075"
+        },
+        {
+          "name": "Eddy Pineiro",
+          "position": "K",
+          "primaryPosition": "K",
+          "nflTeam": "SF",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/FoPa..d_yQ0yI6zV0nIY_Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/31482.1.png",
+          "yahooPlayerId": "31482"
+        },
+        {
+          "name": "Cairo Santos",
+          "position": "BN",
+          "primaryPosition": "K",
+          "nflTeam": "CHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/HVobubisY1Qx7IbOab0daw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/28227.1.png",
+          "yahooPlayerId": "28227"
+        },
+        {
+          "name": "Seahawks",
+          "position": "DEF",
+          "primaryPosition": "DEF",
+          "nflTeam": "SEA",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sea.gif",
+          "yahooPlayerId": "100026"
+        }
+      ]
+    },
+    {
+      "teamKey": "470.l.529714.t.8",
+      "fantasyHelperTeamId": "8",
+      "name": "Steelers",
+      "manager": "chandrakanth",
+      "draftPosition": 1,
+      "duesPaid": true,
+      "rank": 3,
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "pointsFor": 302.58,
+      "logoUrl": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/25199198912_af85e7dc8e.png",
+      "waiverPriority": 3,
+      "weeklyWins": 1,
+      "weeklyCash": 20,
+      "placementCash": 0,
+      "totalCash": 20,
+      "roster": [
+        {
+          "name": "Jalen Hurts",
+          "position": "QB",
+          "primaryPosition": "QB",
+          "nflTeam": "PHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/rxsu3cY0VkambYSUhFcSwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/32723.1.png",
+          "yahooPlayerId": "32723"
+        },
+        {
+          "name": "Jahmyr Gibbs",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "DET",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/3Db3mVG6L8BChPBXjWMyCg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40059.1.png",
+          "yahooPlayerId": "40059"
+        },
+        {
+          "name": "D'Andre Swift",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "CHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/UEDVsA6XOLm0yRT1kxN65Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/32705.1.png",
+          "yahooPlayerId": "32705"
+        },
+        {
+          "name": "Garrett Wilson",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "NYJ",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/R.E9_N6rpL3Cob_DpH4i1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33965.1.png",
+          "yahooPlayerId": "33965"
+        },
+        {
+          "name": "Kayshon Boutte",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "HOU",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/keYCee8h2dgGMwcrQ2.zAQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212025/40224.png",
+          "yahooPlayerId": "40224"
+        },
+        {
+          "name": "Travis Kelce",
+          "position": "TE",
+          "primaryPosition": "TE",
+          "nflTeam": "KC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ynhkrbJAJKmF5XgXM2ydDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/26686.png",
+          "yahooPlayerId": "26686"
+        },
+        {
+          "name": "Jameson Williams",
+          "position": "W/R/T",
+          "primaryPosition": "WR",
+          "nflTeam": "DET",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/owMvSONLoM2eNK8dufTo8w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33967.1.png",
+          "yahooPlayerId": "33967"
+        },
+        {
+          "name": "Nico Collins",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "HOU",
+          "status": "O",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XaIf3oUtj4rr.CpsGxqvDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33477.2.png",
+          "yahooPlayerId": "33477"
+        },
+        {
+          "name": "Brock Bowers",
+          "position": "BN",
+          "primaryPosition": "TE",
+          "nflTeam": "LV",
+          "status": "O",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2BDzPCSW.w29RpeJ.Sw.bw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40878.2.png",
+          "yahooPlayerId": "40878"
+        },
+        {
+          "name": "Jayden Daniels",
+          "position": "BN",
+          "primaryPosition": "QB",
+          "nflTeam": "WAS",
+          "status": "D",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/CQnydoRKTgjiOU.ERkugfQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/40896.1.png",
+          "yahooPlayerId": "40896"
+        },
+        {
+          "name": "Quentin Johnston",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "LAC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/9LCk06L.TL66ftWwm8L68g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/40051.1.png",
+          "yahooPlayerId": "40051"
+        },
+        {
+          "name": "Blake Corum",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "LAR",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VMUSaW4q_.UehllmRZwFXA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252025/40962.png",
+          "yahooPlayerId": "40962"
+        },
+        {
+          "name": "Jaxson Dart",
+          "position": "BN",
+          "primaryPosition": "QB",
+          "nflTeam": "NYG",
+          "status": "D",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QJOKptxyTVChDYyVem2K3A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/41810.1.png",
+          "yahooPlayerId": "41810"
+        },
+        {
+          "name": "Cam Little",
+          "position": "K",
+          "primaryPosition": "K",
+          "nflTeam": "JAX",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/t7UkDRo.julV_UT4jZ7CHA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/41062.1.png",
+          "yahooPlayerId": "41062"
+        },
+        {
+          "name": "Ravens",
+          "position": "DEF",
+          "primaryPosition": "DEF",
+          "nflTeam": "BAL",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/bal_2.gif",
+          "yahooPlayerId": "100033"
+        }
+      ]
+    },
+    {
       "teamKey": "470.l.529714.t.5",
       "fantasyHelperTeamId": "5",
       "name": "Fly High Eagles",
       "manager": "Dhru",
       "draftPosition": 4,
       "duesPaid": true,
-      "rank": 3,
+      "rank": 4,
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "pointsFor": 147.14,
+      "pointsFor": 253.5,
       "logoUrl": "https://s.yimg.com/ba/images/0b1f460050e00e1e111684e9d5376c881ac2dbc7c1e17370b1e39984e5e89f51.png",
-      "waiverPriority": 9,
+      "waiverPriority": 6,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
@@ -398,13 +563,13 @@
           "yahooPlayerId": "33966"
         },
         {
-          "name": "DJ Moore",
+          "name": "Ladd McConkey",
           "position": "WR",
           "primaryPosition": "WR",
-          "nflTeam": "BUF",
+          "nflTeam": "LAC",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/cRf0PZjrcxCx9Oqer9Uo3Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/30994.1.png",
-          "yahooPlayerId": "30994"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Qh3Odk6nSkjXBrcmGRT9Rg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/40908.1.png",
+          "yahooPlayerId": "40908"
         },
         {
           "name": "Sam LaPorta",
@@ -420,27 +585,27 @@
           "position": "W/R/T",
           "primaryPosition": "WR",
           "nflTeam": "CAR",
-          "status": "Q",
+          "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/65k_7o4BvaoaSdVEIhckoQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/41293.1.png",
           "yahooPlayerId": "41293"
+        },
+        {
+          "name": "DJ Moore",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "BUF",
+          "status": "Q",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/cRf0PZjrcxCx9Oqer9Uo3Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/30994.1.png",
+          "yahooPlayerId": "30994"
         },
         {
           "name": "Jadarian Price",
           "position": "BN",
           "primaryPosition": "RB",
           "nflTeam": "SEA",
-          "status": null,
+          "status": "Q",
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hU4wrCOTpxi92OmU9C4hqQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/42654.1.png",
           "yahooPlayerId": "42654"
-        },
-        {
-          "name": "Ladd McConkey",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "LAC",
-          "status": "Q",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Qh3Odk6nSkjXBrcmGRT9Rg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/40908.1.png",
-          "yahooPlayerId": "40908"
         },
         {
           "name": "Trevor Lawrence",
@@ -499,174 +664,18 @@
       ]
     },
     {
-      "teamKey": "470.l.529714.t.2",
-      "fantasyHelperTeamId": "2",
-      "name": "Insane in the End Zone",
-      "manager": "Kiran K",
-      "draftPosition": 2,
-      "duesPaid": true,
-      "rank": 4,
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "pointsFor": 134.66,
-      "logoUrl": "https://s.yimg.com/ba/images/7f8ff9b8076d87f5ee33efab14526f87943b2a9d3a98415f35e978d69a8391bf.png",
-      "waiverPriority": 5,
-      "weeklyWins": 0,
-      "weeklyCash": 0,
-      "placementCash": 0,
-      "totalCash": 0,
-      "roster": [
-        {
-          "name": "Joe Burrow",
-          "position": "QB",
-          "primaryPosition": "QB",
-          "nflTeam": "CIN",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VnU.xoV9ZxUJeMYKyjssZg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/32671.1.png",
-          "yahooPlayerId": "32671"
-        },
-        {
-          "name": "Bijan Robinson",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "ATL",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/V5nNwT6sRKYHH3N.NzXTlw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/40055.1.png",
-          "yahooPlayerId": "40055"
-        },
-        {
-          "name": "Javonte Williams",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "DAL",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/DL1fPcbDhk5P_YDOYfDTZw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33423.1.png",
-          "yahooPlayerId": "33423"
-        },
-        {
-          "name": "Drake London",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "ATL",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/vFbuoZ42dGVpV5gz3aWkBQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/33963.1.png",
-          "yahooPlayerId": "33963"
-        },
-        {
-          "name": "Tetairoa McMillan",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "CAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/bjURNY7S3oVoIbPP221sKw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/41793.1.png",
-          "yahooPlayerId": "41793"
-        },
-        {
-          "name": "Tucker Kraft",
-          "position": "TE",
-          "primaryPosition": "TE",
-          "nflTeam": "GB",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2_S7FBVe7Hbf_HH2HcLn3g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40102.3.png",
-          "yahooPlayerId": "40102"
-        },
-        {
-          "name": "Luther Burden III",
-          "position": "W/R/T",
-          "primaryPosition": "WR",
-          "nflTeam": "CHI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/vcs_38fMP0TS1vIlbumWRg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/41824.1.png",
-          "yahooPlayerId": "41824"
-        },
-        {
-          "name": "Jayden Reed",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "GB",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/jFju8pccim6PicNIcu6Gjw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40063.3.png",
-          "yahooPlayerId": "40063"
-        },
-        {
-          "name": "DK Metcalf",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "PIT",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xNQy._m0pGTaF4D.WKgjsA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/31896.1.png",
-          "yahooPlayerId": "31896"
-        },
-        {
-          "name": "Jordan Mason",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "MIN",
-          "status": "Q",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Kj_YpmnK_Kt47Ey7h47seg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/34320.1.png",
-          "yahooPlayerId": "34320"
-        },
-        {
-          "name": "Courtland Sutton",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "DEN",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Q5hbrclpQZeVJXmHy3X_8w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/31010.1.png",
-          "yahooPlayerId": "31010"
-        },
-        {
-          "name": "Xavier Worthy",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "KC",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/sfFEJ.MKkGLfVHKpFy45Lw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40877.png",
-          "yahooPlayerId": "40877"
-        },
-        {
-          "name": "Denzel Boston",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "CLE",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Ahmp6D7MimpQQdTFNlE2vg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/42661.1.png",
-          "yahooPlayerId": "42661"
-        },
-        {
-          "name": "Tyler Loop",
-          "position": "K",
-          "primaryPosition": "K",
-          "nflTeam": "BAL",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/drRfrYZU6.gqEiMhBwX0og--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/41988.1.png",
-          "yahooPlayerId": "41988"
-        },
-        {
-          "name": "Steelers",
-          "position": "DEF",
-          "primaryPosition": "DEF",
-          "nflTeam": "PIT",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/pit.gif",
-          "yahooPlayerId": "100023"
-        }
-      ]
-    },
-    {
-      "teamKey": "470.l.529714.t.10",
-      "fantasyHelperTeamId": "10",
-      "name": "49ers",
-      "manager": "ashok",
-      "draftPosition": 9,
+      "teamKey": "470.l.529714.t.7",
+      "fantasyHelperTeamId": "7",
+      "name": "Bear Claw",
+      "manager": "bharath",
+      "draftPosition": 10,
       "duesPaid": true,
       "rank": 5,
       "wins": 1,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "pointsFor": 128.4,
-      "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-helmet-1-png_1721176614976.png",
+      "pointsFor": 250.62,
+      "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-wolf-2-png_1721175962789.png",
       "waiverPriority": 10,
       "weeklyWins": 0,
       "weeklyCash": 0,
@@ -674,304 +683,157 @@
       "totalCash": 0,
       "roster": [
         {
-          "name": "Matthew Stafford",
+          "name": "Dak Prescott",
           "position": "QB",
           "primaryPosition": "QB",
-          "nflTeam": "LAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/WB0VYA2W5C4vPf8BtjcFdg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/9265.2.png",
-          "yahooPlayerId": "9265"
-        },
-        {
-          "name": "Kenneth Walker",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "KC",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/J19j1xe4AIAERekP6cF8xQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/33996.png",
-          "yahooPlayerId": "33996"
-        },
-        {
-          "name": "Jeremiyah Love",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "ARI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SF3YXcxMZ_izNcxZVQQdtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/42625.1.png",
-          "yahooPlayerId": "42625"
-        },
-        {
-          "name": "Amon-Ra St. Brown",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "DET",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LQZl1Mo7u0KUzLXU9RSw2g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/07312025/33500.png",
-          "yahooPlayerId": "33500"
-        },
-        {
-          "name": "George Pickens",
-          "position": "WR",
-          "primaryPosition": "WR",
           "nflTeam": "DAL",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/tL4TO41aAirHrtd5rFiVBg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072025/34007.png",
-          "yahooPlayerId": "34007"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/7qieJGO_VZyuf0v74QNeEg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/29369.1.png",
+          "yahooPlayerId": "29369"
         },
         {
-          "name": "Harold Fannin Jr.",
-          "position": "TE",
-          "primaryPosition": "TE",
-          "nflTeam": "CLE",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/JwOZzpNOcx7X.3gWJWdGHg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062025/41877.png",
-          "yahooPlayerId": "41877"
-        },
-        {
-          "name": "Chuba Hubbard",
-          "position": "W/R/T",
+          "name": "Chase Brown",
+          "position": "RB",
           "primaryPosition": "RB",
-          "nflTeam": "CAR",
+          "nflTeam": "CIN",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/84nO7y.ExPfjb.8M689CSQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/33514.1.png",
-          "yahooPlayerId": "33514"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ybmXLgb43ePXwalSnaelLw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40196.1.png",
+          "yahooPlayerId": "40196"
         },
         {
-          "name": "Davante Adams",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "LAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Lq0buOz6WeFBtJha4zFsjQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252025/27581.png",
-          "yahooPlayerId": "27581"
-        },
-        {
-          "name": "Terry McLaurin",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "WAS",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oOjiUdKATa9lZ_1mx_JpaA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/31908.1.png",
-          "yahooPlayerId": "31908"
-        },
-        {
-          "name": "Jordan Addison",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "MIN",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/nn3eSJYNQea549YDPeNwQg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40042.1.png",
-          "yahooPlayerId": "40042"
-        },
-        {
-          "name": "Tyler Allgeier",
-          "position": "BN",
+          "name": "Jaylen Warren",
+          "position": "RB",
           "primaryPosition": "RB",
-          "nflTeam": "ARI",
+          "nflTeam": "PIT",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/pC47EHB57nX4d9A.s1HYIw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/34107.1.png",
-          "yahooPlayerId": "34107"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aeLJ6CcF9iHNAnYV3xe0YA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/34447.1.png",
+          "yahooPlayerId": "34447"
         },
         {
-          "name": "Aaron Jones Sr.",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "MIN",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/PghAktupcNVLfkjAyCUacQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08152025/30295.png",
-          "yahooPlayerId": "30295"
-        },
-        {
-          "name": "Jordan Love",
-          "position": "BN",
-          "primaryPosition": "QB",
+          "name": "Christian Watson",
+          "position": "WR",
+          "primaryPosition": "WR",
           "nflTeam": "GB",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/kr.cv9_CzEvW8_R.diHvcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/32696.3.png",
-          "yahooPlayerId": "32696"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/zdZ4n05lF0SOcdt4FXNbRw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33989.3.png",
+          "yahooPlayerId": "33989"
         },
         {
-          "name": "Zach Charbonnet",
-          "position": "IR",
-          "primaryPosition": "RB",
-          "nflTeam": "SEA",
-          "status": "PUP-R",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ds39bFEU6VoBXxj_kl1Gpg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072026/40075.1.png",
-          "yahooPlayerId": "40075"
-        },
-        {
-          "name": "Eddy Pineiro",
-          "position": "K",
-          "primaryPosition": "K",
-          "nflTeam": "SF",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/FoPa..d_yQ0yI6zV0nIY_Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/31482.1.png",
-          "yahooPlayerId": "31482"
-        },
-        {
-          "name": "Seahawks",
-          "position": "DEF",
-          "primaryPosition": "DEF",
-          "nflTeam": "SEA",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sea.gif",
-          "yahooPlayerId": "100026"
-        }
-      ]
-    },
-    {
-      "teamKey": "470.l.529714.t.4",
-      "fantasyHelperTeamId": "4",
-      "name": "Caleb’s Cookin’",
-      "manager": "Bhargav",
-      "draftPosition": 7,
-      "duesPaid": true,
-      "rank": 6,
-      "wins": 0,
-      "losses": 1,
-      "ties": 0,
-      "pointsFor": 126.76,
-      "logoUrl": "https://s.yimg.com/ba/images/47a728c76719437ff23b6a4dab95bc55fde687a903eaa557108542cc251763dd.png",
-      "waiverPriority": 2,
-      "weeklyWins": 0,
-      "weeklyCash": 0,
-      "placementCash": 0,
-      "totalCash": 0,
-      "roster": [
-        {
-          "name": "Caleb Williams",
-          "position": "QB",
-          "primaryPosition": "QB",
-          "nflTeam": "CHI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/bfYvPX2QyI.HTH.3UabvKg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08012025/40900.png",
-          "yahooPlayerId": "40900"
-        },
-        {
-          "name": "James Cook III",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "BUF",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/phPvtlUh.MceOTZItKh_AA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08282024/34019.png",
-          "yahooPlayerId": "34019"
-        },
-        {
-          "name": "Bucky Irving",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "TB",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/m_qM8NCZ0Axr7R49oWPTwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/40993.1.png",
-          "yahooPlayerId": "40993"
-        },
-        {
-          "name": "DeVonta Smith",
+          "name": "Jaylen Waddle",
           "position": "WR",
           "primaryPosition": "WR",
-          "nflTeam": "PHI",
+          "nflTeam": "DEN",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/0OsYYjR30ceCxcRp8cStbw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33398.1.png",
-          "yahooPlayerId": "33398"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LraqgG.r4S.LNyMAd6RSnQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33394.1.png",
+          "yahooPlayerId": "33394"
         },
         {
-          "name": "Rashee Rice",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "KC",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/qY36psYIl_c63byOJeu4Rg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40084.png",
-          "yahooPlayerId": "40084"
-        },
-        {
-          "name": "Isaiah Likely",
+          "name": "Dalton Kincaid",
           "position": "TE",
           "primaryPosition": "TE",
-          "nflTeam": "NYG",
+          "nflTeam": "BUF",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/EHF10aQeyuo41zClRCGe5A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/34095.1.png",
-          "yahooPlayerId": "34095"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2S58M4.ijx2yJ7WNMMBjyw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40048.1.png",
+          "yahooPlayerId": "40048"
         },
         {
-          "name": "Omarion Hampton",
+          "name": "Bhayshul Tuten",
           "position": "W/R/T",
           "primaryPosition": "RB",
-          "nflTeam": "LAC",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/E3OBtN4RVVXkZvnZCY7AiA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/41807.1.png",
-          "yahooPlayerId": "41807"
-        },
-        {
-          "name": "Parker Washington",
-          "position": "BN",
-          "primaryPosition": "WR",
           "nflTeam": "JAX",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/X77XymjeUdDCpWFiI0lOtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/40234.1.png",
-          "yahooPlayerId": "40234"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SRCXwZGkVsSbMwKupYpvLw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/41900.1.png",
+          "yahooPlayerId": "41900"
         },
         {
-          "name": "Josh Downs",
+          "name": "Saquon Barkley",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "PHI",
+          "status": "Q",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VXOmjaMBllUqGug6vTs48A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/30972.1.png",
+          "yahooPlayerId": "30972"
+        },
+        {
+          "name": "Justin Herbert",
+          "position": "BN",
+          "primaryPosition": "QB",
+          "nflTeam": "LAC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/qf14p8LyYMZ5KPeEVUAQ1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/32676.1.png",
+          "yahooPlayerId": "32676"
+        },
+        {
+          "name": "Alec Pierce",
           "position": "BN",
           "primaryPosition": "WR",
           "nflTeam": "IND",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2N3fbHpcxarK6OYUackvOQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40126.1.png",
-          "yahooPlayerId": "40126"
+          "status": "D",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xHFK1rmuD7EbSz1bTBuXtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/34008.1.png",
+          "yahooPlayerId": "34008"
         },
         {
-          "name": "Kyle Monangai",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "CHI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/YUTcqEGrvr2pHk80c6HhWg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/42025.1.png",
-          "yahooPlayerId": "42025"
-        },
-        {
-          "name": "Rome Odunze",
+          "name": "Matthew Golden",
           "position": "BN",
           "primaryPosition": "WR",
-          "nflTeam": "CHI",
+          "nflTeam": "GB",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/7mOuM7u9usQ7ge8D.SKj_w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40901.1.png",
-          "yahooPlayerId": "40901"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aw7YkgM1GuypR0QPgCdxFA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/41808.1.png",
+          "yahooPlayerId": "41808"
         },
         {
-          "name": "Bryce Young",
+          "name": "Dallas Goedert",
           "position": "BN",
-          "primaryPosition": "QB",
-          "nflTeam": "CAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/V9fTWlvMZ92ho7Eny6yU6A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/40029.1.png",
-          "yahooPlayerId": "40029"
+          "primaryPosition": "TE",
+          "nflTeam": "PHI",
+          "status": "D",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/GIIf5pQFjmXq8NZNwyi.GA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/31019.1.png",
+          "yahooPlayerId": "31019"
         },
         {
-          "name": "Deebo Samuel Sr.",
+          "name": "Pat Bryant",
           "position": "BN",
           "primaryPosition": "WR",
-          "nflTeam": "SF",
+          "nflTeam": "DEN",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/K6SdCEf1rZIl_V0bHYosdA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09022025/31868.png",
-          "yahooPlayerId": "31868"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/_GFpkuWbLPYf9ek_mu791w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/41860.1.png",
+          "yahooPlayerId": "41860"
         },
         {
-          "name": "Brandon Aubrey",
+          "name": "Zay Flowers",
+          "position": "IR",
+          "primaryPosition": "WR",
+          "nflTeam": "BAL",
+          "status": "O",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xxTmCvgTcZ_kNWR4QFRqSw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/40039.1.png",
+          "yahooPlayerId": "40039"
+        },
+        {
+          "name": "Jordyn Tyson",
+          "position": "IR",
+          "primaryPosition": "WR",
+          "nflTeam": "NO",
+          "status": "IR-R",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/j4E3jcOTGILnudVz.SJoAw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/42630.1.png",
+          "yahooPlayerId": "42630"
+        },
+        {
+          "name": "Trey Smack",
           "position": "K",
           "primaryPosition": "K",
-          "nflTeam": "DAL",
+          "nflTeam": "GB",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QFhJ3YtUbKOBqoSm.lOY6Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40819.1.png",
-          "yahooPlayerId": "40819"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/MKMYhDkwOXDg.U_e2kiNQg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/42838.1.png",
+          "yahooPlayerId": "42838"
         },
         {
-          "name": "Chargers",
+          "name": "Buccaneers",
           "position": "DEF",
           "primaryPosition": "DEF",
-          "nflTeam": "LAC",
+          "nflTeam": "TB",
           "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sdg3.jpg",
-          "yahooPlayerId": "100024"
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/tam.gif",
+          "yahooPlayerId": "100027"
         }
       ]
     },
@@ -982,11 +844,11 @@
       "manager": "Jr Nani",
       "draftPosition": 8,
       "duesPaid": true,
-      "rank": 7,
-      "wins": 0,
+      "rank": 6,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "pointsFor": 125.76,
+      "pointsFor": 239.26,
       "logoUrl": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/6e5997253c0b0342c68963cfb02cc31b9cae71e0b549b81ff2387e1e162c4727.png",
       "waiverPriority": 1,
       "weeklyWins": 0,
@@ -1040,35 +902,8 @@
           "yahooPlayerId": "41804"
         },
         {
-          "name": "Kyle Pitts Sr.",
-          "position": "TE",
-          "primaryPosition": "TE",
-          "nflTeam": "ATL",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oXa30OfMZKt5hdoFxa2qeg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/33392.1.png",
-          "yahooPlayerId": "33392"
-        },
-        {
-          "name": "Malik Nabers",
-          "position": "W/R/T",
-          "primaryPosition": "WR",
-          "nflTeam": "NYG",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Df0fqJ37.bWIf7UIcdW35g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092025/40899.png",
-          "yahooPlayerId": "40899"
-        },
-        {
-          "name": "Jonathon Brooks",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "CAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/fwYiJZOr3h3WFoOfy53osA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/40926.1.png",
-          "yahooPlayerId": "40926"
-        },
-        {
           "name": "George Kittle",
-          "position": "BN",
+          "position": "TE",
           "primaryPosition": "TE",
           "nflTeam": "SF",
           "status": null,
@@ -1077,12 +912,39 @@
         },
         {
           "name": "Stefon Diggs",
-          "position": "BN",
+          "position": "W/R/T",
           "primaryPosition": "WR",
           "nflTeam": "WAS",
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2jXx5MZN2eJU2odJvRk8VQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09022026/28534.2.png",
           "yahooPlayerId": "28534"
+        },
+        {
+          "name": "Malik Nabers",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "NYG",
+          "status": "Q",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Df0fqJ37.bWIf7UIcdW35g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092025/40899.png",
+          "yahooPlayerId": "40899"
+        },
+        {
+          "name": "Kyle Pitts Sr.",
+          "position": "BN",
+          "primaryPosition": "TE",
+          "nflTeam": "ATL",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oXa30OfMZKt5hdoFxa2qeg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/33392.1.png",
+          "yahooPlayerId": "33392"
+        },
+        {
+          "name": "Jonathon Brooks",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "CAR",
+          "status": "D",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/fwYiJZOr3h3WFoOfy53osA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/40926.1.png",
+          "yahooPlayerId": "40926"
         },
         {
           "name": "Patrick Mahomes",
@@ -1103,13 +965,13 @@
           "yahooPlayerId": "31856"
         },
         {
-          "name": "Caleb Douglas",
+          "name": "Xavier Hutchinson",
           "position": "BN",
           "primaryPosition": "WR",
-          "nflTeam": "MIA",
+          "nflTeam": "HOU",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/drpU_fdv.iExZvFQnA9v1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/42697.2.png",
-          "yahooPlayerId": "42697"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/45bmFSrg2w2NPOVrkWBvBw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40232.2.png",
+          "yahooPlayerId": "40232"
         },
         {
           "name": "Will Reichard",
@@ -1138,13 +1000,13 @@
       "manager": "VJ",
       "draftPosition": 3,
       "duesPaid": true,
-      "rank": 8,
-      "wins": 0,
+      "rank": 7,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "pointsFor": 120.42,
+      "pointsFor": 222.34,
       "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-gold-y-medal-png_1721174761440.png",
-      "waiverPriority": 3,
+      "waiverPriority": 8,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
@@ -1218,7 +1080,7 @@
           "position": "BN",
           "primaryPosition": "RB",
           "nflTeam": "NE",
-          "status": "Q",
+          "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SGM4Z8veK9SctATKC_6Luw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/41823.1.png",
           "yahooPlayerId": "41823"
         },
@@ -1236,7 +1098,7 @@
           "position": "BN",
           "primaryPosition": "RB",
           "nflTeam": "PIT",
-          "status": null,
+          "status": "Q",
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ywTo2aUjogCZOwXb2d4J.Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/33100.1.png",
           "yahooPlayerId": "33100"
         },
@@ -1250,15 +1112,6 @@
           "yahooPlayerId": "40875"
         },
         {
-          "name": "Chris Rodriguez Jr.",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "JAX",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/91cDvEedAYb2rXG1ayul_A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09022025/40231.png",
-          "yahooPlayerId": "40231"
-        },
-        {
           "name": "Mark Andrews",
           "position": "BN",
           "primaryPosition": "TE",
@@ -1266,6 +1119,15 @@
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/esyGOZhIzn5kp7nExzw3Yg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/31056.1.png",
           "yahooPlayerId": "31056"
+        },
+        {
+          "name": "KC Concepcion Jr.",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "CLE",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hiQScgAqjz9rvRk_yQdxcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/42646.1.png",
+          "yahooPlayerId": "42646"
         },
         {
           "name": "Cameron Dicker",
@@ -1288,167 +1150,332 @@
       ]
     },
     {
-      "teamKey": "470.l.529714.t.7",
-      "fantasyHelperTeamId": "7",
-      "name": "Bear Claw",
-      "manager": "bharath",
-      "draftPosition": 10,
+      "teamKey": "470.l.529714.t.2",
+      "fantasyHelperTeamId": "2",
+      "name": "Insane in the End Zone",
+      "manager": "Kiran K",
+      "draftPosition": 2,
       "duesPaid": true,
-      "rank": 9,
-      "wins": 0,
+      "rank": 8,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "pointsFor": 116.56,
-      "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-wolf-2-png_1721175962789.png",
-      "waiverPriority": 7,
+      "pointsFor": 220.44,
+      "logoUrl": "https://s.yimg.com/ba/images/7f8ff9b8076d87f5ee33efab14526f87943b2a9d3a98415f35e978d69a8391bf.png",
+      "waiverPriority": 9,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
       "totalCash": 0,
       "roster": [
         {
-          "name": "Justin Herbert",
+          "name": "Joe Burrow",
           "position": "QB",
           "primaryPosition": "QB",
-          "nflTeam": "LAC",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/qf14p8LyYMZ5KPeEVUAQ1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/32676.1.png",
-          "yahooPlayerId": "32676"
-        },
-        {
-          "name": "Saquon Barkley",
-          "position": "RB",
-          "primaryPosition": "RB",
-          "nflTeam": "PHI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VXOmjaMBllUqGug6vTs48A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/30972.1.png",
-          "yahooPlayerId": "30972"
-        },
-        {
-          "name": "Chase Brown",
-          "position": "RB",
-          "primaryPosition": "RB",
           "nflTeam": "CIN",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ybmXLgb43ePXwalSnaelLw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40196.1.png",
-          "yahooPlayerId": "40196"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VnU.xoV9ZxUJeMYKyjssZg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/32671.1.png",
+          "yahooPlayerId": "32671"
         },
         {
-          "name": "Zay Flowers",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "BAL",
-          "status": "Q",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xxTmCvgTcZ_kNWR4QFRqSw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/40039.1.png",
-          "yahooPlayerId": "40039"
-        },
-        {
-          "name": "Christian Watson",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "GB",
+          "name": "Bijan Robinson",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "ATL",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/zdZ4n05lF0SOcdt4FXNbRw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33989.3.png",
-          "yahooPlayerId": "33989"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/V5nNwT6sRKYHH3N.NzXTlw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/40055.1.png",
+          "yahooPlayerId": "40055"
         },
         {
-          "name": "Dalton Kincaid",
+          "name": "Javonte Williams",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "DAL",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/DL1fPcbDhk5P_YDOYfDTZw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33423.1.png",
+          "yahooPlayerId": "33423"
+        },
+        {
+          "name": "Tetairoa McMillan",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "CAR",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/bjURNY7S3oVoIbPP221sKw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/41793.1.png",
+          "yahooPlayerId": "41793"
+        },
+        {
+          "name": "Luther Burden III",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "CHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/vcs_38fMP0TS1vIlbumWRg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/41824.1.png",
+          "yahooPlayerId": "41824"
+        },
+        {
+          "name": "Tucker Kraft",
           "position": "TE",
           "primaryPosition": "TE",
-          "nflTeam": "BUF",
+          "nflTeam": "GB",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2S58M4.ijx2yJ7WNMMBjyw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40048.1.png",
-          "yahooPlayerId": "40048"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2_S7FBVe7Hbf_HH2HcLn3g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40102.3.png",
+          "yahooPlayerId": "40102"
         },
         {
-          "name": "Jaylen Warren",
+          "name": "DK Metcalf",
           "position": "W/R/T",
-          "primaryPosition": "RB",
+          "primaryPosition": "WR",
           "nflTeam": "PIT",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aeLJ6CcF9iHNAnYV3xe0YA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/34447.1.png",
-          "yahooPlayerId": "34447"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xNQy._m0pGTaF4D.WKgjsA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/31896.1.png",
+          "yahooPlayerId": "31896"
         },
         {
-          "name": "Bhayshul Tuten",
+          "name": "Drake London",
           "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "JAX",
+          "primaryPosition": "WR",
+          "nflTeam": "ATL",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SRCXwZGkVsSbMwKupYpvLw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/41900.1.png",
-          "yahooPlayerId": "41900"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/vFbuoZ42dGVpV5gz3aWkBQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/33963.1.png",
+          "yahooPlayerId": "33963"
         },
         {
-          "name": "Jaylen Waddle",
+          "name": "Jayden Reed",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "GB",
+          "status": "Q",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/jFju8pccim6PicNIcu6Gjw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40063.3.png",
+          "yahooPlayerId": "40063"
+        },
+        {
+          "name": "Courtland Sutton",
           "position": "BN",
           "primaryPosition": "WR",
           "nflTeam": "DEN",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LraqgG.r4S.LNyMAd6RSnQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33394.1.png",
-          "yahooPlayerId": "33394"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Q5hbrclpQZeVJXmHy3X_8w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/31010.1.png",
+          "yahooPlayerId": "31010"
         },
         {
-          "name": "Alec Pierce",
+          "name": "Xavier Worthy",
           "position": "BN",
           "primaryPosition": "WR",
-          "nflTeam": "IND",
-          "status": "Q",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/xHFK1rmuD7EbSz1bTBuXtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/34008.1.png",
-          "yahooPlayerId": "34008"
-        },
-        {
-          "name": "Matthew Golden",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "GB",
+          "nflTeam": "KC",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/aw7YkgM1GuypR0QPgCdxFA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/41808.1.png",
-          "yahooPlayerId": "41808"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/sfFEJ.MKkGLfVHKpFy45Lw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40877.png",
+          "yahooPlayerId": "40877"
         },
         {
-          "name": "Woody Marks",
+          "name": "Denzel Boston",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "CLE",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Ahmp6D7MimpQQdTFNlE2vg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/42661.1.png",
+          "yahooPlayerId": "42661"
+        },
+        {
+          "name": "MarShawn Lloyd",
           "position": "BN",
           "primaryPosition": "RB",
-          "nflTeam": "HOU",
+          "nflTeam": "GB",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/YmBtiLg_3bZPt6c51A6Ngg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/41902.2.png",
-          "yahooPlayerId": "41902"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Q32rawxvCvcLx7Co.N1P0Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40971.3.png",
+          "yahooPlayerId": "40971"
         },
         {
-          "name": "Dallas Goedert",
-          "position": "BN",
-          "primaryPosition": "TE",
-          "nflTeam": "PHI",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/GIIf5pQFjmXq8NZNwyi.GA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/31019.1.png",
-          "yahooPlayerId": "31019"
-        },
-        {
-          "name": "Tank Dell",
+          "name": "Jordan Mason",
           "position": "IR",
-          "primaryPosition": "WR",
-          "nflTeam": "HOU",
-          "status": "IR-R",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/W3sBTIYx4oYoZfg75QITrw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40097.2.png",
-          "yahooPlayerId": "40097"
+          "primaryPosition": "RB",
+          "nflTeam": "MIN",
+          "status": "IR",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Kj_YpmnK_Kt47Ey7h47seg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/34320.1.png",
+          "yahooPlayerId": "34320"
         },
         {
-          "name": "Harrison Mevis",
+          "name": "Tyler Loop",
           "position": "K",
           "primaryPosition": "K",
-          "nflTeam": "LAR",
+          "nflTeam": "BAL",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/y3t1lgmXypqtZ__kodxkwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/41312.2.png",
-          "yahooPlayerId": "41312"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/drRfrYZU6.gqEiMhBwX0og--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/41988.1.png",
+          "yahooPlayerId": "41988"
         },
         {
-          "name": "Buccaneers",
+          "name": "Steelers",
           "position": "DEF",
           "primaryPosition": "DEF",
+          "nflTeam": "PIT",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/pit.gif",
+          "yahooPlayerId": "100023"
+        }
+      ]
+    },
+    {
+      "teamKey": "470.l.529714.t.4",
+      "fantasyHelperTeamId": "4",
+      "name": "Caleb’s Cookin’",
+      "manager": "Bhargav",
+      "draftPosition": 7,
+      "duesPaid": true,
+      "rank": 9,
+      "wins": 0,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 253.18,
+      "logoUrl": "https://s.yimg.com/ba/images/47a728c76719437ff23b6a4dab95bc55fde687a903eaa557108542cc251763dd.png",
+      "waiverPriority": 2,
+      "weeklyWins": 0,
+      "weeklyCash": 0,
+      "placementCash": 0,
+      "totalCash": 0,
+      "roster": [
+        {
+          "name": "Bryce Young",
+          "position": "QB",
+          "primaryPosition": "QB",
+          "nflTeam": "CAR",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/V9fTWlvMZ92ho7Eny6yU6A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/40029.1.png",
+          "yahooPlayerId": "40029"
+        },
+        {
+          "name": "James Cook III",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "BUF",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/phPvtlUh.MceOTZItKh_AA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08282024/34019.png",
+          "yahooPlayerId": "34019"
+        },
+        {
+          "name": "Omarion Hampton",
+          "position": "RB",
+          "primaryPosition": "RB",
+          "nflTeam": "LAC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/E3OBtN4RVVXkZvnZCY7AiA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09092026/41807.1.png",
+          "yahooPlayerId": "41807"
+        },
+        {
+          "name": "DeVonta Smith",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "PHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/0OsYYjR30ceCxcRp8cStbw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33398.1.png",
+          "yahooPlayerId": "33398"
+        },
+        {
+          "name": "Parker Washington",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "JAX",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/X77XymjeUdDCpWFiI0lOtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/40234.1.png",
+          "yahooPlayerId": "40234"
+        },
+        {
+          "name": "Isaiah Likely",
+          "position": "TE",
+          "primaryPosition": "TE",
+          "nflTeam": "NYG",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/EHF10aQeyuo41zClRCGe5A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/34095.1.png",
+          "yahooPlayerId": "34095"
+        },
+        {
+          "name": "Josh Downs",
+          "position": "W/R/T",
+          "primaryPosition": "WR",
+          "nflTeam": "IND",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/2N3fbHpcxarK6OYUackvOQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40126.1.png",
+          "yahooPlayerId": "40126"
+        },
+        {
+          "name": "Bucky Irving",
+          "position": "BN",
+          "primaryPosition": "RB",
           "nflTeam": "TB",
           "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/tam.gif",
-          "yahooPlayerId": "100027"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/m_qM8NCZ0Axr7R49oWPTwA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/40993.1.png",
+          "yahooPlayerId": "40993"
+        },
+        {
+          "name": "Rashee Rice",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "KC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/qY36psYIl_c63byOJeu4Rg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40084.png",
+          "yahooPlayerId": "40084"
+        },
+        {
+          "name": "Caleb Williams",
+          "position": "BN",
+          "primaryPosition": "QB",
+          "nflTeam": "CHI",
+          "status": "D",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/bfYvPX2QyI.HTH.3UabvKg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08012025/40900.png",
+          "yahooPlayerId": "40900"
+        },
+        {
+          "name": "Kyle Monangai",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "CHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/YUTcqEGrvr2pHk80c6HhWg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/42025.1.png",
+          "yahooPlayerId": "42025"
+        },
+        {
+          "name": "Rome Odunze",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "CHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/7mOuM7u9usQ7ge8D.SKj_w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40901.1.png",
+          "yahooPlayerId": "40901"
+        },
+        {
+          "name": "Deebo Samuel Sr.",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "SF",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/K6SdCEf1rZIl_V0bHYosdA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09022025/31868.png",
+          "yahooPlayerId": "31868"
+        },
+        {
+          "name": "De'Zhaun Stribling",
+          "position": "IR",
+          "primaryPosition": "WR",
+          "nflTeam": "SF",
+          "status": "IR",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/e_j0dbRT5a04wE6TzewF5w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/42655.1.png",
+          "yahooPlayerId": "42655"
+        },
+        {
+          "name": "Brandon Aubrey",
+          "position": "K",
+          "primaryPosition": "K",
+          "nflTeam": "DAL",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QFhJ3YtUbKOBqoSm.lOY6Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/40819.1.png",
+          "yahooPlayerId": "40819"
+        },
+        {
+          "name": "Chiefs",
+          "position": "DEF",
+          "primaryPosition": "DEF",
+          "nflTeam": "KC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/kan.gif",
+          "yahooPlayerId": "100012"
         }
       ]
     },
@@ -1461,11 +1488,11 @@
       "duesPaid": true,
       "rank": 10,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "pointsFor": 110.62,
+      "pointsFor": 219.7,
       "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-y-letterman-jacket-png_1721175177806.png",
-      "waiverPriority": 8,
+      "waiverPriority": 5,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
@@ -1499,15 +1526,6 @@
           "yahooPlayerId": "41922"
         },
         {
-          "name": "Puka Nacua",
-          "position": "WR",
-          "primaryPosition": "WR",
-          "nflTeam": "LAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ScG6X1txLlmgHXWOsHYFzg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40168.2.png",
-          "yahooPlayerId": "40168"
-        },
-        {
           "name": "Khalil Shakir",
           "position": "WR",
           "primaryPosition": "WR",
@@ -1515,6 +1533,15 @@
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/Fj2mXlA7NkAYE8UQ0ENHpQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/34104.1.png",
           "yahooPlayerId": "34104"
+        },
+        {
+          "name": "Jordan Addison",
+          "position": "WR",
+          "primaryPosition": "WR",
+          "nflTeam": "MIN",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/nn3eSJYNQea549YDPeNwQg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40042.1.png",
+          "yahooPlayerId": "40042"
         },
         {
           "name": "Trey McBride",
@@ -1535,11 +1562,20 @@
           "yahooPlayerId": "31905"
         },
         {
+          "name": "Puka Nacua",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "LAR",
+          "status": "O",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ScG6X1txLlmgHXWOsHYFzg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/40168.2.png",
+          "yahooPlayerId": "40168"
+        },
+        {
           "name": "Kyler Murray",
           "position": "BN",
           "primaryPosition": "QB",
           "nflTeam": "MIN",
-          "status": "Q",
+          "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/frZpvK9Afq1vRWbaZXv_FQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/31833.1.png",
           "yahooPlayerId": "31833"
         },
@@ -1557,27 +1593,9 @@
           "position": "BN",
           "primaryPosition": "RB",
           "nflTeam": "DEN",
-          "status": null,
+          "status": "Q",
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/qIw9czTCGxW94slu_jv4AA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/32725.1.png",
           "yahooPlayerId": "32725"
-        },
-        {
-          "name": "Michael Pittman Jr.",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "PIT",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/RbfOdQEOZa.kBRGSNDS2OQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/03132026/32704.1.png",
-          "yahooPlayerId": "32704"
-        },
-        {
-          "name": "Juwan Johnson",
-          "position": "BN",
-          "primaryPosition": "TE",
-          "nflTeam": "NO",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/BKGuH.LGDGTpzRsgfzS9fg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/33113.1.png",
-          "yahooPlayerId": "33113"
         },
         {
           "name": "Rachaad White",
@@ -1587,6 +1605,24 @@
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/QeZuoLZbQeAXC43hGJWcPQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/34047.1.png",
           "yahooPlayerId": "34047"
+        },
+        {
+          "name": "Makai Lemon",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "PHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/w8pWbu3pal5BSGT3tA4CzA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/42642.1.png",
+          "yahooPlayerId": "42642"
+        },
+        {
+          "name": "Michael Pittman Jr.",
+          "position": "IR",
+          "primaryPosition": "WR",
+          "nflTeam": "PIT",
+          "status": "O",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/RbfOdQEOZa.kBRGSNDS2OQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/03132026/32704.1.png",
+          "yahooPlayerId": "32704"
         },
         {
           "name": "A.J. Brown",
@@ -1619,6 +1655,15 @@
     }
   ],
   "weeklyWinners": [
+    {
+      "week": 2,
+      "teamId": "3",
+      "teamName": "ALLEN'S LAMB BIRYANI",
+      "manager": "Sai",
+      "score": 192.32,
+      "prize": 20,
+      "tied": false
+    },
     {
       "week": 1,
       "teamId": "8",
@@ -1719,174 +1764,174 @@
     ],
     "2": [
       {
-        "status": "midevent",
+        "status": "postevent",
         "teams": [
           {
             "teamId": "1",
             "name": "Nabers Gonna Nab",
-            "score": 0,
-            "projectedScore": 126.51
+            "score": 113.5,
+            "projectedScore": 126.24
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
-            "score": 0,
-            "projectedScore": 127.27
+            "score": 109.08,
+            "projectedScore": 118.24
           }
         ]
       },
       {
-        "status": "midevent",
+        "status": "postevent",
         "teams": [
           {
             "teamId": "2",
             "name": "Insane in the End Zone",
-            "score": 0,
-            "projectedScore": 129.31
+            "score": 85.78,
+            "projectedScore": 126.3
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
-            "score": 0,
-            "projectedScore": 124.6
+            "score": 101.92,
+            "projectedScore": 126.13
           }
         ]
       },
       {
-        "status": "midevent",
+        "status": "postevent",
         "teams": [
           {
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
-            "score": 0,
-            "projectedScore": 130.16
+            "score": 192.32,
+            "projectedScore": 129.97
           },
           {
             "teamId": "4",
             "name": "Caleb’s Cookin’",
-            "score": 0,
-            "projectedScore": 119.9
+            "score": 126.42,
+            "projectedScore": 122.46
           }
         ]
       },
       {
-        "status": "midevent",
+        "status": "postevent",
         "teams": [
           {
             "teamId": "5",
             "name": "Fly High Eagles",
-            "score": 0,
-            "projectedScore": 121.69
+            "score": 106.36,
+            "projectedScore": 123.5
           },
           {
             "teamId": "10",
             "name": "49ers",
-            "score": 0,
-            "projectedScore": 124.72
+            "score": 156.88,
+            "projectedScore": 126.88
           }
         ]
       },
       {
-        "status": "midevent",
+        "status": "postevent",
         "teams": [
           {
             "teamId": "7",
             "name": "Bear Claw",
-            "score": 0,
-            "projectedScore": 119.96
+            "score": 134.06,
+            "projectedScore": 123.4
           },
           {
             "teamId": "8",
             "name": "Steelers",
-            "score": 0,
-            "projectedScore": 129.55
+            "score": 122.16,
+            "projectedScore": 123.38
           }
         ]
       }
     ],
     "3": [
       {
-        "status": "preevent",
+        "status": "midevent",
         "teams": [
           {
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 121.82
+            "projectedScore": 125.98
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 117.03
+            "projectedScore": 129.18
           }
         ]
       },
       {
-        "status": "preevent",
+        "status": "midevent",
         "teams": [
           {
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 119.01
+            "projectedScore": 120.96
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 120.47
+            "projectedScore": 126.32
           }
         ]
       },
       {
-        "status": "preevent",
+        "status": "midevent",
         "teams": [
           {
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 121.07
+            "projectedScore": 130.02
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 115.64
+            "projectedScore": 112.06
           }
         ]
       },
       {
-        "status": "preevent",
+        "status": "midevent",
         "teams": [
           {
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 111.69
+            "projectedScore": 118.32
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 112.07
+            "projectedScore": 119.16
           }
         ]
       },
       {
-        "status": "preevent",
+        "status": "midevent",
         "teams": [
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 120.66
+            "projectedScore": 118.69
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 118.27
+            "projectedScore": 125.95
           }
         ]
       }
@@ -1899,13 +1944,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 121.39
+            "projectedScore": 123.9
           },
           {
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 122.71
+            "projectedScore": 119.46
           }
         ]
       },
@@ -1916,13 +1961,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 118.41
+            "projectedScore": 121.43
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 107.36
+            "projectedScore": 115.69
           }
         ]
       },
@@ -1933,13 +1978,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 112.2
+            "projectedScore": 116.46
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 121.6
+            "projectedScore": 124.54
           }
         ]
       },
@@ -1950,13 +1995,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 115.56
+            "projectedScore": 125.56
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 114.86
+            "projectedScore": 113.05
           }
         ]
       },
@@ -1967,13 +2012,13 @@
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 122.65
+            "projectedScore": 118.04
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 117.3
+            "projectedScore": 119.24
           }
         ]
       }
@@ -1986,13 +2031,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 121.03
+            "projectedScore": 117.31
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 106.72
+            "projectedScore": 99.15
           }
         ]
       },
@@ -2003,13 +2048,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 113.94
+            "projectedScore": 107.65
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 116.55
+            "projectedScore": 107.62
           }
         ]
       },
@@ -2020,13 +2065,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 121.75
+            "projectedScore": 122.68
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 107.18
+            "projectedScore": 110.67
           }
         ]
       },
@@ -2037,13 +2082,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 98.16
+            "projectedScore": 84.62
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 94.96
+            "projectedScore": 93.36
           }
         ]
       },
@@ -2054,13 +2099,13 @@
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 110.81
+            "projectedScore": 113.1
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 124.06
+            "projectedScore": 123.33
           }
         ]
       }
@@ -2073,13 +2118,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 95.67
+            "projectedScore": 94.41
           },
           {
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 110.42
+            "projectedScore": 105.83
           }
         ]
       },
@@ -2090,13 +2135,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 103.48
+            "projectedScore": 97.93
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 66.71
+            "projectedScore": 70.04
           }
         ]
       },
@@ -2107,13 +2152,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 112.69
+            "projectedScore": 113.05
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 83.3
+            "projectedScore": 83.48
           }
         ]
       },
@@ -2124,13 +2169,13 @@
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 122.01
+            "projectedScore": 103.29
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 82.67
+            "projectedScore": 76.82
           }
         ]
       },
@@ -2141,13 +2186,13 @@
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 93.67
+            "projectedScore": 93.46
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 99.53
+            "projectedScore": 100.63
           }
         ]
       }
@@ -2160,13 +2205,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 123.7
+            "projectedScore": 112.05
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 82.86
+            "projectedScore": 86.97
           }
         ]
       },
@@ -2177,13 +2222,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 124.26
+            "projectedScore": 117.74
           },
           {
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 94.47
+            "projectedScore": 94.23
           }
         ]
       },
@@ -2194,13 +2239,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 77.82
+            "projectedScore": 67.49
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 107.68
+            "projectedScore": 98.77
           }
         ]
       },
@@ -2211,13 +2256,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 104.12
+            "projectedScore": 107.27
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 110.98
+            "projectedScore": 103.8
           }
         ]
       },
@@ -2228,13 +2273,13 @@
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 116.86
+            "projectedScore": 114.92
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 116.44
+            "projectedScore": 116.58
           }
         ]
       }
@@ -2247,13 +2292,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 78.53
+            "projectedScore": 79.98
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 124.68
+            "projectedScore": 125.21
           }
         ]
       },
@@ -2264,13 +2309,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 127.46
+            "projectedScore": 121.37
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 97.75
+            "projectedScore": 98.84
           }
         ]
       },
@@ -2281,13 +2326,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 97.74
+            "projectedScore": 98.95
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 110.35
+            "projectedScore": 108.19
           }
         ]
       },
@@ -2298,13 +2343,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 98.78
+            "projectedScore": 100
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 84.49
+            "projectedScore": 88.1
           }
         ]
       },
@@ -2315,13 +2360,13 @@
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 73.22
+            "projectedScore": 64.55
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 111.17
+            "projectedScore": 115.08
           }
         ]
       }
@@ -2334,13 +2379,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 115.38
+            "projectedScore": 114.07
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 122.6
+            "projectedScore": 123.77
           }
         ]
       },
@@ -2351,13 +2396,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 120.07
+            "projectedScore": 102.63
           },
           {
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 111.95
+            "projectedScore": 104.91
           }
         ]
       },
@@ -2368,13 +2413,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 121.72
+            "projectedScore": 121.8
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 116.83
+            "projectedScore": 110.02
           }
         ]
       },
@@ -2385,13 +2430,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 116.82
+            "projectedScore": 121.07
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 96.19
+            "projectedScore": 97.97
           }
         ]
       },
@@ -2402,13 +2447,13 @@
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 116.95
+            "projectedScore": 106.4
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 120.76
+            "projectedScore": 120.59
           }
         ]
       }
@@ -2421,13 +2466,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 109.2
+            "projectedScore": 107.35
           },
           {
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 117.51
+            "projectedScore": 117.79
           }
         ]
       },
@@ -2438,13 +2483,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 109.15
+            "projectedScore": 105.35
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 89.56
+            "projectedScore": 93.87
           }
         ]
       },
@@ -2455,13 +2500,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 66.2
+            "projectedScore": 95.25
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 83.2
+            "projectedScore": 75.56
           }
         ]
       },
@@ -2472,13 +2517,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 117.14
+            "projectedScore": 119.74
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 108.36
+            "projectedScore": 109.6
           }
         ]
       },
@@ -2489,13 +2534,13 @@
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 123.84
+            "projectedScore": 114.55
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 120.26
+            "projectedScore": 119.66
           }
         ]
       }
@@ -2508,13 +2553,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 105.86
+            "projectedScore": 114.23
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 69.02
+            "projectedScore": 79.17
           }
         ]
       },
@@ -2525,13 +2570,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 78.89
+            "projectedScore": 88.98
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 88.42
+            "projectedScore": 88.73
           }
         ]
       },
@@ -2542,13 +2587,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 92.44
+            "projectedScore": 93.41
           },
           {
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 116.72
+            "projectedScore": 108.8
           }
         ]
       },
@@ -2559,13 +2604,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 116.86
+            "projectedScore": 120.48
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 83.83
+            "projectedScore": 71.88
           }
         ]
       },
@@ -2576,13 +2621,13 @@
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 90.79
+            "projectedScore": 93.05
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 118.22
+            "projectedScore": 110.68
           }
         ]
       }
@@ -2595,13 +2640,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 117
+            "projectedScore": 114.65
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 120.68
+            "projectedScore": 123.22
           }
         ]
       },
@@ -2612,13 +2657,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 121.42
+            "projectedScore": 115.4
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 121.71
+            "projectedScore": 119.26
           }
         ]
       },
@@ -2629,13 +2674,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 118.08
+            "projectedScore": 117.94
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 116.06
+            "projectedScore": 106.94
           }
         ]
       },
@@ -2646,13 +2691,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 115.37
+            "projectedScore": 108.96
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 109.34
+            "projectedScore": 109.12
           }
         ]
       },
@@ -2663,13 +2708,13 @@
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 122.19
+            "projectedScore": 115.09
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 117.62
+            "projectedScore": 117.54
           }
         ]
       }
@@ -2682,13 +2727,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 85.44
+            "projectedScore": 82.02
           },
           {
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 113.78
+            "projectedScore": 107.71
           }
         ]
       },
@@ -2699,13 +2744,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 111.6
+            "projectedScore": 111.44
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 95.03
+            "projectedScore": 107.7
           }
         ]
       },
@@ -2716,13 +2761,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 110.28
+            "projectedScore": 93.37
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 90.94
+            "projectedScore": 90.06
           }
         ]
       },
@@ -2733,13 +2778,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 95.68
+            "projectedScore": 99.68
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 115.43
+            "projectedScore": 107.07
           }
         ]
       },
@@ -2750,13 +2795,13 @@
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 97.99
+            "projectedScore": 90.9
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 115.43
+            "projectedScore": 114.61
           }
         ]
       }
@@ -2769,13 +2814,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 114.32
+            "projectedScore": 115
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 120.97
+            "projectedScore": 112.93
           }
         ]
       },
@@ -2786,13 +2831,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 104.95
+            "projectedScore": 100.43
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 101.62
+            "projectedScore": 92.06
           }
         ]
       },
@@ -2803,13 +2848,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 101.53
+            "projectedScore": 102.15
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 117.22
+            "projectedScore": 120.43
           }
         ]
       },
@@ -2820,13 +2865,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 105.12
+            "projectedScore": 95.55
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 92.35
+            "projectedScore": 105.09
           }
         ]
       },
@@ -2837,13 +2882,13 @@
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 106.3
+            "projectedScore": 85.83
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 118.9
+            "projectedScore": 118.43
           }
         ]
       }
