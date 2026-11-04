@@ -5,7 +5,7 @@
   "season": "2026",
   "currentWeek": 9,
   "isFinished": false,
-  "lastUpdated": "2026-11-03T19:56:13.550Z",
+  "lastUpdated": "2026-11-04T20:14:34.496Z",
   "payouts": {
     "weeklyPrize": 20,
     "weeklyPrizeWeeks": 14,
@@ -34,7 +34,7 @@
       "ties": 0,
       "pointsFor": 1209.94,
       "logoUrl": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/7be6fba92308d192cbfa17ed0d80513811caf0ae5d3bcc2ebebb92578156b010.png",
-      "waiverPriority": 7,
+      "waiverPriority": 10,
       "weeklyWins": 1,
       "weeklyCash": 20,
       "placementCash": 0,
@@ -113,15 +113,6 @@
           "yahooPlayerId": "40121"
         },
         {
-          "name": "Emanuel Wilson",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "SEA",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/uwIAfAUBowK9fnRyNL9IAw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/40707.1.png",
-          "yahooPlayerId": "40707"
-        },
-        {
           "name": "RJ Harvey",
           "position": "BN",
           "primaryPosition": "RB",
@@ -158,6 +149,15 @@
           "yahooPlayerId": "40078"
         },
         {
+          "name": "Mike Washington Jr.",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "LV",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/zrteScQfXqFUkgsz.R1GKg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08262026/42744.1.png",
+          "yahooPlayerId": "42744"
+        },
+        {
           "name": "Travis Etienne Jr.",
           "position": "IR",
           "primaryPosition": "RB",
@@ -185,13 +185,13 @@
           "yahooPlayerId": "41062"
         },
         {
-          "name": "Bengals",
+          "name": "Chiefs",
           "position": "DEF",
           "primaryPosition": "DEF",
-          "nflTeam": "CIN",
+          "nflTeam": "KC",
           "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/cin_2.gif",
-          "yahooPlayerId": "100004"
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/kan.gif",
+          "yahooPlayerId": "100012"
         }
       ]
     },
@@ -208,7 +208,7 @@
       "ties": 0,
       "pointsFor": 1106.78,
       "logoUrl": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/25199198912_af85e7dc8e.png",
-      "waiverPriority": 8,
+      "waiverPriority": 5,
       "weeklyWins": 1,
       "weeklyCash": 20,
       "placementCash": 0,
@@ -246,7 +246,7 @@
           "position": "WR",
           "primaryPosition": "WR",
           "nflTeam": "NYJ",
-          "status": null,
+          "status": "Q",
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/R.E9_N6rpL3Cob_DpH4i1Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/33965.1.png",
           "yahooPlayerId": "33965"
         },
@@ -269,8 +269,17 @@
           "yahooPlayerId": "40878"
         },
         {
-          "name": "Travis Kelce",
+          "name": "Nico Collins",
           "position": "W/R/T",
+          "primaryPosition": "WR",
+          "nflTeam": "HOU",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XaIf3oUtj4rr.CpsGxqvDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33477.2.png",
+          "yahooPlayerId": "33477"
+        },
+        {
+          "name": "Travis Kelce",
+          "position": "BN",
           "primaryPosition": "TE",
           "nflTeam": "KC",
           "status": null,
@@ -287,24 +296,6 @@
           "yahooPlayerId": "7200"
         },
         {
-          "name": "Nico Collins",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "HOU",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XaIf3oUtj4rr.CpsGxqvDg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/33477.2.png",
-          "yahooPlayerId": "33477"
-        },
-        {
-          "name": "Dameon Pierce",
-          "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "PHI",
-          "status": "IR",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/5C1TenIud.7eUgDArQx8ww--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/34063.1.png",
-          "yahooPlayerId": "34063"
-        },
-        {
           "name": "Jameson Williams",
           "position": "BN",
           "primaryPosition": "WR",
@@ -318,7 +309,7 @@
           "position": "BN",
           "primaryPosition": "WR",
           "nflTeam": "JAX",
-          "status": "Q",
+          "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LqmyofMYNUEds8U.CevMgg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08182026/32231.1.png",
           "yahooPlayerId": "32231"
         },
@@ -341,8 +332,17 @@
           "yahooPlayerId": "32417"
         },
         {
-          "name": "Patriots",
+          "name": "Saints",
           "position": "DEF",
+          "primaryPosition": "DEF",
+          "nflTeam": "NO",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/nor.gif",
+          "yahooPlayerId": "100018"
+        },
+        {
+          "name": "Patriots",
+          "position": "BN",
           "primaryPosition": "DEF",
           "nflTeam": "NE",
           "status": null,
@@ -364,7 +364,7 @@
       "ties": 0,
       "pointsFor": 1036.54,
       "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-gold-y-medal-png_1721174761440.png",
-      "waiverPriority": 3,
+      "waiverPriority": 7,
       "weeklyWins": 2,
       "weeklyCash": 40,
       "placementCash": 0,
@@ -470,15 +470,6 @@
           "yahooPlayerId": "41823"
         },
         {
-          "name": "Mark Andrews",
-          "position": "BN",
-          "primaryPosition": "TE",
-          "nflTeam": "BAL",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/esyGOZhIzn5kp7nExzw3Yg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/31056.1.png",
-          "yahooPlayerId": "31056"
-        },
-        {
           "name": "Omar Cooper Jr.",
           "position": "BN",
           "primaryPosition": "WR",
@@ -486,6 +477,15 @@
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/KJYrf8j1UF6JvDRQ.wXb4Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09182026/42652.1.png",
           "yahooPlayerId": "42652"
+        },
+        {
+          "name": "Deebo Samuel Sr.",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "SF",
+          "status": "Q",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/9RqRBnThuWM8nmEJ73i5MA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/10062026/31868.1.png",
+          "yahooPlayerId": "31868"
         },
         {
           "name": "Tyler Bass",
@@ -520,7 +520,7 @@
       "ties": 0,
       "pointsFor": 1033.32,
       "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-y-letterman-jacket-png_1721175177806.png",
-      "waiverPriority": 6,
+      "waiverPriority": 4,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
@@ -685,20 +685,20 @@
       "ties": 0,
       "pointsFor": 994.26,
       "logoUrl": "https://yahoofantasysports-res.cloudinary.com/image/upload/t_s192sq/fantasy-logos/6e5997253c0b0342c68963cfb02cc31b9cae71e0b549b81ff2387e1e162c4727.png",
-      "waiverPriority": 2,
+      "waiverPriority": 1,
       "weeklyWins": 1,
       "weeklyCash": 20,
       "placementCash": 0,
       "totalCash": 20,
       "roster": [
         {
-          "name": "Patrick Mahomes",
+          "name": "Tyler Shough",
           "position": "QB",
           "primaryPosition": "QB",
-          "nflTeam": "KC",
+          "nflTeam": "NO",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/.W3ZQBDoQG_ZvIlbaJbUqg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/30123.png",
-          "yahooPlayerId": "30123"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/THgYM56gIICXgdIMCbs66w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/41825.1.png",
+          "yahooPlayerId": "41825"
         },
         {
           "name": "Braelon Allen",
@@ -755,6 +755,15 @@
           "yahooPlayerId": "31856"
         },
         {
+          "name": "Patrick Mahomes",
+          "position": "BN",
+          "primaryPosition": "QB",
+          "nflTeam": "KC",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/.W3ZQBDoQG_ZvIlbaJbUqg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/30123.png",
+          "yahooPlayerId": "30123"
+        },
+        {
           "name": "Jordan Mason",
           "position": "BN",
           "primaryPosition": "RB",
@@ -782,15 +791,6 @@
           "yahooPlayerId": "33991"
         },
         {
-          "name": "Tyler Shough",
-          "position": "BN",
-          "primaryPosition": "QB",
-          "nflTeam": "NO",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/THgYM56gIICXgdIMCbs66w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08202026/41825.1.png",
-          "yahooPlayerId": "41825"
-        },
-        {
           "name": "Emeka Egbuka",
           "position": "BN",
           "primaryPosition": "WR",
@@ -798,6 +798,15 @@
           "status": "Q",
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/oa3IjOXHfHvlhvd8L3dGYQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/41804.1.png",
           "yahooPlayerId": "41804"
+        },
+        {
+          "name": "Bam Knight",
+          "position": "BN",
+          "primaryPosition": "RB",
+          "nflTeam": "ARI",
+          "status": "Q",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/6ELV4NwyLxp13jBsUVIvDw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/34357.1.png",
+          "yahooPlayerId": "34357"
         },
         {
           "name": "Lamar Jackson",
@@ -850,7 +859,7 @@
       "ties": 0,
       "pointsFor": 962.14,
       "logoUrl": "https://s.yimg.com/ba/images/0b1f460050e00e1e111684e9d5376c881ac2dbc7c1e17370b1e39984e5e89f51.png",
-      "waiverPriority": 9,
+      "waiverPriority": 8,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
@@ -911,8 +920,17 @@
           "yahooPlayerId": "40064"
         },
         {
-          "name": "Dalton Kincaid",
+          "name": "Jalen Coker",
           "position": "W/R/T",
+          "primaryPosition": "WR",
+          "nflTeam": "CAR",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/65k_7o4BvaoaSdVEIhckoQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/41293.1.png",
+          "yahooPlayerId": "41293"
+        },
+        {
+          "name": "Dalton Kincaid",
+          "position": "BN",
           "primaryPosition": "TE",
           "nflTeam": "BUF",
           "status": null,
@@ -936,15 +954,6 @@
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/XsoQGZvz8ZOH8aRKvCq03g--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/31960.1.png",
           "yahooPlayerId": "31960"
-        },
-        {
-          "name": "Jalen Coker",
-          "position": "BN",
-          "primaryPosition": "WR",
-          "nflTeam": "CAR",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/65k_7o4BvaoaSdVEIhckoQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/41293.1.png",
-          "yahooPlayerId": "41293"
         },
         {
           "name": "Jared Goff",
@@ -974,15 +983,6 @@
           "yahooPlayerId": "31905"
         },
         {
-          "name": "Jadarian Price",
-          "position": "IR",
-          "primaryPosition": "RB",
-          "nflTeam": "SEA",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/hU4wrCOTpxi92OmU9C4hqQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/42654.1.png",
-          "yahooPlayerId": "42654"
-        },
-        {
           "name": "Ka'imi Fairbairn",
           "position": "K",
           "primaryPosition": "K",
@@ -992,13 +992,13 @@
           "yahooPlayerId": "29792"
         },
         {
-          "name": "Rams",
+          "name": "Bears",
           "position": "DEF",
           "primaryPosition": "DEF",
-          "nflTeam": "LAR",
+          "nflTeam": "CHI",
           "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/stl.gif",
-          "yahooPlayerId": "100014"
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/chi.gif",
+          "yahooPlayerId": "100003"
         }
       ]
     },
@@ -1015,7 +1015,7 @@
       "ties": 0,
       "pointsFor": 1077.82,
       "logoUrl": "https://s.yimg.com/ba/images/7f8ff9b8076d87f5ee33efab14526f87943b2a9d3a98415f35e978d69a8391bf.png",
-      "waiverPriority": 4,
+      "waiverPriority": 2,
       "weeklyWins": 2,
       "weeklyCash": 40,
       "placementCash": 0,
@@ -1134,7 +1134,7 @@
           "position": "K",
           "primaryPosition": "K",
           "nflTeam": "BAL",
-          "status": "D",
+          "status": "IR",
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/drRfrYZU6.gqEiMhBwX0og--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08112026/41988.1.png",
           "yahooPlayerId": "41988"
         },
@@ -1171,20 +1171,20 @@
       "ties": 0,
       "pointsFor": 986.64,
       "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-helmet-1-png_1721176614976.png",
-      "waiverPriority": 5,
+      "waiverPriority": 3,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
       "totalCash": 0,
       "roster": [
         {
-          "name": "Matthew Stafford",
+          "name": "Jordan Love",
           "position": "QB",
           "primaryPosition": "QB",
-          "nflTeam": "LAR",
-          "status": "Q",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/WB0VYA2W5C4vPf8BtjcFdg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/9265.2.png",
-          "yahooPlayerId": "9265"
+          "nflTeam": "GB",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/kr.cv9_CzEvW8_R.diHvcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/32696.3.png",
+          "yahooPlayerId": "32696"
         },
         {
           "name": "Kenneth Walker III",
@@ -1232,13 +1232,22 @@
           "yahooPlayerId": "41877"
         },
         {
-          "name": "Jeremiyah Love",
+          "name": "Zach Charbonnet",
           "position": "W/R/T",
           "primaryPosition": "RB",
-          "nflTeam": "ARI",
-          "status": "O",
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SF3YXcxMZ_izNcxZVQQdtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/42625.1.png",
-          "yahooPlayerId": "42625"
+          "nflTeam": "SEA",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ds39bFEU6VoBXxj_kl1Gpg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072026/40075.1.png",
+          "yahooPlayerId": "40075"
+        },
+        {
+          "name": "Matthew Stafford",
+          "position": "BN",
+          "primaryPosition": "QB",
+          "nflTeam": "LAR",
+          "status": "Q",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/WB0VYA2W5C4vPf8BtjcFdg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08192026/9265.2.png",
+          "yahooPlayerId": "9265"
         },
         {
           "name": "Hunter Henry",
@@ -1268,15 +1277,6 @@
           "yahooPlayerId": "30295"
         },
         {
-          "name": "Jordan Love",
-          "position": "BN",
-          "primaryPosition": "QB",
-          "nflTeam": "GB",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/kr.cv9_CzEvW8_R.diHvcg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/32696.3.png",
-          "yahooPlayerId": "32696"
-        },
-        {
           "name": "Wan'Dale Robinson",
           "position": "BN",
           "primaryPosition": "WR",
@@ -1284,6 +1284,15 @@
           "status": null,
           "photoUrl": "https://s.yimg.com/iu/api/res/1.2/yzOboZCDxSxe5MurJYRGmA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08252026/33998.1.png",
           "yahooPlayerId": "33998"
+        },
+        {
+          "name": "Jeremiyah Love",
+          "position": "IR",
+          "primaryPosition": "RB",
+          "nflTeam": "ARI",
+          "status": "IR",
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/SF3YXcxMZ_izNcxZVQQdtw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/42625.1.png",
+          "yahooPlayerId": "42625"
         },
         {
           "name": "Davante Adams",
@@ -1295,15 +1304,6 @@
           "yahooPlayerId": "27581"
         },
         {
-          "name": "Zach Charbonnet",
-          "position": "IR",
-          "primaryPosition": "RB",
-          "nflTeam": "SEA",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ds39bFEU6VoBXxj_kl1Gpg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08072026/40075.1.png",
-          "yahooPlayerId": "40075"
-        },
-        {
           "name": "Jake Bates",
           "position": "K",
           "primaryPosition": "K",
@@ -1313,22 +1313,22 @@
           "yahooPlayerId": "40835"
         },
         {
-          "name": "Seahawks",
-          "position": "DEF",
-          "primaryPosition": "DEF",
-          "nflTeam": "SEA",
-          "status": null,
-          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sea.gif",
-          "yahooPlayerId": "100026"
-        },
-        {
           "name": "49ers",
-          "position": "BN",
+          "position": "DEF",
           "primaryPosition": "DEF",
           "nflTeam": "SF",
           "status": null,
           "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sfo.gif",
           "yahooPlayerId": "100025"
+        },
+        {
+          "name": "Seahawks",
+          "position": "BN",
+          "primaryPosition": "DEF",
+          "nflTeam": "SEA",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/lq/i/us/sp/v/nfl/teams/1/50x50w/sea.gif",
+          "yahooPlayerId": "100026"
         }
       ]
     },
@@ -1345,7 +1345,7 @@
       "ties": 0,
       "pointsFor": 1018.34,
       "logoUrl": "https://s.yimg.com/ep/cx/blendr/v2/image-wolf-2-png_1721175962789.png",
-      "waiverPriority": 10,
+      "waiverPriority": 9,
       "weeklyWins": 1,
       "weeklyCash": 20,
       "placementCash": 0,
@@ -1451,22 +1451,22 @@
           "yahooPlayerId": "34447"
         },
         {
-          "name": "Rico Dowdle",
+          "name": "Adonai Mitchell",
           "position": "BN",
-          "primaryPosition": "RB",
-          "nflTeam": "PIT",
+          "primaryPosition": "WR",
+          "nflTeam": "NYJ",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/ywTo2aUjogCZOwXb2d4J.Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/33100.1.png",
-          "yahooPlayerId": "33100"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/GtabLsSJNQ2n7VYCNoXDRg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/11132025/40915.png",
+          "yahooPlayerId": "40915"
         },
         {
-          "name": "Bryce Young",
+          "name": "C.J. Stroud",
           "position": "BN",
           "primaryPosition": "QB",
-          "nflTeam": "CAR",
+          "nflTeam": "HOU",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/V9fTWlvMZ92ho7Eny6yU6A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08062026/40029.1.png",
-          "yahooPlayerId": "40029"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/J2IyiVCB6Fs4XracSm3V5A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/40030.2.png",
+          "yahooPlayerId": "40030"
         },
         {
           "name": "Jordyn Tyson",
@@ -1478,13 +1478,13 @@
           "yahooPlayerId": "42630"
         },
         {
-          "name": "Spencer Shrader",
+          "name": "Eddy Pineiro",
           "position": "K",
           "primaryPosition": "K",
-          "nflTeam": "IND",
+          "nflTeam": "SF",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/pzI21uP6FhtQsAS.x2NLUA--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08142026/41499.1.png",
-          "yahooPlayerId": "41499"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/FoPa..d_yQ0yI6zV0nIY_Q--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08242026/31482.1.png",
+          "yahooPlayerId": "31482"
         },
         {
           "name": "Jaguars",
@@ -1510,7 +1510,7 @@
       "ties": 0,
       "pointsFor": 983.7,
       "logoUrl": "https://s.yimg.com/ba/images/47a728c76719437ff23b6a4dab95bc55fde687a903eaa557108542cc251763dd.png",
-      "waiverPriority": 1,
+      "waiverPriority": 6,
       "weeklyWins": 0,
       "weeklyCash": 0,
       "placementCash": 0,
@@ -1535,13 +1535,13 @@
           "yahooPlayerId": "40993"
         },
         {
-          "name": "Saquon Barkley",
+          "name": "Tyler Allgeier",
           "position": "RB",
           "primaryPosition": "RB",
-          "nflTeam": "PHI",
+          "nflTeam": "ARI",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VXOmjaMBllUqGug6vTs48A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/30972.1.png",
-          "yahooPlayerId": "30972"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/pC47EHB57nX4d9A.s1HYIw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08052026/34107.1.png",
+          "yahooPlayerId": "34107"
         },
         {
           "name": "Rashee Rice",
@@ -1553,13 +1553,13 @@
           "yahooPlayerId": "40084"
         },
         {
-          "name": "Rome Odunze",
+          "name": "Jaylen Waddle",
           "position": "WR",
           "primaryPosition": "WR",
-          "nflTeam": "CHI",
+          "nflTeam": "DEN",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/7mOuM7u9usQ7ge8D.SKj_w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40901.1.png",
-          "yahooPlayerId": "40901"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LraqgG.r4S.LNyMAd6RSnQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33394.1.png",
+          "yahooPlayerId": "33394"
         },
         {
           "name": "Isaiah Likely",
@@ -1571,13 +1571,22 @@
           "yahooPlayerId": "34095"
         },
         {
-          "name": "Jaylen Waddle",
+          "name": "Saquon Barkley",
           "position": "W/R/T",
-          "primaryPosition": "WR",
-          "nflTeam": "DEN",
+          "primaryPosition": "RB",
+          "nflTeam": "PHI",
           "status": null,
-          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/LraqgG.r4S.LNyMAd6RSnQ--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08132026/33394.1.png",
-          "yahooPlayerId": "33394"
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/VXOmjaMBllUqGug6vTs48A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08212026/30972.1.png",
+          "yahooPlayerId": "30972"
+        },
+        {
+          "name": "Rome Odunze",
+          "position": "BN",
+          "primaryPosition": "WR",
+          "nflTeam": "CHI",
+          "status": null,
+          "photoUrl": "https://s.yimg.com/iu/api/res/1.2/7mOuM7u9usQ7ge8D.SKj_w--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/08122026/40901.1.png",
+          "yahooPlayerId": "40901"
         },
         {
           "name": "Josh Downs",
@@ -2424,13 +2433,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 131.61
+            "projectedScore": 131.51
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 122.92
+            "projectedScore": 131.17
           }
         ]
       },
@@ -2441,13 +2450,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 132.7
+            "projectedScore": 130.25
           },
           {
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 110.1
+            "projectedScore": 114.02
           }
         ]
       },
@@ -2458,13 +2467,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 137.48
+            "projectedScore": 139.87
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 132.34
+            "projectedScore": 138.5
           }
         ]
       },
@@ -2475,13 +2484,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 117.93
+            "projectedScore": 122.65
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 129.64
+            "projectedScore": 131.43
           }
         ]
       },
@@ -2492,13 +2501,13 @@
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 117.35
+            "projectedScore": 119.03
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 125.95
+            "projectedScore": 126.25
           }
         ]
       }
@@ -2511,13 +2520,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 126.42
+            "projectedScore": 126.25
           },
           {
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 138.8
+            "projectedScore": 140.29
           }
         ]
       },
@@ -2528,13 +2537,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 111.68
+            "projectedScore": 113.07
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 126.69
+            "projectedScore": 127.65
           }
         ]
       },
@@ -2545,13 +2554,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 39.16
+            "projectedScore": 51.78
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 106.38
+            "projectedScore": 111.06
           }
         ]
       },
@@ -2562,13 +2571,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 108.6
+            "projectedScore": 104.44
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 119.78
+            "projectedScore": 124.69
           }
         ]
       },
@@ -2579,13 +2588,13 @@
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 122.91
+            "projectedScore": 123.81
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 129.25
+            "projectedScore": 127.91
           }
         ]
       }
@@ -2598,13 +2607,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 116.51
+            "projectedScore": 113.15
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 50.78
+            "projectedScore": 51.4
           }
         ]
       },
@@ -2615,13 +2624,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 88.4
+            "projectedScore": 84.81
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 96.7
+            "projectedScore": 95.63
           }
         ]
       },
@@ -2632,13 +2641,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 102.12
+            "projectedScore": 105.02
           },
           {
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 116.4
+            "projectedScore": 118.73
           }
         ]
       },
@@ -2649,13 +2658,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 111.23
+            "projectedScore": 123.47
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 90.77
+            "projectedScore": 88.1
           }
         ]
       },
@@ -2666,13 +2675,13 @@
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 118.76
+            "projectedScore": 118.62
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 126.78
+            "projectedScore": 137.71
           }
         ]
       }
@@ -2685,13 +2694,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 128.22
+            "projectedScore": 127.86
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 119.36
+            "projectedScore": 122.25
           }
         ]
       },
@@ -2702,13 +2711,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 132.13
+            "projectedScore": 128.34
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 124.86
+            "projectedScore": 125.47
           }
         ]
       },
@@ -2719,13 +2728,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 135.67
+            "projectedScore": 136.58
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 117.25
+            "projectedScore": 117.27
           }
         ]
       },
@@ -2736,13 +2745,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 118.97
+            "projectedScore": 121.48
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 128.4
+            "projectedScore": 128.52
           }
         ]
       },
@@ -2753,13 +2762,13 @@
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 134.96
+            "projectedScore": 142.74
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 131.75
+            "projectedScore": 130.56
           }
         ]
       }
@@ -2772,13 +2781,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 122.31
+            "projectedScore": 123.09
           },
           {
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 124.1
+            "projectedScore": 123.64
           }
         ]
       },
@@ -2789,13 +2798,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 135.45
+            "projectedScore": 134.39
           },
           {
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 101.26
+            "projectedScore": 110.43
           }
         ]
       },
@@ -2806,13 +2815,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 111.93
+            "projectedScore": 110.64
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 96.23
+            "projectedScore": 97.51
           }
         ]
       },
@@ -2823,13 +2832,13 @@
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 100.25
+            "projectedScore": 101.21
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 93.7
+            "projectedScore": 95.73
           }
         ]
       },
@@ -2840,13 +2849,13 @@
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 88.68
+            "projectedScore": 94.79
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 122.27
+            "projectedScore": 127.29
           }
         ]
       }
@@ -2859,13 +2868,13 @@
             "teamId": "1",
             "name": "Nabers Gonna Nab",
             "score": 0,
-            "projectedScore": 128.5
+            "projectedScore": 125.84
           },
           {
             "teamId": "8",
             "name": "Steelers",
             "score": 0,
-            "projectedScore": 130.4
+            "projectedScore": 139.29
           }
         ]
       },
@@ -2876,13 +2885,13 @@
             "teamId": "2",
             "name": "Insane in the End Zone",
             "score": 0,
-            "projectedScore": 114.18
+            "projectedScore": 114.24
           },
           {
             "teamId": "6",
             "name": "4th Down Sagar",
             "score": 0,
-            "projectedScore": 86.47
+            "projectedScore": 87.22
           }
         ]
       },
@@ -2893,13 +2902,13 @@
             "teamId": "3",
             "name": "ALLEN'S LAMB BIRYANI",
             "score": 0,
-            "projectedScore": 113.89
+            "projectedScore": 114.73
           },
           {
             "teamId": "5",
             "name": "Fly High Eagles",
             "score": 0,
-            "projectedScore": 115.56
+            "projectedScore": 118.95
           }
         ]
       },
@@ -2910,13 +2919,13 @@
             "teamId": "4",
             "name": "Caleb’s Cookin’",
             "score": 0,
-            "projectedScore": 103.86
+            "projectedScore": 93.12
           },
           {
             "teamId": "10",
             "name": "49ers",
             "score": 0,
-            "projectedScore": 108.55
+            "projectedScore": 119.17
           }
         ]
       },
@@ -2927,13 +2936,13 @@
             "teamId": "7",
             "name": "Bear Claw",
             "score": 0,
-            "projectedScore": 101.48
+            "projectedScore": 101.29
           },
           {
             "teamId": "9",
             "name": "Launch Play VJ",
             "score": 0,
-            "projectedScore": 126
+            "projectedScore": 125.6
           }
         ]
       }
